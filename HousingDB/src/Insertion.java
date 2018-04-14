@@ -4,10 +4,10 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Insertion{
-    Scanner scanString=new Scanner(System.in);
-    Scanner scanNum=new Scanner(System.in);
-    Connect c=new Connect();
-    Connection con=c.getConnection();
+   private Scanner scanString=new Scanner(System.in);
+   private Scanner scanNum=new Scanner(System.in);
+   private Connect c=new Connect();
+   private Connection con=c.getConnection();
 
     public void insertForSale(){
         try {

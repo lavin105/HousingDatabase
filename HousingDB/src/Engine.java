@@ -4,11 +4,23 @@ public class Engine {
     private Selection s=new Selection();
     private LoginOrRegister l=new LoginOrRegister();
     private Insertion i=new Insertion();
+    private Deletion d=new Deletion();
     Scanner scanInt=new Scanner(System.in);
     Scanner scanString=new Scanner(System.in);
 
-    public void run(){
+    public void run() throws InterruptedException{
             System.out.println("WELCOME TO THE HOUSING HELPER");
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
+            System.out.println("");
             System.out.println("1- Login");
             System.out.println("2- Register");
             System.out.println("Please enter 1 to Login or 2 to Register");
@@ -55,6 +67,10 @@ public class Engine {
                     goAgain=scanInt.nextInt();
 
                 }else  if(forSaleChoice==3){
+                    d.deleteForSale();
+                    System.out.println("Back to the main menu?");
+                    System.out.println("1-Yes, 2-No");
+                    goAgain=scanInt.nextInt();
 
                 }else  if(forSaleChoice==4){
 
