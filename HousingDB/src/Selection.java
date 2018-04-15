@@ -45,7 +45,6 @@ public class Selection extends Connect {
         if(filter==2) {
 
             try {
-//                PrintWriter pw=new PrintWriter(new File("test.csv"));
 //                StringBuilder s=new StringBuilder();
                 PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale");
                 ResultSet r = p.executeQuery();
@@ -107,15 +106,20 @@ public class Selection extends Connect {
 //                    s.append('\n');
 
                 }
-                System.out.println("Would you like to export this data to a CSV file?");
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 int csv=scan.nextInt();
                 if(csv==1){
+                    //ask user for what file they would like to export to
+
+                    //PrintWriter pw=new PrintWriter(new File("test.csv"));
+                    //pw.write(s.toString());
+                    //pw.close();
+
                     System.out.println("Exported");
                 }else{
                     System.out.println("Not exported");
                 }
-//                pw.write(s.toString());
-//                pw.close();
+
 
             } catch (SQLException r) {
 
@@ -796,6 +800,58 @@ public class Selection extends Connect {
             System.out.println("Not a valid option please choose again");
             selectForRent();
         }
+    }
+
+    public void avgPriceForSalePerCity(){
+        try {
+            System.out.println("Please enter the city in which you would like to see the average price of houses for sale.");
+            String city = scanString.nextLine();
+            PreparedStatement p = con.prepareStatement("SELECT City, AVG(Price) as AverageHousePrice FROM forsale WHERE City=? GROUP BY City");
+            p.setString(1,city);
+            ResultSet r=p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String format ="\u2503%1$-20s\u2503%2$-20s\u2503\n";
+            System.out.println("");
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+            System.out.format(format, col1, col2);
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+            while (r.next()){
+                System.out.format(format, r.getString(1),r.getDouble(2));
+                System.out.format(format, "--------------------", "--------------------");
+            }
+
+        }catch (SQLException e){
+
+        }
+
+
+    }
+    public void avgPriceForRentPerCity(){
+        try {
+            System.out.println("Please enter the city in which you would like to see the average price of houses for rent.");
+            String city = scanString.nextLine();
+            PreparedStatement p = con.prepareStatement("SELECT City, AVG(Price) as AverageHousePrice FROM forrent WHERE City=? GROUP BY City");
+            p.setString(1,city);
+            ResultSet r=p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String format ="\u2503%1$-20s\u2503%2$-20s\u2503\n";
+            System.out.println("");
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+            System.out.format(format, col1, col2);
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+            while (r.next()){
+                System.out.format(format, r.getString(1),r.getDouble(2));
+                System.out.format(format, "--------------------", "--------------------");
+            }
+
+        }catch (SQLException e){
+
+        }
+
     }
 
 

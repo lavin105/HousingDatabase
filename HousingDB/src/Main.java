@@ -1,11 +1,9 @@
-import java.sql.SQLException;
-
 public class Main {
 
-    public static void main(String args[]) throws InterruptedException, SQLException {
-
+    public static void main(String args[]) throws InterruptedException{
         Engine e =new Engine();
-        e.run();
+        e.runStart();
+        e.runBody();
     }
 }
 

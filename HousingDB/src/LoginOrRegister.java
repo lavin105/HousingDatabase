@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.Scanner;
 public class LoginOrRegister {
     Scanner scan=new Scanner(System.in);
-     public static String fname;
      Connect c=new Connect();
      Connection con=c.getConnection();
      public static int primary_keys;
@@ -38,7 +37,7 @@ public class LoginOrRegister {
             System.out.println("Please enter your desired username");
             String username = scan.nextLine();
             System.out.println("Please enter your first name.");
-            fname = scan.nextLine();
+            String fname = scan.nextLine();
             System.out.println("Please enter your last name");
             String lname = scan.nextLine();
             PreparedStatement ps = con.prepareStatement("INSERT INTO users(Username, FirstName, LastName) VALUES (?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
