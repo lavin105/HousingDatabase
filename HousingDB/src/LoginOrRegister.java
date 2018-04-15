@@ -22,8 +22,11 @@ public class LoginOrRegister {
             ResultSet rs=ps.executeQuery();
             if (rs.next()) {
                 primary_keys = rs.getInt(1);
+                System.out.println(primary_keys);
+            }else{
+                System.exit(0);
             }
-            System.out.println(primary_keys);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -1,3 +1,4 @@
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Engine {
@@ -8,7 +9,7 @@ public class Engine {
     Scanner scanInt=new Scanner(System.in);
     Scanner scanString=new Scanner(System.in);
 
-    public void run() throws InterruptedException{
+    public void run() throws InterruptedException, SQLException {
             System.out.println("WELCOME TO THE HOUSING HELPER");
             System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
             System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);System.out.print(".");Thread.sleep(50);
@@ -101,6 +102,10 @@ public class Engine {
                     goAgain=scanInt.nextInt();
 
                 }else  if(forRentChoice==3){
+                    d.deleteForRent();
+                    System.out.println("Back to the main menu?");
+                    System.out.println("1-Yes, 2-No");
+                    goAgain=scanInt.nextInt();
 
                 }else  if(forRentChoice==4){
 

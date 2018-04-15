@@ -9,8 +9,10 @@ public class Insertion{
    private Connect c=new Connect();
    private Connection con=c.getConnection();
 
-    public void insertForSale(){
+
+    public void insertForSale() throws SQLException {
         try {
+            con.setAutoCommit(false);
             System.out.println("Please fill out the following fields in order to list your house for sale.");
             System.out.println("");
             System.out.println("Please enter the address of the home you wish to list.");
@@ -38,18 +40,21 @@ public class Insertion{
             addForSale.setDouble(7, bathroom);
             addForSale.setDouble(8,price);
             addForSale.executeUpdate();
+            con.commit();
             System.out.println("Your house has been successfully added to the for sale listings!");
 
 
          }catch (SQLException e){
+            con.rollback();
 
         }
 
 
 
     }
-    public void insertForRent(){
+    public void insertForRent() throws SQLException {
         try {
+            con.setAutoCommit(false);
             System.out.println("Please fill out the following fields in order to list your house for rent.");
             System.out.println("");
             System.out.println("Please enter the address of the home you wish to list.");
@@ -77,11 +82,12 @@ public class Insertion{
             addForSale.setDouble(7, bathroom);
             addForSale.setDouble(8,price);
             addForSale.executeUpdate();
+            con.commit();
             System.out.println("Your house has been successfully added to the for rent listings!");
 
 
         }catch (SQLException e){
-
+            con.rollback();
         }
 
 
