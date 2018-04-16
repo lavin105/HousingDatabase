@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class theSystem {
     private Selection s=new Selection();
     private LoginOrRegister l=new LoginOrRegister();
-    private InsertionAndUpdate i=new InsertionAndUpdate();
+    private Insertion i=new Insertion();
+    private Updating u=new Updating();
     private Deletion d=new Deletion();
     Scanner scanInt=new Scanner(System.in);
     Scanner scanString=new Scanner(System.in);
@@ -87,7 +88,7 @@ public class theSystem {
 
                     } else if (forSaleChoice == 4) {
 
-                        i.updateForSale();
+                        u.updateForSale();
                         System.out.println("Back to the main menu?");
                         System.out.println("1-Yes, 2-No");
                         goAgain = scanInt.nextInt();
@@ -157,44 +158,6 @@ public class theSystem {
 
                 }
 
-
-//            System.out.println("Please enter 1 in order to view the tables within the database");
-//            System.out.println("Please enter 2 in order to view the records within a table in the Housing Database");
-//
-//            int choice=scanInt.nextInt();
-//            if(choice==1){
-//                s.showTables();
-//                System.out.println("Back to the main menu?");
-//                System.out.println("1-Yes, 2-No");
-//                goAgain=scanInt.nextInt();
-//
-//
-//            }
-//            else if(choice==2){
-//                s.showTables();
-//                System.out.println("Please select the table in which you would like to see records");
-//                System.out.println("1 for ?, 2 for ?, 3 for ?");
-//                int selection=scanInt.nextInt();
-//                if(selection==1){
-//                    s.selectForRent();
-//                    System.out.println("Back to the main menu?");
-//                    System.out.println("1-Yes, 2-No");
-//                    goAgain=scanInt.nextInt();
-//                }else if(selection==2){
-//                    s.selectForSale();
-//                    System.out.println("Back to the main menu?");
-//                    System.out.println("1-Yes, 2-No");
-//                    goAgain=scanInt.nextInt();
-//                }else if(selection==3){
-//                    System.out.println("Back to the main menu?");
-//                    System.out.println("1-Yes, 2-No");
-//                    goAgain=scanInt.nextInt();
-//                }
-//
-//
-//            }else{
-//                System.exit(54);
-//            }
             }catch (SQLException e){
                 e.printStackTrace();
             }
