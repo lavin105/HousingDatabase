@@ -134,6 +134,10 @@ public class theSystem {
                         goAgain = scanInt.nextInt();
 
                     } else if (forRentChoice == 4) {
+                        u.updateForRent();
+                        System.out.println("Back to the main menu?");
+                        System.out.println("1-Yes, 2-No");
+                        goAgain = scanInt.nextInt();
 
                     }else if(forRentChoice==5){
                         s.avgPriceForRentPerCity();
