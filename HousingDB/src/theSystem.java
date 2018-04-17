@@ -171,6 +171,14 @@ public class theSystem {
                     System.out.println("1- View all agents available.");
                     System.out.println("2- Find agents in your area.");
                     System.out.println("8-Return to main menu");
+                    int agentChoice = scanInt.nextInt();
+                    if (agentChoice == 1) {
+                        s.viewAgents();
+                        System.out.println("Back to the main menu?");
+                        System.out.println("1-Yes, 2-No");
+                        goAgain = scanInt.nextInt();
+
+                    }
 
 
 

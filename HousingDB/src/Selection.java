@@ -879,6 +879,36 @@ public class Selection extends Connect {
 
     }
 
+    public void viewAgents(){
+        try{
+            PreparedStatement p = con.prepareStatement("SELECT agents.AgentID, AgentFirstName, AgentLastName, CityJurisdiction, Phone, AgentEmail FROM agents JOIN agentinformation ON agents.AgentID=agentinformation.AgentID");
+            ResultSet r=p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String col3=rm.getColumnName(3);
+            String col4=rm.getColumnName(4);
+            String col5=rm.getColumnName(5);
+            String col6=rm.getColumnName(6);
+
+
+            String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503%5$-20s\u2503%6$-20s\u2503\n";
+            System.out.println("");
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+            System.out.format(format, col1, col2,col3, col4,col5,col6);
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+            while (r.next()){
+                System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getLong(5), r.getString(6));
+                System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
+            }
+
+        }catch (SQLException e){
+
+        }
+
+
+    }
+
 
 
 
