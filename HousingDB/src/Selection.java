@@ -125,7 +125,14 @@ public class Selection extends Connect {
 
 //            }catch (FileNotFoundException r){
 
+            }finally {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
+
 
         }else if(filter==1){
 
@@ -167,6 +174,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==2){
@@ -204,6 +217,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==3){
@@ -241,6 +260,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==4){
@@ -278,6 +303,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
 
@@ -315,6 +346,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==6){
@@ -352,6 +389,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
 
@@ -390,6 +433,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==8){
@@ -427,6 +476,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else {
@@ -482,6 +537,12 @@ public class Selection extends Connect {
 
             } catch (SQLException r) {
 
+            }finally {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }else if(filter==1){
 
@@ -523,6 +584,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==2){
@@ -560,6 +627,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==3){
@@ -597,6 +670,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==4){
@@ -634,6 +713,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
 
@@ -671,6 +756,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==6){
@@ -708,6 +799,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
 
@@ -746,6 +843,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else if(filter2==8){
@@ -783,6 +886,12 @@ public class Selection extends Connect {
 
                 } catch (SQLException r) {
 
+                }finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }else {
@@ -824,6 +933,12 @@ public class Selection extends Connect {
 
         }catch (SQLException e){
 
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
 
@@ -850,6 +965,12 @@ public class Selection extends Connect {
 
         }catch (SQLException e){
 
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
     }
@@ -875,6 +996,12 @@ public class Selection extends Connect {
 
         }catch (SQLException e){
 
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
     }
@@ -904,6 +1031,12 @@ public class Selection extends Connect {
 
         }catch (SQLException e){
 
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
 
@@ -945,6 +1078,12 @@ public class Selection extends Connect {
 
         }catch (SQLException e){
 
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -985,6 +1124,12 @@ public class Selection extends Connect {
 
         }catch (SQLException e){
 
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
     public void viewAgentsByCity(){
@@ -1015,6 +1160,12 @@ public class Selection extends Connect {
 
         }catch (SQLException e){
 
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
 
@@ -1047,7 +1198,13 @@ public class Selection extends Connect {
 
     }catch (SQLException e){
 
-    }
+    }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
     public void AgentsAndAddressForRent(){
         try{
@@ -1076,6 +1233,12 @@ public class Selection extends Connect {
 
         }catch (SQLException e){
 
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
