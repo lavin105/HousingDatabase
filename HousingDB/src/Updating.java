@@ -33,9 +33,15 @@ public class Updating {
                     ps.setString(1, address);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    con.commit();
-                    System.out.println("The address has been updated to "+ address);
+                     int x=ps.executeUpdate();
+                     if(x>0){
+                         System.out.println("The address has been updated to "+ address);
+                         con.commit();
+                     }else{
+                         System.out.println("Update unsuccessful something went wrong.");
+                     }
+
+
                 }catch (SQLException e){
                     con.rollback();
                 }
