@@ -853,6 +853,31 @@ public class Selection extends Connect {
         }
 
     }
+    public void userForSaleForRent(){
+        try {
+            System.out.println("Displaying users with a house for sale and for rent");
+            PreparedStatement p = con.prepareStatement("SELECT  DISTINCT FirstName, LastName FROM users u \n" +
+                    "JOIN forrent f ON u.UserID=f.UserID \n" +
+                    "JOIN forsale f1 WHERE f1.UserID=f.UserID;");
+            ResultSet r=p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String format ="\u2503%1$-20s\u2503%2$-20s\u2503\n";
+            System.out.println("");
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+            System.out.format(format, col1, col2);
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+            while (r.next()){
+                System.out.format(format, r.getString(1),r.getString(2));
+                System.out.format(format, "--------------------", "--------------------");
+            }
+
+        }catch (SQLException e){
+
+        }
+
+    }
 
 
 

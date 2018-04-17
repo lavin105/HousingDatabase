@@ -62,6 +62,7 @@ public class theSystem {
                     System.out.println("3- Remove your property from the database.");
                     System.out.println("4- Update your property in the database");
                     System.out.println("5- View the average house price for sale in a particular city");
+                    System.out.println("6- Find users who have both a property for sale and for rent");
 
                     //view house above certain price
                     //view house below certain price
@@ -100,6 +101,12 @@ public class theSystem {
                         System.out.println("Back to the main menu?");
                         System.out.println("1-Yes, 2-No");
                         goAgain = scanInt.nextInt();
+                    }else if(forSaleChoice==6){
+                        s.userForSaleForRent();
+                        System.out.println("Back to the main menu?");
+                        System.out.println("1-Yes, 2-No");
+                        goAgain = scanInt.nextInt();
+
                     }
 
 
@@ -111,6 +118,8 @@ public class theSystem {
                     System.out.println("3- Remove your property from the database.");
                     System.out.println("4- Update your property in the database");
                     System.out.println("5- View the average house price for rent in a particular city");
+                    System.out.println("6- Find users who have both a property for rent and for sale");
+
 
                     //view house above certain price
                     //view have below certain price
@@ -145,6 +154,11 @@ public class theSystem {
 
                     }else if(forRentChoice==5){
                         s.avgPriceForRentPerCity();
+                        System.out.println("Back to the main menu?");
+                        System.out.println("1-Yes, 2-No");
+                        goAgain = scanInt.nextInt();
+                    }else if(forRentChoice==6){
+                        s.userForSaleForRent();
                         System.out.println("Back to the main menu?");
                         System.out.println("1-Yes, 2-No");
                         goAgain = scanInt.nextInt();
