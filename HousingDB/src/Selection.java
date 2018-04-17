@@ -908,6 +908,177 @@ public class Selection extends Connect {
 
 
     }
+    public void betweenPriceRangeSale(){
+        try{
+            System.out.println("In order to find houses between a certain range we need a min and a max");
+            System.out.println("What is the minimum price you are searching for?");
+            double min=scan.nextDouble();
+            System.out.println("What is the maximum price you are searching?");
+            double max=scan.nextDouble();
+            PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE Price BETWEEN ? AND ?");
+            p.setDouble(1, min);
+            p.setDouble(2,max);
+            ResultSet r = p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String col3 = rm.getColumnName(3);
+            String col4 = rm.getColumnName(4);
+            String col5 = rm.getColumnName(5);
+            String col6 = rm.getColumnName(6);
+            String col7 = rm.getColumnName(7);
+            String col8= rm.getColumnName(8);
+            String col9=rm.getColumnName(9);
+
+            System.out.println("");
+            System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+            System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+            System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+            while (r.next()){
+                System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+
+                System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+            }
+
+        }catch (SQLException e){
+
+        }
+    }
+
+    public void betweenPriceRangeRent(){
+        try{
+            System.out.println("In order to find houses between a certain range we need a min and a max");
+            System.out.println("What is the minimum price you are searching for?");
+            double min=scan.nextDouble();
+            System.out.println("What is the maximum price you are searching?");
+            double max=scan.nextDouble();
+            PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Price BETWEEN ? AND ?");
+            p.setDouble(1, min);
+            p.setDouble(2,max);
+            ResultSet r = p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String col3 = rm.getColumnName(3);
+            String col4 = rm.getColumnName(4);
+            String col5 = rm.getColumnName(5);
+            String col6 = rm.getColumnName(6);
+            String col7 = rm.getColumnName(7);
+            String col8= rm.getColumnName(8);
+            String col9=rm.getColumnName(9);
+
+            System.out.println("");
+            System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+            System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+            System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+            while (r.next()){
+                System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+
+                System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+            }
+
+        }catch (SQLException e){
+
+        }
+    }
+    public void viewAgentsByCity(){
+        try{
+            System.out.println("Please enter the city in which you like to filter agents by.");
+            String city=scanString.nextLine();
+            PreparedStatement p = con.prepareStatement("SELECT agents.AgentID, AgentFirstName, AgentLastName, CityJurisdiction, Phone, AgentEmail FROM agents JOIN agentinformation ON agents.AgentID=agentinformation.AgentID WHERE CityJurisdiction=?");
+            p.setString(1, city);
+            ResultSet r=p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String col3=rm.getColumnName(3);
+            String col4=rm.getColumnName(4);
+            String col5=rm.getColumnName(5);
+            String col6=rm.getColumnName(6);
+
+
+            String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503%5$-20s\u2503%6$-20s\u2503\n";
+            System.out.println("");
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+            System.out.format(format, col1, col2,col3, col4,col5,col6);
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+            while (r.next()){
+                System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getLong(5), r.getString(6));
+                System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
+            }
+
+        }catch (SQLException e){
+
+        }
+
+
+    }
+
+    public void AgentsAndAddressForSale(){
+        try{
+        PreparedStatement p = con.prepareStatement("SELECT Address, forsale.City, ZipCode, AgentFirstName, AgentLastName, agentinformation.Phone, AgentEmail FROM forsale JOIN agentinformation on forsale.city=agentinformation.CityJurisdiction JOIN agents ON agents.AgentID=agentinformation.AgentID");
+        ResultSet r=p.executeQuery();
+        ResultSetMetaData rm = r.getMetaData();
+        String col1 = rm.getColumnName(1);
+        String col2 = rm.getColumnName(2);
+        String col3=rm.getColumnName(3);
+        String col4=rm.getColumnName(4);
+        String col5=rm.getColumnName(5);
+        String col6=rm.getColumnName(6);
+        String col7=rm.getColumnName(7);
+
+
+
+        String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503%5$-20s\u2503%6$-20s\u2503%7$-20s\u2503\n";
+        System.out.println("");
+        System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+        System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
+        System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+        while (r.next()){
+            System.out.format(format, r.getString(1),r.getString(2), r.getLong(3),r.getString(4),r.getString(5), r.getLong(6), r.getString(7));
+            System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
+        }
+
+    }catch (SQLException e){
+
+    }
+    }
+    public void AgentsAndAddressForRent(){
+        try{
+            PreparedStatement p = con.prepareStatement("SELECT Address, forrent.City, ZipCode, AgentFirstName, AgentLastName, agentinformation.Phone, AgentEmail FROM forrent JOIN agentinformation on forsale.city=agentinformation.CityJurisdiction JOIN agents ON agents.AgentID=agentinformation.AgentID");
+            ResultSet r=p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String col3=rm.getColumnName(3);
+            String col4=rm.getColumnName(4);
+            String col5=rm.getColumnName(5);
+            String col6=rm.getColumnName(6);
+            String col7=rm.getColumnName(7);
+
+
+
+            String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503%5$-20s\u2503%6$-20s\u2503%7$-20s\u2503\n";
+            System.out.println("");
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+            System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
+            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+            while (r.next()){
+                System.out.format(format, r.getString(1),r.getString(2), r.getLong(3),r.getString(4),r.getString(5), r.getLong(6), r.getString(7));
+                System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
+            }
+
+        }catch (SQLException e){
+
+        }
+    }
+
 
 
 
