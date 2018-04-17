@@ -63,8 +63,10 @@ public class theSystem {
                     System.out.println("4- Update your property in the database");
                     System.out.println("5- View the average house price for sale in a particular city");
 
-                    //view the cheapest house
-                    //view avg house price in a city
+                    //view house above certain price
+                    //view house below certain price
+                    //view house between a certain price
+                    //address city agent and agent phone join
                     System.out.println("8-Return to main menu");
 
                     int forSaleChoice = scanInt.nextInt();
@@ -110,8 +112,10 @@ public class theSystem {
                     System.out.println("4- Update your property in the database");
                     System.out.println("5- View the average house price for rent in a particular city");
 
-                    //view the cheapest house
-                    //view avg house price in a city
+                    //view house above certain price
+                    //view have below certain price
+                    //view house between a certain price
+                    //address city agent and agent phone join
                     System.out.println("8-Return to main menu");
 
                     int forRentChoice = scanInt.nextInt();
