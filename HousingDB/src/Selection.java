@@ -561,18 +561,25 @@ public class Selection extends Connect {
                 String col8= rm.getColumnName(8);
                 String col9=rm.getColumnName(9);
 
+                if(!r.isBeforeFirst()){
+                    System.out.println("No record exists");
 
+                }else{
+                    System.out.println("");
+                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                System.out.println("");
-                System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                    while (r.next()) {
+                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                while (r.next()) {
-                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                    System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                    }
                 }
+
+
+
+
 
 
             } catch (SQLException r) {
@@ -608,18 +615,23 @@ public class Selection extends Connect {
                     String col8= rm.getColumnName(8);
                     String col9=rm.getColumnName(9);
 
+                    if(!r.isBeforeFirst()){
+                        System.out.println("No house for rent with the ID "+id);
 
+                    }else{
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                    System.out.println("");
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        while (r.next()) {
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                    while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                        }
                     }
+
+
 
 
                 } catch (SQLException r) {
@@ -651,18 +663,23 @@ public class Selection extends Connect {
                     String col8= rm.getColumnName(8);
                     String col9=rm.getColumnName(9);
 
+                    if(!r.isBeforeFirst()){
+                        System.out.println("No house exists with the address "+ add);
 
+                    }else{
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                    System.out.println("");
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        while (r.next()) {
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                    while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+                        }
 
                     }
+
 
 
                 } catch (SQLException r) {
@@ -694,18 +711,23 @@ public class Selection extends Connect {
                     String col8= rm.getColumnName(8);
                     String col9=rm.getColumnName(9);
 
+                    if(!r.isBeforeFirst()){
+                        System.out.println("No house for rent exists with the city "+city);
 
+                    }else{
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                    System.out.println("");
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        while (r.next()) {
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                    while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                        }
                     }
+
+
 
 
                 } catch (SQLException r) {
@@ -737,18 +759,23 @@ public class Selection extends Connect {
                     String col8= rm.getColumnName(8);
                     String col9=rm.getColumnName(9);
 
+                    if(!r.isBeforeFirst()){
+                        System.out.println("No house for rent has the zipcode "+zcode);
 
+                    }else{
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                    System.out.println("");
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        while (r.next()) {
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                    while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                        }
                     }
+
+
 
 
                 } catch (SQLException r) {
@@ -766,7 +793,7 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Size=?");
                     System.out.println("Enter the Size (sqft) to filter by.");
-                    double sz=scan.nextInt();
+                    double sz=scan.nextDouble();
                     p.setDouble(1,sz);
                     ResultSet r = p.executeQuery();
                     ResultSetMetaData rm = r.getMetaData();
@@ -781,18 +808,23 @@ public class Selection extends Connect {
                     String col8= rm.getColumnName(8);
                     String col9=rm.getColumnName(9);
 
+                    if(!r.isBeforeFirst()){
+                        System.out.println("No house for rent exists that is "+sz+" square feet");
 
+                    }else{
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                    System.out.println("");
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        while (r.next()) {
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                    while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                        }
                     }
+
+
 
                 } catch (SQLException r) {
 
@@ -808,8 +840,8 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Bedrooms=?");
                     System.out.println("Enter the number of Bedrooms to filter by.");
-                    int bed=scan.nextInt();
-                    p.setInt(1,bed);
+                    double bed=scan.nextDouble();
+                    p.setDouble(1,bed);
                     ResultSet r = p.executeQuery();
                     ResultSetMetaData rm = r.getMetaData();
 
@@ -823,18 +855,23 @@ public class Selection extends Connect {
                     String col8= rm.getColumnName(8);
                     String col9=rm.getColumnName(9);
 
+                    if(!r.isBeforeFirst()){
+                        System.out.println("No hose for rent has "+bed+" bedrooms");
 
+                    }else{
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                    System.out.println("");
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        while (r.next()) {
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                    while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                        }
                     }
+
+
 
 
                 } catch (SQLException r) {
@@ -852,8 +889,8 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Bathrooms=?");
                     System.out.println("Enter the number of Bathrooms to filter by.");
-                    float bath=scan.nextInt();
-                    p.setFloat(1,bath);
+                    double bath=scan.nextDouble();
+                    p.setDouble(1,bath);
                     ResultSet r = p.executeQuery();
                     ResultSetMetaData rm = r.getMetaData();
 
@@ -867,18 +904,23 @@ public class Selection extends Connect {
                     String col8= rm.getColumnName(8);
                     String col9=rm.getColumnName(9);
 
+                    if(!r.isBeforeFirst()){
+                        System.out.println("No house for rent has "+bath+" bathrooms");
 
+                    }else{
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                    System.out.println("");
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        while (r.next()) {
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                    while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                        }
                     }
+
+
 
 
                 } catch (SQLException r) {
@@ -895,7 +937,7 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Price=?");
                     System.out.println("Enter the Price to filter by.");
-                    double price=scan.nextInt();
+                    double price=scan.nextDouble();
                     p.setDouble(1,price);
                     ResultSet r = p.executeQuery();
                     ResultSetMetaData rm = r.getMetaData();
@@ -910,18 +952,23 @@ public class Selection extends Connect {
                     String col8= rm.getColumnName(8);
                     String col9=rm.getColumnName(9);
 
+                    if(!r.isBeforeFirst()){
+                        System.out.println("No house with the price "+price+" exists");
 
+                    }else{
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-                    System.out.println("");
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        while (r.next()) {
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
-                    while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
-                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                        }
                     }
+
+
 
 
                 } catch (SQLException r) {
@@ -962,14 +1009,26 @@ public class Selection extends Connect {
             String col1 = rm.getColumnName(1);
             String col2 = rm.getColumnName(2);
             String format ="\u2503%1$-20s\u2503%2$-20s\u2503\n";
-            System.out.println("");
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
-            System.out.format(format, col1, col2);
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
-            while (r.next()){
-                System.out.format(format, r.getString(1),r.getDouble(2));
-                System.out.format(format, "--------------------", "--------------------");
+
+
+
+            if(!r.isBeforeFirst()){
+                System.out.println("No house exists with the city "+city);
+
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                System.out.format(format, col1, col2);
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                while (r.next()){
+                    System.out.format(format, r.getString(1),r.getDouble(2));
+                    System.out.format(format, "--------------------", "--------------------");
+                }
             }
+
+
+
+
 
         }catch (SQLException e){
 
@@ -994,14 +1053,24 @@ public class Selection extends Connect {
             String col1 = rm.getColumnName(1);
             String col2 = rm.getColumnName(2);
             String format ="\u2503%1$-20s\u2503%2$-20s\u2503\n";
-            System.out.println("");
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
-            System.out.format(format, col1, col2);
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
-            while (r.next()){
-                System.out.format(format, r.getString(1),r.getDouble(2));
-                System.out.format(format, "--------------------", "--------------------");
+
+
+
+            if(!r.isBeforeFirst()){
+                System.out.println("No record exists with the city "+city);
+
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                System.out.format(format, col1, col2);
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                while (r.next()){
+                    System.out.format(format, r.getString(1),r.getDouble(2));
+                    System.out.format(format, "--------------------", "--------------------");
+                }
             }
+
+
 
         }catch (SQLException e){
 
@@ -1025,14 +1094,25 @@ public class Selection extends Connect {
             String col1 = rm.getColumnName(1);
             String col2 = rm.getColumnName(2);
             String format ="\u2503%1$-20s\u2503%2$-20s\u2503\n";
-            System.out.println("");
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
-            System.out.format(format, col1, col2);
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
-            while (r.next()){
-                System.out.format(format, r.getString(1),r.getString(2));
-                System.out.format(format, "--------------------", "--------------------");
+
+
+
+            if(!r.isBeforeFirst()){
+                System.out.println("No record exists");
+
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                System.out.format(format, col1, col2);
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                while (r.next()){
+                    System.out.format(format, r.getString(1),r.getString(2));
+                    System.out.format(format, "--------------------", "--------------------");
+                }
             }
+
+
+
 
         }catch (SQLException e){
 
@@ -1060,14 +1140,24 @@ public class Selection extends Connect {
 
 
             String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503%5$-20s\u2503%6$-20s\u2503\n";
-            System.out.println("");
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
-            System.out.format(format, col1, col2,col3, col4,col5,col6);
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
-            while (r.next()){
-                System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getLong(5), r.getString(6));
-                System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
+
+
+
+            if(!r.isBeforeFirst()){
+                System.out.println("Records do not exists");
+
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                System.out.format(format, col1, col2,col3, col4,col5,col6);
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                while (r.next()){
+                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getLong(5), r.getString(6));
+                    System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
+                }
             }
+
+
 
         }catch (SQLException e){
 
@@ -1104,17 +1194,27 @@ public class Selection extends Connect {
             String col8= rm.getColumnName(8);
             String col9=rm.getColumnName(9);
 
-            System.out.println("");
-            System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-            System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-            System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-            while (r.next()){
-                System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
 
-                System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+            if(!r.isBeforeFirst()){
+                System.out.println("No house for sale between the prices of "+min+ " and "+max);
 
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                while (r.next()){
+                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+
+                    System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                }
             }
+
+
+
 
         }catch (SQLException e){
 
@@ -1150,17 +1250,27 @@ public class Selection extends Connect {
             String col8= rm.getColumnName(8);
             String col9=rm.getColumnName(9);
 
-            System.out.println("");
-            System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-            System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-            System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
-            while (r.next()){
-                System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
 
-                System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+            if(!r.isBeforeFirst()){
+                System.out.println("No house for rent between "+min+" and "+max);
 
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                while (r.next()){
+                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+
+                    System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                }
             }
+
+
+
 
         }catch (SQLException e){
 
@@ -1189,14 +1299,23 @@ public class Selection extends Connect {
 
 
             String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503%5$-20s\u2503%6$-20s\u2503\n";
-            System.out.println("");
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
-            System.out.format(format, col1, col2,col3, col4,col5,col6);
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
-            while (r.next()){
-                System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getLong(5), r.getString(6));
-                System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
+
+
+            if(!r.isBeforeFirst()){
+                System.out.println("No agent exists with jurisdiction over the city "+city);
+
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                System.out.format(format, col1, col2,col3, col4,col5,col6);
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                while (r.next()){
+                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getLong(5), r.getString(6));
+                    System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
+                }
             }
+
+
 
         }catch (SQLException e){
 
@@ -1227,14 +1346,21 @@ public class Selection extends Connect {
 
 
         String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503%5$-20s\u2503%6$-20s\u2503%7$-20s\u2503\n";
-        System.out.println("");
-        System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
-        System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
-        System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
-        while (r.next()){
-            System.out.format(format, r.getString(1),r.getString(2), r.getLong(3),r.getString(4),r.getString(5), r.getLong(6), r.getString(7));
-            System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
-        }
+
+            if(!r.isBeforeFirst()){
+                System.out.println("Record does not exist");
+
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                while (r.next()){
+                    System.out.format(format, r.getString(1),r.getString(2), r.getLong(3),r.getString(4),r.getString(5), r.getLong(6), r.getString(7));
+                    System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
+                }
+            }
+
 
     }catch (SQLException e){
 
@@ -1262,14 +1388,23 @@ public class Selection extends Connect {
 
 
             String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503%5$-20s\u2503%6$-20s\u2503%7$-20s\u2503\n";
-            System.out.println("");
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
-            System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
-            System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
-            while (r.next()){
-                System.out.format(format, r.getString(1),r.getString(2), r.getLong(3),r.getString(4),r.getString(5), r.getLong(6), r.getString(7));
-                System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
+
+
+            if(!r.isBeforeFirst()){
+                System.out.println("Record does not exist");
+
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                while (r.next()){
+                    System.out.format(format, r.getString(1),r.getString(2), r.getLong(3),r.getString(4),r.getString(5), r.getLong(6), r.getString(7));
+                    System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
+                }
             }
+
+
 
         }catch (SQLException e){
 
