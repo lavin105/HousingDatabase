@@ -143,6 +143,12 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE ForSaleID=?");
                     System.out.println("Enter the ID to filter by.");
+
+                    while (!scan.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID to filter by.");
+                        scan.next(); // this is important!
+                    }
                     int id=scan.nextInt();
                     p.setInt(1,id);
                     ResultSet r = p.executeQuery();
