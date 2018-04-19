@@ -292,8 +292,16 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE ZipCode=?");
                     System.out.println("Enter the ZipCode to filter by.");
-                    long zcode=scan.nextLong();
-                    p.setLong(1,zcode);
+
+                    while (!scan.hasNextInt()) {
+                        System.out.println("That's not a popper zipcode!");
+                        System.out.println("Enter the Zipcode to filter by.");
+                        scan.next(); // this is important!
+                    }
+
+
+                    int zcode=scan.nextInt();
+                    p.setInt(1,zcode);
                     ResultSet r = p.executeQuery();
                     ResultSetMetaData rm = r.getMetaData();
 
@@ -340,6 +348,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE Size=?");
                     System.out.println("Enter the Size (sqft) to filter by.");
+                    while (!scan.hasNextDouble()) {
+                        System.out.println("That's not a popper size!");
+                        System.out.println("Enter the size to filter by.");
+                        scan.next(); // this is important!
+                    }
                     double sz=scan.nextDouble();
                     p.setDouble(1,sz);
                     ResultSet r = p.executeQuery();
@@ -387,6 +400,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE Bedrooms=?");
                     System.out.println("Enter the number of Bedrooms to filter by.");
+                    while (!scan.hasNextDouble()) {
+                        System.out.println("That's not a popper number of bedrooms!");
+                        System.out.println("Enter the number of bedrooms to filter by.");
+                        scan.next(); // this is important!
+                    }
                     double bed=scan.nextDouble();
                     p.setDouble(1,bed);
                     ResultSet r = p.executeQuery();
@@ -436,6 +454,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE Bathrooms=?");
                     System.out.println("Enter the number of Bathrooms to filter by.");
+                    while (!scan.hasNextDouble()) {
+                        System.out.println("That's not a popper number of bathrooms!");
+                        System.out.println("Enter the number of bathrooms to filter by.");
+                        scan.next(); // this is important!
+                    }
                     double bath=scan.nextDouble();
                     p.setDouble(1,bath);
                     ResultSet r = p.executeQuery();
@@ -486,6 +509,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE Price=?");
                     System.out.println("Enter the Price to filter by.");
+                    while (!scan.hasNextDouble()) {
+                        System.out.println("That's not a popper price!");
+                        System.out.println("Enter the price to filter by.");
+                        scan.next(); // this is important!
+                    }
                     double price=scan.nextDouble();
                     p.setDouble(1,price);
                     ResultSet r = p.executeQuery();
@@ -606,6 +634,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE ForRentID=?");
                     System.out.println("Enter the ID to filter by.");
+                    while (!scan.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID to filter by.");
+                        scan.next(); // this is important!
+                    }
                     int id=scan.nextInt();
                     p.setInt(1,id);
                     ResultSet r = p.executeQuery();
@@ -750,8 +783,13 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE ZipCode=?");
                     System.out.println("Enter the ZipCode to filter by.");
-                    long zcode=scan.nextInt();
-                    p.setLong(1,zcode);
+                    while (!scan.hasNextInt()) {
+                        System.out.println("That's not a proper zipcode!");
+                        System.out.println("Enter the zipcode to filter by.");
+                        scan.next(); // this is important!
+                    }
+                    int zcode=scan.nextInt();
+                    p.setInt(1,zcode);
                     ResultSet r = p.executeQuery();
                     ResultSetMetaData rm = r.getMetaData();
 
@@ -799,6 +837,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Size=?");
                     System.out.println("Enter the Size (sqft) to filter by.");
+                    while (!scan.hasNextDouble()) {
+                        System.out.println("That's not a proper size!");
+                        System.out.println("Enter the size to filter by.");
+                        scan.next(); // this is important!
+                    }
                     double sz=scan.nextDouble();
                     p.setDouble(1,sz);
                     ResultSet r = p.executeQuery();
@@ -846,6 +889,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Bedrooms=?");
                     System.out.println("Enter the number of Bedrooms to filter by.");
+                    while (!scan.hasNextDouble()) {
+                        System.out.println("That's not a proper number of bedrooms!");
+                        System.out.println("Enter the number of bedrooms to filter by.");
+                        scan.next(); // this is important!
+                    }
                     double bed=scan.nextDouble();
                     p.setDouble(1,bed);
                     ResultSet r = p.executeQuery();
@@ -895,6 +943,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Bathrooms=?");
                     System.out.println("Enter the number of Bathrooms to filter by.");
+                    while (!scan.hasNextDouble()) {
+                        System.out.println("That's not a proper number of bathrooms!");
+                        System.out.println("Enter the number of bathrooms to filter by.");
+                        scan.next(); // this is important!
+                    }
                     double bath=scan.nextDouble();
                     p.setDouble(1,bath);
                     ResultSet r = p.executeQuery();
@@ -943,6 +996,11 @@ public class Selection extends Connect {
                 try {
                     PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Price=?");
                     System.out.println("Enter the Price to filter by.");
+                    while (!scan.hasNextDouble()) {
+                        System.out.println("That's not a proper price!");
+                        System.out.println("Enter the price to filter by.");
+                        scan.next(); // this is important!
+                    }
                     double price=scan.nextDouble();
                     p.setDouble(1,price);
                     ResultSet r = p.executeQuery();
@@ -1181,8 +1239,18 @@ public class Selection extends Connect {
         try{
             System.out.println("In order to find houses between a certain range we need a min and a max");
             System.out.println("What is the minimum price you are searching for?");
+            while (!scan.hasNextDouble()) {
+                System.out.println("That's not a proper minimum price!");
+                System.out.println("What is the minimum price you are searching for?");
+                scan.next(); // this is important!
+            }
             double min=scan.nextDouble();
             System.out.println("What is the maximum price you are searching?");
+            while (!scan.hasNextDouble()) {
+                System.out.println("That's not a proper maximum price!");
+                System.out.println("What is the maximum price you are searching for?\"");
+                scan.next(); // this is important!
+            }
             double max=scan.nextDouble();
             PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE Price BETWEEN ? AND ?");
             p.setDouble(1, min);
@@ -1237,8 +1305,18 @@ public class Selection extends Connect {
         try{
             System.out.println("In order to find houses between a certain range we need a min and a max");
             System.out.println("What is the minimum price you are searching for?");
+            while (!scan.hasNextDouble()) {
+                System.out.println("That's not a proper minimum price!");
+                System.out.println("What is the minimum price you are searching for?");
+                scan.next(); // this is important!
+            }
             double min=scan.nextDouble();
             System.out.println("What is the maximum price you are searching?");
+            while (!scan.hasNextDouble()) {
+                System.out.println("That's not a proper maximum price!");
+                System.out.println("What is the maximum price you are searching for?\"");
+                scan.next(); // this is important!
+            }
             double max=scan.nextDouble();
             PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Price BETWEEN ? AND ?");
             p.setDouble(1, min);
