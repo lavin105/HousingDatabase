@@ -16,14 +16,19 @@ public class LoginOrRegister {
         try {
             System.out.println("Please enter your username to login.");
             String username=scan.nextLine();
-            PreparedStatement ps=con.prepareStatement("SELECT DISTINCT UserID FROM users WHERE username=?");
+            System.out.println("Please enter your password to login.");
+            String pass=scan.nextLine();
+            PreparedStatement ps=con.prepareStatement("SELECT DISTINCT UserID FROM users WHERE username=? AND Password=? ");
             ps.setString(1,username);
+            ps.setInt(2,pass.hashCode());
+
             ResultSet rs=ps.executeQuery();
             if (rs.next()) {
                 primary_keys = rs.getInt(1);
                 System.out.println(primary_keys);
             }else{
-                System.exit(0);
+                System.out.println("Incorrect password please try again");
+                login();
             }
 
         } catch (SQLException e) {
@@ -36,15 +41,18 @@ public class LoginOrRegister {
         try {
             System.out.println("Please enter your desired username");
             String username = scan.nextLine();
+            System.out.println("Please enter your desired password");
+            String pass = scan.nextLine();
             System.out.println("Please enter your first name.");
             String fname = scan.nextLine();
             System.out.println("Please enter your last name");
             String lname = scan.nextLine();
-            PreparedStatement ps = con.prepareStatement("INSERT INTO users(Username, FirstName, LastName) VALUES (?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = con.prepareStatement("INSERT INTO users(Username,Password, FirstName, LastName) VALUES (?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
             ps.clearParameters();
             ps.setString(1, username);
-            ps.setString(2, fname);
-            ps.setString(3, lname);
+            ps.setInt(2, pass.hashCode());
+            ps.setString(3, fname);
+            ps.setString(4, lname);
             ps.executeUpdate();
             ResultSet rs_key = ps.getGeneratedKeys();
             if (rs_key.next()) {
