@@ -20,23 +20,48 @@ public class Insertion {
             System.out.println("Please enter the city where your house is located in.");
             String city=scanString.nextLine();
             System.out.println("Please enter your 5 digit zipcode of your home.");
-            long zip=scanNum.nextLong();
+            while (!scanNum.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the zipcode of your home.");
+                scanNum.next(); // this is important!
+            }
+            int zip=scanNum.nextInt();
             System.out.println("Please enter the size of your home in square feet.");
+            while (!scanNum.hasNextDouble()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the size of your home.");
+                scanNum.next(); // this is important!
+            }
             double size=scanNum.nextDouble();
             System.out.println("Please enter the number of bedrooms in your home.");
-            int bedroom=scanNum.nextInt();
+            while (!scanNum.hasNextDouble()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the number of bedrooms of your home.");
+                scanNum.next(); // this is important!
+            }
+            double bedroom=scanNum.nextDouble();
             System.out.println("Please enter the number of bathrooms in your home.");
+            while (!scanNum.hasNextDouble()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the number of bathrooms of your home.");
+                scanNum.next(); // this is important!
+            }
             double bathroom=scanNum.nextDouble();
             System.out.println("Finally, please enter the price you wish to list your home at.");
+            while (!scanNum.hasNextDouble()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the  price of your home.");
+                scanNum.next(); // this is important!
+            }
             double price=scanNum.nextDouble();
             PreparedStatement addForSale=con.prepareStatement("INSERT INTO forsale(UserID, Address,City, ZipCode, Size, Bedrooms, Bathrooms, Price) VALUES (?,?,?,?,?,?,?,?)");
             addForSale.clearParameters();
             addForSale.setInt(1,LoginOrRegister.primary_keys);
             addForSale.setString(2, address);
             addForSale.setString(3,city);
-            addForSale.setLong(4, zip);
+            addForSale.setInt(4, zip);
             addForSale.setDouble(5, size);
-            addForSale.setInt(6, bedroom);
+            addForSale.setDouble(6, bedroom);
             addForSale.setDouble(7, bathroom);
             addForSale.setDouble(8,price);
             addForSale.executeUpdate();
@@ -55,47 +80,70 @@ public class Insertion {
     public void insertForRent() throws SQLException {
         try {
             con.setAutoCommit(false);
-            System.out.println("Please fill out the following fields in order to list your house for rent.");
+            System.out.println("Please fill out the following fields in order to list your house for sale.");
             System.out.println("");
             System.out.println("Please enter the address of the home you wish to list.");
             String address=scanString.nextLine();
             System.out.println("Please enter the city where your house is located in.");
             String city=scanString.nextLine();
             System.out.println("Please enter your 5 digit zipcode of your home.");
-            long zip=scanNum.nextLong();
+            while (!scanNum.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the zipcode of your home.");
+                scanNum.next(); // this is important!
+            }
+            int zip=scanNum.nextInt();
             System.out.println("Please enter the size of your home in square feet.");
+            while (!scanNum.hasNextDouble()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the size of your home.");
+                scanNum.next(); // this is important!
+            }
             double size=scanNum.nextDouble();
             System.out.println("Please enter the number of bedrooms in your home.");
-            int bedroom=scanNum.nextInt();
+            while (!scanNum.hasNextDouble()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the number of bedrooms of your home.");
+                scanNum.next(); // this is important!
+            }
+            double bedroom=scanNum.nextDouble();
             System.out.println("Please enter the number of bathrooms in your home.");
+            while (!scanNum.hasNextDouble()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the number of bathrooms of your home.");
+                scanNum.next(); // this is important!
+            }
             double bathroom=scanNum.nextDouble();
             System.out.println("Finally, please enter the price you wish to list your home at.");
+            while (!scanNum.hasNextDouble()) {
+                System.out.println("That's not a number!");
+                System.out.println("Enter the  price of your home.");
+                scanNum.next(); // this is important!
+            }
             double price=scanNum.nextDouble();
             PreparedStatement addForSale=con.prepareStatement("INSERT INTO forrent(UserID, Address,City, ZipCode, Size, Bedrooms, Bathrooms, Price) VALUES (?,?,?,?,?,?,?,?)");
             addForSale.clearParameters();
             addForSale.setInt(1,LoginOrRegister.primary_keys);
             addForSale.setString(2, address);
             addForSale.setString(3,city);
-            addForSale.setLong(4, zip);
+            addForSale.setInt(4, zip);
             addForSale.setDouble(5, size);
-            addForSale.setInt(6, bedroom);
+            addForSale.setDouble(6, bedroom);
             addForSale.setDouble(7, bathroom);
             addForSale.setDouble(8,price);
             addForSale.executeUpdate();
             con.commit();
-            System.out.println("Your house has been successfully added to the for rent listings!");
+            System.out.println("Your house has been successfully added to the for sale listings!");
 
 
         }catch (SQLException e){
             con.rollback();
+
         }
 
 
 
-
     }
-
-
 
 
 

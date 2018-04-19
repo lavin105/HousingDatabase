@@ -22,6 +22,11 @@ public class Deletion {
             } else if (dontKnow == 2) {
                 con.setAutoCommit(false);
                 System.out.println("Please enter the houses for sale ID");
+                while (!scanInt.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID of the house you wish to delete.");
+                    scanInt.next(); // this is important!
+                }
                 int saleID = scanInt.nextInt();
                 PreparedStatement ps = con.prepareStatement("DELETE FROM forsale WHERE ForSaleID=? AND UserID=?");
                 ps.setInt(1, saleID);
@@ -48,6 +53,11 @@ public class Deletion {
             } else if (dontKnow == 2) {
                 con.setAutoCommit(false);
                 System.out.println("Please enter the houses for rent ID");
+                while (!scanInt.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID of the house you wish to delete.");
+                    scanInt.next(); // this is important!
+                }
                 int saleID = scanInt.nextInt();
                 PreparedStatement ps = con.prepareStatement("DELETE FROM forrent WHERE ForRentID=? AND UserID=?");
                 ps.setInt(1, saleID);

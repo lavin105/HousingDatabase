@@ -83,7 +83,7 @@ public class Selection extends Connect {
 //                s.append('\n');
 
                 while (r.next()) {
-                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                     System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 //                    s.append(r.getInt(1));
 //                    s.append(',');
@@ -93,11 +93,11 @@ public class Selection extends Connect {
 //                    s.append(',');
 //                    s.append(r.getString(4));
 //                    s.append(',');
-//                    s.append(r.getLong(5));
+//                    s.append(r.getInt(5));
 //                    s.append(',');
 //                    s.append(r.getDouble(6));
 //                    s.append(',');
-//                    s.append(r.getInt(7));
+//                    s.append(r.getDouble(7));
 //                    s.append(',');
 //                    s.append(r.getFloat(8));
 //                    s.append(',');
@@ -176,7 +176,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -224,7 +224,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
 
                         }
@@ -271,7 +271,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
 
                         }
@@ -326,7 +326,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
 
                         }
@@ -380,7 +380,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
 
                         }
@@ -432,7 +432,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
 
                         }
@@ -487,7 +487,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
 
                         }
@@ -540,7 +540,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
 
                         }
@@ -605,7 +605,7 @@ public class Selection extends Connect {
                     System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                     while (r.next()) {
-                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                         System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                     }
@@ -664,7 +664,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -712,7 +712,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -760,7 +760,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -813,7 +813,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -867,7 +867,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -919,7 +919,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -973,7 +973,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -1026,7 +1026,7 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                         }
@@ -1216,7 +1216,7 @@ public class Selection extends Connect {
                 System.out.format(format, col1, col2,col3, col4,col5,col6);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 while (r.next()){
-                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getLong(5), r.getString(6));
+                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getInt(5), r.getString(6));
                     System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
                 }
             }
@@ -1280,7 +1280,7 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                 while (r.next()){
-                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
 
                     System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
@@ -1346,7 +1346,7 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                 while (r.next()){
-                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getLong(5), r.getDouble(6), r.getInt(7), r.getDouble(8), r.getDouble(9));
+                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
 
                     System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
@@ -1394,7 +1394,7 @@ public class Selection extends Connect {
                 System.out.format(format, col1, col2,col3, col4,col5,col6);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 while (r.next()){
-                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getLong(5), r.getString(6));
+                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getInt(5), r.getString(6));
                     System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
                 }
             }
@@ -1440,7 +1440,7 @@ public class Selection extends Connect {
                 System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 while (r.next()){
-                    System.out.format(format, r.getString(1),r.getString(2), r.getLong(3),r.getString(4),r.getString(5), r.getLong(6), r.getString(7));
+                    System.out.format(format, r.getString(1),r.getString(2), r.getInt(3),r.getString(4),r.getString(5), r.getInt(6), r.getString(7));
                     System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
                 }
             }
@@ -1483,7 +1483,7 @@ public class Selection extends Connect {
                 System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 while (r.next()){
-                    System.out.format(format, r.getString(1),r.getString(2), r.getLong(3),r.getString(4),r.getString(5), r.getLong(6), r.getString(7));
+                    System.out.format(format, r.getString(1),r.getString(2), r.getInt(3),r.getString(4),r.getString(5), r.getInt(6), r.getString(7));
                     System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
                 }
             }

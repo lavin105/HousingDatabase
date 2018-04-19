@@ -19,12 +19,30 @@ public class Updating {
             System.out.println("6- Update Record number of bathrooms");
             System.out.println("7- Update Record the price");
             System.out.println("8- Return to the main menu");
+            while (!scanNum.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.println("In order to update your housing record please select what you would like to update.");
+                System.out.println("1- Update Record Address");
+                System.out.println("2- Update Record City");
+                System.out.println("3- Update Record Zipcode");
+                System.out.println("4- Update Record size");
+                System.out.println("5- Update Record number of bedrooms");
+                System.out.println("6- Update Record number of bathrooms");
+                System.out.println("7- Update Record the price");
+                System.out.println("8- Return to the main menu");
+                scanNum.next(); // this is important!
+            }
 
             int whatToUpdate = scanNum.nextInt();
             if (whatToUpdate == 1) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the address please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update your address to.");
                     String address = scanString.nextLine();
@@ -49,6 +67,11 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the city please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the city to.");
                     String city = scanString.nextLine();
@@ -70,12 +93,22 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the zipcode please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the zipcode to.");
-                    long zip = scanNum.nextLong();
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update the zipcode to.");
+                        scanNum.next(); // this is important!
+                    }
+                    int zip = scanNum.nextInt();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET ZipCode=? WHERE UserID=? AND ForSaleID=?");
                     ps.clearParameters();
-                    ps.setLong(1, zip);
+                    ps.setInt(1, zip);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
@@ -90,8 +123,18 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the size please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the size to.");
+                    while (!scanNum.hasNextDouble()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update the size to.");
+                        scanNum.next(); // this is important!
+                    }
                     double size = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET Size=? WHERE UserID=? AND ForSaleID=?");
                     ps.clearParameters();
@@ -110,12 +153,22 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the  number of bedrooms please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the number of bedrooms to.");
-                    int bed = scanNum.nextInt();
+                    while (!scanNum.hasNextDouble()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update the number of bedrooms to.");
+                        scanNum.next(); // this is important!
+                    }
+                    double bed = scanNum.nextInt();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET Bedrooms=? WHERE UserID=? AND ForSaleID=?");
                     ps.clearParameters();
-                    ps.setInt(1, bed);
+                    ps.setDouble(1, bed);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
@@ -130,8 +183,18 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the number of bathrooms please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the number of bathrooms to.");
+                    while (!scanNum.hasNextDouble()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update the number of bathrooms to.");
+                        scanNum.next(); // this is important!
+                    }
                     double bath = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET Bathrooms=? WHERE UserID=? AND ForSaleID=?");
                     ps.clearParameters();
@@ -150,8 +213,18 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the price please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update your price to.");
+                    while (!scanNum.hasNextDouble()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update your price to.");
+                        scanNum.next(); // this is important!
+                    }
                     double price = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET Price=? WHERE UserID=? AND ForSaleID=?");
                     ps.clearParameters();
@@ -185,12 +258,30 @@ public class Updating {
             System.out.println("6- Update Record number of bathrooms");
             System.out.println("7- Update Record the price");
             System.out.println("8- Return to the main menu");
+            while (!scanNum.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.println("In order to update your housing record please select what you would like to update.");
+                System.out.println("1- Update Record Address");
+                System.out.println("2- Update Record City");
+                System.out.println("3- Update Record Zipcode");
+                System.out.println("4- Update Record size");
+                System.out.println("5- Update Record number of bedrooms");
+                System.out.println("6- Update Record number of bathrooms");
+                System.out.println("7- Update Record the price");
+                System.out.println("8- Return to the main menu");
+                scanNum.next(); // this is important!
+            }
 
             int whatToUpdate = scanNum.nextInt();
             if (whatToUpdate == 1) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the address please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update your address to.");
                     String address = scanString.nextLine();
@@ -209,6 +300,11 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the city please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the city to.");
                     String city = scanString.nextLine();
@@ -230,12 +326,22 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the zipcode please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the zipcode to.");
-                    long zip = scanNum.nextLong();
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update the zipcode to.");
+                        scanNum.next(); // this is important!
+                    }
+                    int zip = scanNum.nextInt();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET ZipCode=? WHERE UserID=? AND ForRentID=?");
                     ps.clearParameters();
-                    ps.setLong(1, zip);
+                    ps.setInt(1, zip);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
@@ -250,8 +356,18 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the size please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the size to.");
+                    while (!scanNum.hasNextDouble()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update size to.");
+                        scanNum.next(); // this is important!
+                    }
                     double size = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET Size=? WHERE UserID=? AND ForRentID=?");
                     ps.clearParameters();
@@ -270,8 +386,18 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the  number of bedrooms please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the number of bedrooms to.");
+                    while (!scanNum.hasNextDouble()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update the number of bedrooms to.");
+                        scanNum.next(); // this is important!
+                    }
                     int bed = scanNum.nextInt();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET Bedrooms=? WHERE UserID=? AND ForRentID=?");
                     ps.clearParameters();
@@ -290,8 +416,18 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the number of bathrooms please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the number of bathrooms to.");
+                    while (!scanNum.hasNextDouble()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to the number of bathrooms to.");
+                        scanNum.next(); // this is important!
+                    }
                     double bath = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET Bathrooms=? WHERE UserID=? AND ForRentID=?");
                     ps.clearParameters();
@@ -310,8 +446,18 @@ public class Updating {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the price please enter it below");
+                    while (!scanNum.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID in order to update");
+                        scanNum.next(); // this is important!
+                    }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update your price to.");
+                    while (!scanNum.hasNextDouble()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Please enter what you would like to update your price to.");
+                        scanNum.next(); // this is important!
+                    }
                     double price = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET Price=? WHERE UserID=? AND ForRentID=?");
                     ps.clearParameters();
