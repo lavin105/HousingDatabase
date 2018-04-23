@@ -14,38 +14,14 @@ public class Selection extends Connect {
     Scanner scanString=new Scanner(System.in);
     String format = "\u2503%1$-18s\u2503%2$-18s\u2503%3$-18s\u2503%4$-18s\u2503%5$-18s\u2503%6$-18s\u2503%7$-18s\u2503%8$-18s\u2503%9$-18s\u2503\n";
 
-
-//    public void showTables(){
-//        try {
-//
-//
-//            String format = "\u2503%1$-25s\u2503\n";
-//            DatabaseMetaData md = con.getMetaData();
-//            ResultSet rs = md.getTables(null, null, "%", null);
-//            System.out.format(format, "+++++++++++++++++++++++++");
-//            System.out.format(format, "Housing Database Tables");
-//            System.out.format(format, "+++++++++++++++++++++++++");
-//
-//            while (rs.next()) {
-//                System.out.format(format,rs.getString(3));
-//                System.out.format(format, "-------------------------");
-//
-//            }
-//        }catch (SQLException e){
-//
-//        }
-//
-//
-//    }
-
     public void selectForSale() {
+        StringBuilder s=new StringBuilder();
         System.out.println("Would you like to filter your selection?");
         System.out.println("1 Yes, 2 No");
         int filter=scan.nextInt();
         if(filter==2) {
 
             try {
-//                StringBuilder s=new StringBuilder();
                 PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale");
                 ResultSet r = p.executeQuery();
                 ResultSetMetaData rm = r.getMetaData();
@@ -59,71 +35,87 @@ public class Selection extends Connect {
                 String col7 = rm.getColumnName(7);
                 String col8= rm.getColumnName(8);
                 String col9=rm.getColumnName(9);
+                if(!r.isBeforeFirst()){
+                    System.out.println("No record exists");
 
-                System.out.println("");
-                System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-                System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
-                System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-//                s.append(col1);
-//                s.append(',');
-//                s.append(col2);
-//                s.append(',');
-//                s.append(col3);
-//                s.append(',');
-//                s.append(col4);
-//                s.append(',');
-//                s.append(col5);
-//                s.append(',');
-//                s.append(col6);
-//                s.append(',');
-//                s.append(col7);
-//                s.append(',');
-//                s.append(col8);
-//                s.append(',');
-//                s.append('\n');
 
-                while (r.next()) {
-                    System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
-                    System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-//                    s.append(r.getInt(1));
-//                    s.append(',');
-//                    s.append(r.getInt(2));
-//                    s.append(',');
-//                    s.append(r.getString(3));
-//                    s.append(',');
-//                    s.append(r.getString(4));
-//                    s.append(',');
-//                    s.append(r.getInt(5));
-//                    s.append(',');
-//                    s.append(r.getDouble(6));
-//                    s.append(',');
-//                    s.append(r.getDouble(7));
-//                    s.append(',');
-//                    s.append(r.getFloat(8));
-//                    s.append(',');
-//                    s.append(r.getDouble(9));
-//                    s.append(',');
-//                    s.append('\n');
-
-                }
-                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
-                int csv=scan.nextInt();
-                if(csv==1){
-                    //ask user for what file they would like to export to
-
-                    //PrintWriter pw=new PrintWriter(new File("test.csv"));
-                    //pw.write(s.toString());
-                    //pw.close();
-
-                    System.out.println("Exported");
                 }else{
-                    System.out.println("Not exported");
+                    System.out.println("");
+                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                    System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                    System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                    s.append(col1);
+                    s.append(',');
+                    s.append(col2);
+                    s.append(',');
+                    s.append(col3);
+                    s.append(',');
+                    s.append(col4);
+                    s.append(',');
+                    s.append(col5);
+                    s.append(',');
+                    s.append(col6);
+                    s.append(',');
+                    s.append(col7);
+                    s.append(',');
+                    s.append(col8);
+                    s.append(',');
+                    s.append(col9);
+                    s.append('\n');
+
+                    while (r.next()) {
+                        System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
+                        System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+                        s.append(r.getInt(1));
+                        s.append(',');
+                        s.append(r.getInt(2));
+                        s.append(',');
+                        s.append(r.getString(3));
+                        s.append(',');
+                        s.append(r.getString(4));
+                        s.append(',');
+                        s.append(r.getInt(5));
+                        s.append(',');
+                        s.append(r.getDouble(6));
+                        s.append(',');
+                        s.append(r.getDouble(7));
+                        s.append(',');
+                        s.append(r.getDouble(8));
+                        s.append(',');
+                        s.append(r.getDouble(9));
+                        s.append('\n');
+
+                    }
+                    System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                    while (!scan.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID to filter by.");
+                        scan.next(); // this is important!
+                    }
+                    int csv=scan.nextInt();
+                    if(csv==1){
+                        System.out.println("Please enter the name of the file you wish to export this data to.");
+                        String _file=scanString.nextLine();
+                        try {
+                            PrintWriter pw = new PrintWriter(new File(_file));
+                            pw.write(s.toString());
+                            pw.close();
+                        }catch (IOException e){
+                            System.out.println("Unable to create file");
+                        }
+
+                        System.out.println("Exported");
+                    }else{
+                        System.out.println("Not exported");
+                    }
+
                 }
+
+
 
 
             } catch (SQLException r) {
-
-//            }catch (FileNotFoundException r){
+                    System.out.println(r.getMessage());
 
             }finally {
                 try {
@@ -174,18 +166,75 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
 
                 } catch (SQLException r) {
-
+                        r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -222,17 +271,74 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -269,17 +375,74 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -324,17 +487,74 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -378,16 +598,73 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
                 } catch (SQLException r) {
-
+                        r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -430,17 +707,74 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
                 } catch (SQLException r) {
-
+                        r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -485,18 +819,75 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
 
                     }
 
 
                 } catch (SQLException r) {
-
+                        r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -538,18 +929,75 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1), r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------", "------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
 
                     }
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -575,6 +1023,7 @@ public class Selection extends Connect {
         }
     }
     public void selectForRent() {
+        StringBuilder s=new StringBuilder();
         System.out.println("Would you like to filter your selection?");
         System.out.println("1 Yes, 2 No");
         int filter=scan.nextInt();
@@ -603,12 +1052,69 @@ public class Selection extends Connect {
                     System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                     System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                     System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                    s.append(col1);
+                    s.append(',');
+                    s.append(col2);
+                    s.append(',');
+                    s.append(col3);
+                    s.append(',');
+                    s.append(col4);
+                    s.append(',');
+                    s.append(col5);
+                    s.append(',');
+                    s.append(col6);
+                    s.append(',');
+                    s.append(col7);
+                    s.append(',');
+                    s.append(col8);
+                    s.append(',');
+                    s.append(col9);
+                    s.append('\n');
                     while (r.next()) {
                         System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                         System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                        s.append(r.getInt(1));
+                        s.append(',');
+                        s.append(r.getInt(2));
+                        s.append(',');
+                        s.append(r.getString(3));
+                        s.append(',');
+                        s.append(r.getString(4));
+                        s.append(',');
+                        s.append(r.getInt(5));
+                        s.append(',');
+                        s.append(r.getDouble(6));
+                        s.append(',');
+                        s.append(r.getDouble(7));
+                        s.append(',');
+                        s.append(r.getDouble(8));
+                        s.append(',');
+                        s.append(r.getDouble(9));
+                        s.append('\n');
                     }
+                    System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                    while (!scan.hasNextInt()) {
+                        System.out.println("That's not a number!");
+                        System.out.println("Enter the ID to filter by.");
+                        scan.next(); // this is important!
+                    }
+                    int csv=scan.nextInt();
+                    if(csv==1){
+                        System.out.println("Please enter the name of the file you wish to export this data to.");
+                        String _file=scanString.nextLine();
+                        try {
+                            PrintWriter pw = new PrintWriter(new File(_file));
+                            pw.write(s.toString());
+                            pw.close();
+                        }catch (IOException e){
+                            System.out.println("Unable to create file");
+                        }
+
+                        System.out.println("Exported");
+                    }else{
+                        System.out.println("Not exported");
+                    }
+
                 }
 
 
@@ -617,7 +1123,7 @@ public class Selection extends Connect {
 
 
             } catch (SQLException r) {
-
+                    r.printStackTrace();
             }finally {
                 try {
                     con.close();
@@ -662,19 +1168,76 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -710,19 +1273,76 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
 
                     }
 
 
 
                 } catch (SQLException r) {
-
+                r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -758,19 +1378,76 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
 
 
                 } catch (SQLException r) {
-
+                        r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -811,19 +1488,76 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
 
 
                 } catch (SQLException r) {
-
+                        r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -865,18 +1599,75 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -917,19 +1708,76 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -971,19 +1819,76 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -1024,19 +1929,76 @@ public class Selection extends Connect {
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                        s.append(col1);
+                        s.append(',');
+                        s.append(col2);
+                        s.append(',');
+                        s.append(col3);
+                        s.append(',');
+                        s.append(col4);
+                        s.append(',');
+                        s.append(col5);
+                        s.append(',');
+                        s.append(col6);
+                        s.append(',');
+                        s.append(col7);
+                        s.append(',');
+                        s.append(col8);
+                        s.append(',');
+                        s.append(col9);
+                        s.append('\n');
                         while (r.next()) {
                             System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                            s.append(r.getInt(1));
+                            s.append(',');
+                            s.append(r.getInt(2));
+                            s.append(',');
+                            s.append(r.getString(3));
+                            s.append(',');
+                            s.append(r.getString(4));
+                            s.append(',');
+                            s.append(r.getInt(5));
+                            s.append(',');
+                            s.append(r.getDouble(6));
+                            s.append(',');
+                            s.append(r.getDouble(7));
+                            s.append(',');
+                            s.append(r.getDouble(8));
+                            s.append(',');
+                            s.append(r.getDouble(9));
+                            s.append('\n');
                         }
+                        System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                        while (!scan.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Enter the ID to filter by.");
+                            scan.next(); // this is important!
+                        }
+                        int csv=scan.nextInt();
+                        if(csv==1){
+                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            String _file=scanString.nextLine();
+                            try {
+                                PrintWriter pw = new PrintWriter(new File(_file));
+                                pw.write(s.toString());
+                                pw.close();
+                            }catch (IOException e){
+                                System.out.println("Unable to create file");
+                            }
+
+                            System.out.println("Exported");
+                        }else{
+                            System.out.println("Not exported");
+                        }
+
                     }
 
 
 
 
                 } catch (SQLException r) {
-
+                    r.printStackTrace();
                 }finally {
                     try {
                         con.close();
@@ -1063,6 +2025,8 @@ public class Selection extends Connect {
     }
 
     public void avgPriceForSalePerCity(){
+        StringBuilder s=new StringBuilder();
+
         try {
             System.out.println("Please enter the city in which you would like to see the average price of houses for sale.");
             String city = scanString.nextLine();
@@ -1084,10 +2048,41 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
                 System.out.format(format, col1, col2);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getString(1),r.getDouble(2));
                     System.out.format(format, "--------------------", "--------------------");
+                    s.append(r.getString(1));
+                    s.append(',');
+                    s.append(r.getDouble(2));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
@@ -1095,7 +2090,7 @@ public class Selection extends Connect {
 
 
         }catch (SQLException e){
-
+            e.printStackTrace();
         }finally {
             try {
                 con.close();
@@ -1107,6 +2102,8 @@ public class Selection extends Connect {
 
     }
     public void avgPriceForRentPerCity(){
+        StringBuilder s=new StringBuilder();
+
         try {
             System.out.println("Please enter the city in which you would like to see the average price of houses for rent.");
             String city = scanString.nextLine();
@@ -1128,16 +2125,47 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
                 System.out.format(format, col1, col2);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getString(1),r.getDouble(2));
                     System.out.format(format, "--------------------", "--------------------");
+                    s.append(r.getString(1));
+                    s.append(',');
+                    s.append(r.getDouble(2));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
 
         }catch (SQLException e){
-
+            e.printStackTrace();
         }finally {
             try {
                 con.close();
@@ -1148,6 +2176,8 @@ public class Selection extends Connect {
 
     }
     public void userForSaleForRent(){
+        StringBuilder s=new StringBuilder();
+
         try {
             System.out.println("Displaying users with a house for sale and for rent");
             PreparedStatement p = con.prepareStatement("SELECT * FROM SellsAndRents");
@@ -1167,17 +2197,48 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
                 System.out.format(format, col1, col2);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getString(1),r.getString(2));
                     System.out.format(format, "--------------------", "--------------------");
+                    s.append(r.getString(1));
+                    s.append(',');
+                    s.append(r.getString(2));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
 
 
         }catch (SQLException e){
-
+            e.printStackTrace();
         }finally {
             try {
                 con.close();
@@ -1189,6 +2250,8 @@ public class Selection extends Connect {
     }
 
     public void viewAgents(){
+        StringBuilder s=new StringBuilder();
+
         try{
             PreparedStatement p = con.prepareStatement("SELECT agents.AgentID, AgentFirstName, AgentLastName, CityJurisdiction, Phone, AgentEmail FROM agents JOIN agentinformation ON agents.AgentID=agentinformation.AgentID");
             ResultSet r=p.executeQuery();
@@ -1213,16 +2276,63 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3, col4,col5,col6);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append(',');
+                s.append(col3);
+                s.append(',');
+                s.append(col4);
+                s.append(',');
+                s.append(col5);
+                s.append(',');
+                s.append(col6);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getInt(5), r.getString(6));
                     System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
+                    s.append(r.getInt(1));
+                    s.append(',');
+                    s.append(r.getString(2));
+                    s.append(',');
+                    s.append(r.getString(3));
+                    s.append(',');
+                    s.append(r.getString(4));
+                    s.append(',');
+                    s.append(r.getInt(5));
+                    s.append(',');
+                    s.append(r.getString(6));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
 
         }catch (SQLException e){
-
+            e.printStackTrace();
         }finally {
             try {
                 con.close();
@@ -1234,6 +2344,8 @@ public class Selection extends Connect {
 
     }
     public void betweenPriceRangeSale(){
+        StringBuilder s=new StringBuilder();
+
         try{
             System.out.println("In order to find houses between a certain range we need a min and a max");
             System.out.println("What is the minimum price you are searching for?");
@@ -1276,20 +2388,77 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                 System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append(',');
+                s.append(col3);
+                s.append(',');
+                s.append(col4);
+                s.append(',');
+                s.append(col5);
+                s.append(',');
+                s.append(col6);
+                s.append(',');
+                s.append(col7);
+                s.append(',');
+                s.append(col8);
+                s.append(',');
+                s.append(col9);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
 
                     System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                    s.append(r.getInt(1));
+                    s.append(',');
+                    s.append(r.getInt(2));
+                    s.append(',');
+                    s.append(r.getString(3));
+                    s.append(',');
+                    s.append(r.getString(4));
+                    s.append(',');
+                    s.append(r.getInt(5));
+                    s.append(',');
+                    s.append(r.getDouble(6));
+                    s.append(',');
+                    s.append(r.getDouble(7));
+                    s.append(',');
+                    s.append(r.getDouble(8));
+                    s.append(',');
+                    s.append(r.getDouble(9));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
 
 
         }catch (SQLException e){
-
+        e.printStackTrace();
         }finally {
             try {
                 con.close();
@@ -1300,6 +2469,8 @@ public class Selection extends Connect {
     }
 
     public void betweenPriceRangeRent(){
+        StringBuilder s=new StringBuilder();
+
         try{
             System.out.println("In order to find houses between a certain range we need a min and a max");
             System.out.println("What is the minimum price you are searching for?");
@@ -1342,20 +2513,77 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                 System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
-
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append(',');
+                s.append(col3);
+                s.append(',');
+                s.append(col4);
+                s.append(',');
+                s.append(col5);
+                s.append(',');
+                s.append(col6);
+                s.append(',');
+                s.append(col7);
+                s.append(',');
+                s.append(col8);
+                s.append(',');
+                s.append(col9);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
 
                     System.out.format(format, "------------------", "------------------", "------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
-
+                    s.append(r.getInt(1));
+                    s.append(',');
+                    s.append(r.getInt(2));
+                    s.append(',');
+                    s.append(r.getString(3));
+                    s.append(',');
+                    s.append(r.getString(4));
+                    s.append(',');
+                    s.append(r.getInt(5));
+                    s.append(',');
+                    s.append(r.getDouble(6));
+                    s.append(',');
+                    s.append(r.getDouble(7));
+                    s.append(',');
+                    s.append(r.getDouble(8));
+                    s.append(',');
+                    s.append(r.getDouble(9));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
 
 
         }catch (SQLException e){
-
+            e.printStackTrace();
         }finally {
             try {
                 con.close();
@@ -1365,6 +2593,8 @@ public class Selection extends Connect {
         }
     }
     public void viewAgentsByCity(){
+        StringBuilder s=new StringBuilder();
+
         try{
             System.out.println("Please enter the city in which you like to filter agents by.");
             String city=scanString.nextLine();
@@ -1391,16 +2621,63 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3, col4,col5,col6);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append(',');
+                s.append(col3);
+                s.append(',');
+                s.append(col4);
+                s.append(',');
+                s.append(col5);
+                s.append(',');
+                s.append(col6);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getInt(5), r.getString(6));
                     System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------");
+                    s.append(r.getInt(1));
+                    s.append(',');
+                    s.append(r.getString(2));
+                    s.append(',');
+                    s.append(r.getString(3));
+                    s.append(',');
+                    s.append(r.getString(4));
+                    s.append(',');
+                    s.append(r.getInt(5));
+                    s.append(',');
+                    s.append(r.getString(6));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
 
         }catch (SQLException e){
-
+            e.printStackTrace();
         }finally {
             try {
                 con.close();
@@ -1413,6 +2690,8 @@ public class Selection extends Connect {
     }
 
     public void AgentsAndAddressForSale(){
+        StringBuilder s=new StringBuilder();
+
         try{
         PreparedStatement p = con.prepareStatement("SELECT Address, forsale.City, ZipCode, AgentFirstName, AgentLastName, agentinformation.Phone, AgentEmail FROM forsale JOIN agentinformation on forsale.city=agentinformation.CityJurisdiction JOIN agents ON agents.AgentID=agentinformation.AgentID");
         ResultSet r=p.executeQuery();
@@ -1437,15 +2716,66 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append(',');
+                s.append(col3);
+                s.append(',');
+                s.append(col4);
+                s.append(',');
+                s.append(col5);
+                s.append(',');
+                s.append(col6);
+                s.append(',');
+                s.append(col7);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getString(1),r.getString(2), r.getInt(3),r.getString(4),r.getString(5), r.getInt(6), r.getString(7));
                     System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
+                    s.append(r.getString(1));
+                    s.append(',');
+                    s.append(r.getString(2));
+                    s.append(',');
+                    s.append(r.getInt(3));
+                    s.append(',');
+                    s.append(r.getString(4));
+                    s.append(',');
+                    s.append(r.getString(5));
+                    s.append(',');
+                    s.append(r.getInt(6));
+                    s.append(',');
+                    s.append(r.getString(7));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
     }catch (SQLException e){
-
+        e.printStackTrace();
     }finally {
             try {
                 con.close();
@@ -1455,6 +2785,8 @@ public class Selection extends Connect {
         }
     }
     public void AgentsAndAddressForRent(){
+        StringBuilder s=new StringBuilder();
+
         try{
             PreparedStatement p = con.prepareStatement("SELECT Address, forrent.City, ZipCode, AgentFirstName, AgentLastName, agentinformation.Phone, AgentEmail FROM forrent JOIN agentinformation on forsale.city=agentinformation.CityJurisdiction JOIN agents ON agents.AgentID=agentinformation.AgentID");
             ResultSet r=p.executeQuery();
@@ -1480,16 +2812,67 @@ public class Selection extends Connect {
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append(',');
+                s.append(col3);
+                s.append(',');
+                s.append(col4);
+                s.append(',');
+                s.append(col5);
+                s.append(',');
+                s.append(col6);
+                s.append(',');
+                s.append(col7);
+                s.append('\n');
                 while (r.next()){
                     System.out.format(format, r.getString(1),r.getString(2), r.getInt(3),r.getString(4),r.getString(5), r.getInt(6), r.getString(7));
                     System.out.format(format, "--------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","--------------------");
+                    s.append(r.getString(1));
+                    s.append(',');
+                    s.append(r.getString(2));
+                    s.append(',');
+                    s.append(r.getInt(3));
+                    s.append(',');
+                    s.append(r.getString(4));
+                    s.append(',');
+                    s.append(r.getString(5));
+                    s.append(',');
+                    s.append(r.getInt(6));
+                    s.append(',');
+                    s.append(r.getString(7));
+                    s.append('\n');
                 }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
             }
 
 
 
         }catch (SQLException e){
-
+            e.printStackTrace();
         }finally {
             try {
                 con.close();
