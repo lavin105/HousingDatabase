@@ -1150,9 +1150,7 @@ public class Selection extends Connect {
     public void userForSaleForRent(){
         try {
             System.out.println("Displaying users with a house for sale and for rent");
-            PreparedStatement p = con.prepareStatement("SELECT  DISTINCT FirstName, LastName FROM users u \n" +
-                    "JOIN forrent f ON u.UserID=f.UserID \n" +
-                    "JOIN forsale f1 WHERE f1.UserID=f.UserID;");
+            PreparedStatement p = con.prepareStatement("SELECT * FROM SellsAndRents");
             ResultSet r=p.executeQuery();
             ResultSetMetaData rm = r.getMetaData();
             String col1 = rm.getColumnName(1);
