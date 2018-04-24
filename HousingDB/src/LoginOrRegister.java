@@ -5,7 +5,9 @@ import java.sql.SQLException;
 import java.util.Scanner;
 public class LoginOrRegister {
     Scanner scan=new Scanner(System.in);
-     Connect c=new Connect();
+    Scanner scanNum=new Scanner(System.in);
+
+    Connect c=new Connect();
      Connection con=c.getConnection();
      public static int primary_keys;
 
@@ -47,12 +49,24 @@ public class LoginOrRegister {
             String fname = scan.nextLine();
             System.out.println("Please enter your last name");
             String lname = scan.nextLine();
-            PreparedStatement ps = con.prepareStatement("INSERT INTO users(Username,Password, FirstName, LastName) VALUES (?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
+            System.out.println("Please enter your phone number");
+            while (!scanNum.hasNextLong()) {
+                System.out.println("That's not a number!");
+                System.out.println("Please enter your phone number");
+                scanNum.next(); // this is important!
+            }
+            long num = scanNum.nextInt();
+            System.out.println("Please enter your email address");
+            String email = scan.nextLine();
+            PreparedStatement ps = con.prepareStatement("INSERT INTO users(Username,Password, FirstName, LastName, Phone, Email) VALUES (?,?,?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
             ps.clearParameters();
             ps.setString(1, username);
             ps.setInt(2, pass.hashCode());
             ps.setString(3, fname);
             ps.setString(4, lname);
+            ps.setLong(5, num);
+            ps.setString(6, email);
+
             ps.executeUpdate();
             ResultSet rs_key = ps.getGeneratedKeys();
             if (rs_key.next()) {

@@ -2185,7 +2185,9 @@ public class Selection extends Connect {
             ResultSetMetaData rm = r.getMetaData();
             String col1 = rm.getColumnName(1);
             String col2 = rm.getColumnName(2);
-            String format ="\u2503%1$-20s\u2503%2$-20s\u2503\n";
+            String col3 = rm.getColumnName(3);
+            String col4 = rm.getColumnName(4);
+            String format ="\u2503%1$-20s\u2503%2$-20s\u2503%3$-20s\u2503%4$-20s\u2503\n";
 
 
 
@@ -2194,19 +2196,27 @@ public class Selection extends Connect {
 
             }else{
                 System.out.println("");
-                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
-                System.out.format(format, col1, col2);
-                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++");
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
+                System.out.format(format, col1, col2,col3,col4);
+                System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++");
                 s.append(col1);
                 s.append(',');
                 s.append(col2);
+                s.append(',');
+                s.append(col3);
+                s.append(',');
+                s.append(col4);
                 s.append('\n');
                 while (r.next()){
-                    System.out.format(format, r.getString(1),r.getString(2));
-                    System.out.format(format, "--------------------", "--------------------");
+                    System.out.format(format, r.getString(1),r.getString(2),r.getInt(3),r.getString(4));
+                    System.out.format(format, "--------------------", "--------------------","--------------------","--------------------");
                     s.append(r.getString(1));
                     s.append(',');
                     s.append(r.getString(2));
+                    s.append(',');
+                    s.append(r.getString(3));
+                    s.append(',');
+                    s.append(r.getString(4));
                     s.append('\n');
                 }
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");

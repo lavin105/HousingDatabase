@@ -15,8 +15,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -25,7 +25,7 @@
       <file leaf-file-name="theSystem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/theSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
+            <state relative-caret-position="4862">
               <caret line="364" column="25" lean-forward="false" selection-start-line="364" selection-start-column="25" selection-end-line="364" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -47,13 +47,13 @@
       <file leaf-file-name="LoginOrRegister.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LoginOrRegister.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="884">
+              <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1524121848591" expanded="true" signature="652:702" ph="SELECT DISTI... users" />
-                <marker date="1524121848591" expanded="true" signature="652:717" ph="SELECT DISTI... users" />
-                <marker date="1524121848591" expanded="true" signature="1736:1810" ph="INSERT INTO users... " />
+                <marker date="1524609870347" expanded="true" signature="696:746" ph="SELECT DISTI... users" />
+                <marker date="1524609870347" expanded="true" signature="696:761" ph="SELECT DISTI... users" />
+                <marker date="1524609870347" expanded="true" signature="2242:2334" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="Insertion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Insertion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2091">
+            <state relative-caret-position="1569">
               <caret line="123" column="82" lean-forward="false" selection-start-line="123" selection-start-column="82" selection-end-line="123" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -76,8 +76,8 @@
       <file leaf-file-name="Deletion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Deletion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-369">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="26" column="88" lean-forward="true" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1524106057593" expanded="true" signature="1387:1437" ph="DELETE FROM forsale... " />
@@ -90,36 +90,36 @@
       <file leaf-file-name="Selection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Selection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-315">
-              <caret line="2844" column="0" lean-forward="false" selection-start-line="2844" selection-start-column="0" selection-end-line="2844" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="2189" column="86" lean-forward="false" selection-start-line="2189" selection-start-column="86" selection-end-line="2189" selection-end-column="86" />
               <folding>
-                <marker date="1524453032287" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
-                <marker date="1524453032287" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
-                <marker date="1524453032287" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
-                <marker date="1524453032287" expanded="true" signature="111223:111389" ph="SELECT agent... agents" />
-                <marker date="1524453032287" expanded="true" signature="116129:116178" ph="SELECT * FRO... ForSale" />
-                <marker date="1524453032287" expanded="true" signature="121708:121757" ph="SELECT * FRO... ForRent" />
-                <marker date="1524453032287" expanded="true" signature="126514:126705" ph="SELECT agent... agents" />
-                <marker date="1524453032287" expanded="true" signature="130610:130854" ph="SELECT Addre... forsale" />
-                <marker date="1524453032287" expanded="true" signature="134934:135178" ph="SELECT Addre... forsale" />
+                <marker date="1524609474318" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
+                <marker date="1524609474318" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
+                <marker date="1524609474318" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
+                <marker date="1524609474318" expanded="true" signature="111806:111972" ph="SELECT agent... agents" />
+                <marker date="1524609474318" expanded="true" signature="116712:116761" ph="SELECT * FRO... ForSale" />
+                <marker date="1524609474318" expanded="true" signature="122291:122340" ph="SELECT * FRO... ForRent" />
+                <marker date="1524609474318" expanded="true" signature="127097:127288" ph="SELECT agent... agents" />
+                <marker date="1524609474318" expanded="true" signature="131193:131437" ph="SELECT Addre... forsale" />
+                <marker date="1524609474318" expanded="true" signature="135517:135761" ph="SELECT Addre... forsale" />
               </folding>
             </state>
           </provider>
@@ -128,8 +128,8 @@
       <file leaf-file-name="Connect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Connect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="153">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -183,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/HomePage.java" />
         <option value="$PROJECT_DIR$/src/poop.form" />
         <option value="$PROJECT_DIR$/src/test.form" />
-        <option value="$PROJECT_DIR$/src/Connect.java" />
         <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/src/Update.java" />
         <option value="$PROJECT_DIR$/src/d.java" />
@@ -195,9 +194,10 @@
         <option value="$PROJECT_DIR$/src/Insertion.java" />
         <option value="$PROJECT_DIR$/src/Updating.java" />
         <option value="$PROJECT_DIR$/src/theSystem.java" />
-        <option value="$PROJECT_DIR$/src/LoginOrRegister.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Connect.java" />
         <option value="$PROJECT_DIR$/src/Selection.java" />
+        <option value="$PROJECT_DIR$/src/LoginOrRegister.java" />
       </list>
     </option>
   </component>
@@ -246,7 +246,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -263,6 +262,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -437,15 +437,16 @@
       <workItem from="1523297910448" duration="1245000" />
       <workItem from="1523642700912" duration="16608000" />
       <workItem from="1523731347465" duration="22290000" />
-      <workItem from="1523990690513" duration="23876000" />
+      <workItem from="1523990690513" duration="24462000" />
+      <workItem from="1524608142242" duration="1858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73200000" />
+    <option name="totallyTimeSpent" value="75644000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -456,14 +457,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75594294" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55942947" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64342314" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16640624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16617863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -475,6 +475,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -519,23 +520,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginOrRegister.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="71" lean-forward="false" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1524121848591" expanded="true" signature="652:702" ph="SELECT DISTI... users" />
-            <marker date="1524121848591" expanded="true" signature="652:717" ph="SELECT DISTI... users" />
-            <marker date="1524121848591" expanded="true" signature="1736:1810" ph="INSERT INTO users... " />
+            <marker date="1524609870347" expanded="true" signature="696:746" ph="SELECT DISTI... users" />
+            <marker date="1524609870347" expanded="true" signature="696:761" ph="SELECT DISTI... users" />
+            <marker date="1524609870347" expanded="true" signature="2242:2334" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -557,33 +550,33 @@
         <state relative-caret-position="1377">
           <caret line="81" column="33" lean-forward="true" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
           <folding>
-            <marker date="1524453032287" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
-            <marker date="1524453032287" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
-            <marker date="1524453032287" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
-            <marker date="1524453032287" expanded="true" signature="111223:111389" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="116129:116178" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="121708:121757" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="126514:126705" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="130610:130854" ph="SELECT Addre... forsale" />
-            <marker date="1524453032287" expanded="true" signature="134934:135178" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
+            <marker date="1524609474318" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
+            <marker date="1524609474318" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
+            <marker date="1524609474318" expanded="true" signature="111806:111972" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="116712:116761" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="122291:122340" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="127097:127288" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="131193:131437" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="135517:135761" ph="SELECT Addre... forsale" />
           </folding>
         </state>
       </provider>
@@ -633,33 +626,33 @@
         <state relative-caret-position="1751">
           <caret line="111" column="52" lean-forward="false" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
           <folding>
-            <marker date="1524453032287" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
-            <marker date="1524453032287" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
-            <marker date="1524453032287" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
-            <marker date="1524453032287" expanded="true" signature="111223:111389" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="116129:116178" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="121708:121757" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="126514:126705" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="130610:130854" ph="SELECT Addre... forsale" />
-            <marker date="1524453032287" expanded="true" signature="134934:135178" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
+            <marker date="1524609474318" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
+            <marker date="1524609474318" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
+            <marker date="1524609474318" expanded="true" signature="111806:111972" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="116712:116761" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="122291:122340" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="127097:127288" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="131193:131437" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="135517:135761" ph="SELECT Addre... forsale" />
           </folding>
         </state>
       </provider>
@@ -693,33 +686,33 @@
         <state relative-caret-position="1887">
           <caret line="111" column="52" lean-forward="false" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
           <folding>
-            <marker date="1524453032287" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
-            <marker date="1524453032287" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
-            <marker date="1524453032287" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
-            <marker date="1524453032287" expanded="true" signature="111223:111389" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="116129:116178" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="121708:121757" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="126514:126705" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="130610:130854" ph="SELECT Addre... forsale" />
-            <marker date="1524453032287" expanded="true" signature="134934:135178" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
+            <marker date="1524609474318" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
+            <marker date="1524609474318" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
+            <marker date="1524609474318" expanded="true" signature="111806:111972" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="116712:116761" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="122291:122340" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="127097:127288" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="131193:131437" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="135517:135761" ph="SELECT Addre... forsale" />
           </folding>
         </state>
       </provider>
@@ -753,33 +746,33 @@
         <state relative-caret-position="4675">
           <caret line="275" column="54" lean-forward="true" selection-start-line="275" selection-start-column="54" selection-end-line="275" selection-end-column="54" />
           <folding>
-            <marker date="1524453032287" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
-            <marker date="1524453032287" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
-            <marker date="1524453032287" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
-            <marker date="1524453032287" expanded="true" signature="111223:111389" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="116129:116178" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="121708:121757" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="126514:126705" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="130610:130854" ph="SELECT Addre... forsale" />
-            <marker date="1524453032287" expanded="true" signature="134934:135178" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
+            <marker date="1524609474318" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
+            <marker date="1524609474318" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
+            <marker date="1524609474318" expanded="true" signature="111806:111972" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="116712:116761" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="122291:122340" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="127097:127288" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="131193:131437" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="135517:135761" ph="SELECT Addre... forsale" />
           </folding>
         </state>
       </provider>
@@ -805,33 +798,33 @@
         <state relative-caret-position="187">
           <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
           <folding>
-            <marker date="1524453032287" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
-            <marker date="1524453032287" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
-            <marker date="1524453032287" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
-            <marker date="1524453032287" expanded="true" signature="111223:111389" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="116129:116178" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="121708:121757" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="126514:126705" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="130610:130854" ph="SELECT Addre... forsale" />
-            <marker date="1524453032287" expanded="true" signature="134934:135178" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
+            <marker date="1524609474318" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
+            <marker date="1524609474318" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
+            <marker date="1524609474318" expanded="true" signature="111806:111972" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="116712:116761" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="122291:122340" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="127097:127288" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="131193:131437" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="135517:135761" ph="SELECT Addre... forsale" />
           </folding>
         </state>
       </provider>
@@ -855,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="138" column="36" lean-forward="false" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -867,7 +859,7 @@
         <state relative-caret-position="-5877">
           <caret line="110" column="30" lean-forward="false" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1524107250317" expanded="true" signature="2697:2756" ph="UPDATE forsale... " />
             <marker date="1524107250317" expanded="true" signature="4180:4236" ph="UPDATE forsale... " />
             <marker date="1524107250317" expanded="true" signature="5771:5830" ph="UPDATE forsale... " />
@@ -886,42 +878,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine.java">
+    <entry file="file://$PROJECT_DIR$/t.csv" />
+    <entry file="file://$PROJECT_DIR$/t" />
+    <entry file="file://$PROJECT_DIR$/test" />
+    <entry file="file://$PROJECT_DIR$/fart" />
+    <entry file="file://$PROJECT_DIR$/ddz.csv" />
+    <entry file="file://$PROJECT_DIR$/dog.csv" />
+    <entry file="file://$PROJECT_DIR$/test.csv" />
+    <entry file="file://$PROJECT_DIR$/d.csv" />
+    <entry file="file://$PROJECT_DIR$/p.csv" />
+    <entry file="file://$PROJECT_DIR$/mydata.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginOrRegister.java">
+    <entry file="file://$PROJECT_DIR$/src/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1524121848591" expanded="true" signature="652:702" ph="SELECT DISTI... users" />
-            <marker date="1524121848591" expanded="true" signature="652:717" ph="SELECT DISTI... users" />
-            <marker date="1524121848591" expanded="true" signature="1736:1810" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deletion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1524106057593" expanded="true" signature="1387:1437" ph="DELETE FROM forsale... " />
-            <marker date="1524106057593" expanded="true" signature="2810:2860" ph="DELETE FROM forrent... " />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Insertion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2091">
+        <state relative-caret-position="1569">
           <caret line="123" column="82" lean-forward="false" selection-start-line="123" selection-start-column="82" selection-end-line="123" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -931,73 +915,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/t.csv">
+    <entry file="file://$PROJECT_DIR$/src/Deletion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ddz.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dog.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="26" column="88" lean-forward="true" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1524106057593" expanded="true" signature="1387:1437" ph="DELETE FROM forsale... " />
+            <marker date="1524106057593" expanded="true" signature="2810:2860" ph="DELETE FROM forrent... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Connect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="153">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/theSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
+        <state relative-caret-position="4862">
           <caret line="364" column="25" lean-forward="false" selection-start-line="364" selection-start-column="25" selection-end-line="364" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1007,60 +947,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Selection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="2844" column="0" lean-forward="false" selection-start-line="2844" selection-start-column="0" selection-end-line="2844" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="2189" column="86" lean-forward="false" selection-start-line="2189" selection-start-column="86" selection-end-line="2189" selection-end-column="86" />
           <folding>
-            <marker date="1524453032287" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
-            <marker date="1524453032287" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
-            <marker date="1524453032287" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
-            <marker date="1524453032287" expanded="true" signature="111223:111389" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="116129:116178" ph="SELECT * FRO... ForSale" />
-            <marker date="1524453032287" expanded="true" signature="121708:121757" ph="SELECT * FRO... ForRent" />
-            <marker date="1524453032287" expanded="true" signature="126514:126705" ph="SELECT agent... agents" />
-            <marker date="1524453032287" expanded="true" signature="130610:130854" ph="SELECT Addre... forsale" />
-            <marker date="1524453032287" expanded="true" signature="134934:135178" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="899:920" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="6050:6089" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="11729:11771" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="17180:17214" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="22613:22650" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="28335:28369" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="34055:34093" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="39819:39858" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="45592:45627" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="51825:51846" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="56958:56997" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="62634:62676" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="68066:68100" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="73499:73536" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="79209:79243" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="84925:84963" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="90670:90709" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="96423:96458" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="102633:102717" ph="SELECT City,... forsale" />
+            <marker date="1524609474318" expanded="true" signature="105627:105711" ph="SELECT City,... forrent" />
+            <marker date="1524609474318" expanded="true" signature="108527:108554" ph="SELECT * FRO... SellsAndRents" />
+            <marker date="1524609474318" expanded="true" signature="111806:111972" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="116712:116761" ph="SELECT * FRO... ForSale" />
+            <marker date="1524609474318" expanded="true" signature="122291:122340" ph="SELECT * FRO... ForRent" />
+            <marker date="1524609474318" expanded="true" signature="127097:127288" ph="SELECT agent... agents" />
+            <marker date="1524609474318" expanded="true" signature="131193:131437" ph="SELECT Addre... forsale" />
+            <marker date="1524609474318" expanded="true" signature="135517:135761" ph="SELECT Addre... forsale" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/d.csv">
+    <entry file="file://$PROJECT_DIR$/src/LoginOrRegister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="884">
+          <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1524609870347" expanded="true" signature="696:746" ph="SELECT DISTI... users" />
+            <marker date="1524609870347" expanded="true" signature="696:761" ph="SELECT DISTI... users" />
+            <marker date="1524609870347" expanded="true" signature="2242:2334" ph="INSERT INTO users... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding />
         </state>
       </provider>
