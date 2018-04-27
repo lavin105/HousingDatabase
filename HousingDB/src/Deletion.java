@@ -1,6 +1,8 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Deletion {
@@ -13,13 +15,6 @@ public class Deletion {
     public void deleteForSale() throws SQLException {
         try {
             System.out.println("In order to remove a house for sale please enter the following information.");
-            System.out.println("You will need your home's for sale ID if you do not know it please enter 1");
-            System.out.println("If you do know the ID enter 2 to continue");
-            int dontKnow = scanInt.nextInt();
-            if (dontKnow == 1) {
-                select.selectForSale();
-
-            } else if (dontKnow == 2) {
                 con.setAutoCommit(false);
                 System.out.println("Please enter the houses for sale ID");
                 while (!scanInt.hasNextInt()) {
@@ -32,11 +27,17 @@ public class Deletion {
                 ps.setInt(1, saleID);
                 ps.setInt(2, LoginOrRegister.primary_keys);
                 ps.executeUpdate();
-                con.commit();
                 System.out.println("Record officially deleted from our records.");
 
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"DELETE FROM forsale WHERE ForSaleID= "+saleID+" AND UserID= "+ LoginOrRegister.primary_keys);
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                con.commit();
 
-            }
+
+
+
         }catch (SQLException e){
             con.rollback();
         }
@@ -44,13 +45,6 @@ public class Deletion {
     public void deleteForRent() throws SQLException {
         try {
             System.out.println("In order to remove a house for sale please enter the following information.");
-            System.out.println("You will need your home's for rent ID if you do not know it please enter 1");
-            System.out.println("If you do know the ID enter 2 to continue");
-            int dontKnow = scanInt.nextInt();
-            if (dontKnow == 1) {
-                select.selectForSale();
-
-            } else if (dontKnow == 2) {
                 con.setAutoCommit(false);
                 System.out.println("Please enter the houses for rent ID");
                 while (!scanInt.hasNextInt()) {
@@ -63,11 +57,16 @@ public class Deletion {
                 ps.setInt(1, saleID);
                 ps.setInt(2, LoginOrRegister.primary_keys);
                 ps.executeUpdate();
-                con.commit();
                 System.out.println("Record officially deleted from our records.");
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"DELETE FROM forrent WHERE ForSaleID= "+saleID+" AND UserID= "+ LoginOrRegister.primary_keys);
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                con.commit();
 
 
-            }
+
+
         }catch (SQLException e){
             con.rollback();
         }

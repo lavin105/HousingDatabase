@@ -2,6 +2,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 public class LoginOrRegister {
     Scanner scan=new Scanner(System.in);
@@ -43,7 +45,7 @@ public class LoginOrRegister {
         try {
             System.out.println("Please enter your admin username to login.");
             String username=scan.nextLine();
-            System.out.println("Please enter your  administrator password to login.");
+            System.out.println("Please enter your administrator password to login.");
             String pass=scan.nextLine();
             PreparedStatement ps=con.prepareStatement("SELECT DISTINCT AdminID FROM administrator WHERE AdminUsername=? AND AdminPassword=? ");
             ps.setString(1,username);
@@ -99,6 +101,10 @@ public class LoginOrRegister {
             }
 
             System.out.println(primary_keys);
+            PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+            p2.setString(1,"INSERT INTO users(Username,Password, FirstName, LastName, Phone, Email) VALUES ("+username+","+ pass.hashCode()+","+fname+","+lname+","+num+","+email+")");
+            p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+            p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
 
         }catch (Exception e){
             e.printStackTrace();

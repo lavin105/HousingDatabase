@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Selection extends Connect {
@@ -86,6 +89,13 @@ public class Selection extends Connect {
                         s.append('\n');
 
                     }
+
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"SELECT * FROM ForSale ");
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+
+
                     System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                     while (!scan.hasNextInt()) {
                         System.out.println("That's not a number!");
@@ -206,6 +216,12 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForSale Where ForSaleID="+id);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -311,6 +327,12 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForSale Where Address LIKE "+add);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+
+                        p2.setInt(3,LoginOrRegister.primary_keys);
+                        p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -415,6 +437,13 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForSale Where City="+city);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);
+
+                        p2.setInt(3,LoginOrRegister.primary_keys);
+                        p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -527,6 +556,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForSale Where ZipCode="+zcode);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -638,6 +671,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForSale Where Size="+sz);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -747,6 +784,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForSale Where Bed="+bed);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -859,6 +900,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForSale Where Bath="+bath);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -969,6 +1014,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForSale Where Price="+price);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -1092,6 +1141,10 @@ public class Selection extends Connect {
                         s.append(r.getDouble(9));
                         s.append('\n');
                     }
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"SELECT * FROM ForRent");
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                     System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                     while (!scan.hasNextInt()) {
                         System.out.println("That's not a number!");
@@ -1208,6 +1261,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForRent WHERE ForRentID="+id);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -1313,6 +1370,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForRent WHERE Address LIKE "+add);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -1418,6 +1479,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForRent WHERE City="+city);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -1528,6 +1593,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForRent WHERE ZipCode="+zcode);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -1639,6 +1708,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForRent WHERE Size="+sz);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -1748,6 +1821,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForRent WHERE Bedrooms="+bed);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -1859,6 +1936,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForRent WHERE Bathrooms="+bath);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -1969,6 +2050,10 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1,"SELECT * FROM ForRent WHERE Price="+price);
+                        p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                         System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
@@ -2060,6 +2145,10 @@ public class Selection extends Connect {
                     s.append(r.getDouble(2));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT City, AVG(Price) as AverageHousePrice FROM forsale WHERE City="+city+" GROUP BY City");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2137,6 +2226,10 @@ public class Selection extends Connect {
                     s.append(r.getDouble(2));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT City, AVG(Price) as AverageHousePrice FROM forrent WHERE City="+city+" GROUP BY City");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2219,6 +2312,10 @@ public class Selection extends Connect {
                     s.append(r.getString(4));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM SellsAndRents");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2263,7 +2360,7 @@ public class Selection extends Connect {
         StringBuilder s=new StringBuilder();
 
         try{
-            PreparedStatement p = con.prepareStatement("SELECT agents.AgentID, AgentFirstName, AgentLastName, CityJurisdiction, Phone, AgentEmail FROM agents JOIN agentinformation ON agents.AgentID=agentinformation.AgentID");
+            PreparedStatement p = con.prepareStatement("SELECT * FROM allagents");
             ResultSet r=p.executeQuery();
             ResultSetMetaData rm = r.getMetaData();
             String col1 = rm.getColumnName(1);
@@ -2314,6 +2411,10 @@ public class Selection extends Connect {
                     s.append(r.getString(6));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM allagents");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2439,6 +2540,10 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM ForSale WHERE Price BETWEEN "+min+" AND "+max);
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2564,6 +2669,10 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM ForRent WHERE Price BETWEEN "+min+" AND "+max);
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2608,7 +2717,7 @@ public class Selection extends Connect {
         try{
             System.out.println("Please enter the city in which you like to filter agents by.");
             String city=scanString.nextLine();
-            PreparedStatement p = con.prepareStatement("SELECT agents.AgentID, AgentFirstName, AgentLastName, CityJurisdiction, Phone, AgentEmail FROM agents JOIN agentinformation ON agents.AgentID=agentinformation.AgentID WHERE CityJurisdiction=?");
+        PreparedStatement p = con.prepareStatement("SELECT * FROM agentbycity WHERE CityJurisdiction=?");
             p.setString(1, city);
             ResultSet r=p.executeQuery();
             ResultSetMetaData rm = r.getMetaData();
@@ -2659,6 +2768,10 @@ public class Selection extends Connect {
                     s.append(r.getString(6));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM agentbycity WHERE CityJurisdiction="+city);
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2703,7 +2816,7 @@ public class Selection extends Connect {
         StringBuilder s=new StringBuilder();
 
         try{
-        PreparedStatement p = con.prepareStatement("SELECT Address, forsale.City, ZipCode, AgentFirstName, AgentLastName, agentinformation.Phone, AgentEmail FROM forsale JOIN agentinformation on forsale.city=agentinformation.CityJurisdiction JOIN agents ON agents.AgentID=agentinformation.AgentID");
+        PreparedStatement p = con.prepareStatement("SELECT * FROM agentaddressforsale");
         ResultSet r=p.executeQuery();
         ResultSetMetaData rm = r.getMetaData();
         String col1 = rm.getColumnName(1);
@@ -2758,6 +2871,10 @@ public class Selection extends Connect {
                     s.append(r.getString(7));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM agentaddressforsale");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2798,7 +2915,7 @@ public class Selection extends Connect {
         StringBuilder s=new StringBuilder();
 
         try{
-            PreparedStatement p = con.prepareStatement("SELECT Address, forrent.City, ZipCode, AgentFirstName, AgentLastName, agentinformation.Phone, AgentEmail FROM forrent JOIN agentinformation on forsale.city=agentinformation.CityJurisdiction JOIN agents ON agents.AgentID=agentinformation.AgentID");
+            PreparedStatement p = con.prepareStatement("SELECT * FROM agentaddressforrent");
             ResultSet r=p.executeQuery();
             ResultSetMetaData rm = r.getMetaData();
             String col1 = rm.getColumnName(1);
@@ -2854,6 +2971,10 @@ public class Selection extends Connect {
                     s.append(r.getString(7));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM agentaddressforrent");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -2966,6 +3087,10 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM ForSale WHERE City="+city+" AND Price>(SELECT AVG(Price) FROM ForSale WHERE City="+city+")");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -3075,6 +3200,10 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM ForSale WHERE City="+city+" AND Price<(SELECT AVG(Price) FROM ForSale WHERE City="+city+")");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -3184,6 +3313,10 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM ForRent WHERE City="+city+" AND Price>(SELECT AVG(Price) FROM ForSale WHERE City="+city+")");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -3293,6 +3426,10 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
+                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                p2.setString(1,"SELECT * FROM ForRent WHERE City="+city+" AND Price<(SELECT AVG(Price) FROM ForSale WHERE City="+city+")");
+                p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -3362,6 +3499,7 @@ public class Selection extends Connect {
                     s.append(r.getInt(1));
                     s.append('\n');
                 }
+
                 System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
@@ -3499,6 +3637,90 @@ public class Selection extends Connect {
                 e.printStackTrace();
             }
         }
+    }
+
+
+
+    public void viewLogs(){
+        StringBuilder s=new StringBuilder();
+
+        try {
+            PreparedStatement p = con.prepareStatement("SELECT * FROM logs");
+            ResultSet r=p.executeQuery();
+            ResultSetMetaData rm = r.getMetaData();
+            String col1 = rm.getColumnName(1);
+            String col2 = rm.getColumnName(2);
+            String col3 = rm.getColumnName(3);
+
+            String format ="\u2503%1$-170s\u2503%2$-20s\u2503%3$-20s\u2503\n";
+
+
+
+            if(!r.isBeforeFirst()){
+                System.out.println("No record exists");
+
+            }else{
+                System.out.println("");
+                System.out.format(format, "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++", "++++++++++++++++++++", "++++++++++++++++++++");
+                System.out.format(format, col1, col2,col3);
+                System.out.format(format, "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++", "++++++++++++++++++++", "++++++++++++++++++++");
+                s.append(col1);
+                s.append(',');
+                s.append(col2);
+                s.append(',');
+                s.append(col3);
+                s.append(',');
+                s.append('\n');
+                while (r.next()){
+                    System.out.format(format, r.getString(1),r.getString(2),r.getInt(3));
+                    System.out.format(format, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------", "--------------------", "--------------------");
+                    s.append(r.getString(1));
+                    s.append(',');
+                    s.append(r.getString(2));
+                    s.append(',');
+                    s.append(r.getInt(3));
+                    s.append('\n');
+                }
+                System.out.println("Would you like to export this data to a CSV file press 1 to export press 2 to continue without exporting?");
+                while (!scan.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Enter the ID to filter by.");
+                    scan.next(); // this is important!
+                }
+                int csv=scan.nextInt();
+                if(csv==1){
+                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    String _file=scanString.nextLine();
+                    try {
+                        PrintWriter pw = new PrintWriter(new File(_file));
+                        pw.write(s.toString());
+                        pw.close();
+                    }catch (IOException e){
+                        System.out.println("Unable to create file");
+                    }
+
+                    System.out.println("Exported");
+                }else{
+                    System.out.println("Not exported");
+                }
+
+            }
+
+
+
+
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
     }
 
 

@@ -4,13 +4,15 @@ import java.sql.SQLException;
 
 public class Connect {
     public Connection con;
+    public Connection logCon;
     public Connection getConnection() {
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Housing?useSSL=false", "lavin105", "Lavin105@m.c.edu");
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
         return con;
     }
+
 
 }

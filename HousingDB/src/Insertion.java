@@ -1,6 +1,8 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Insertion {
@@ -65,11 +67,14 @@ public class Insertion {
             addForSale.setDouble(7, bathroom);
             addForSale.setDouble(8,price);
             addForSale.executeUpdate();
-            con.commit();
             System.out.println("Your house has been successfully added to the for sale listings!");
+            PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+            p2.setString(1,"INSERT INTO forsale(UserID, Address,City, ZipCode, Size, Bedrooms, Bathrooms, Price) VALUES ("+LoginOrRegister.primary_keys+","+ address+","+city+","+zip+","+size+","+bedroom+","+bathroom+","+price+")");
+            p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+            p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+            con.commit();
 
-
-         }catch (SQLException e){
+        }catch (SQLException e){
             con.rollback();
 
         }
@@ -132,8 +137,12 @@ public class Insertion {
             addForSale.setDouble(7, bathroom);
             addForSale.setDouble(8,price);
             addForSale.executeUpdate();
-            con.commit();
             System.out.println("Your house has been successfully added to the for sale listings!");
+            PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+            p2.setString(1,"INSERT INTO forrent(UserID, Address,City, ZipCode, Size, Bedrooms, Bathrooms, Price) VALUES ("+LoginOrRegister.primary_keys+","+ address+","+city+","+zip+","+size+","+bedroom+","+bathroom+","+price+")");
+            p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+            p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+            con.commit();
 
 
         }catch (SQLException e){

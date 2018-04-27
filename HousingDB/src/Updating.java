@@ -1,6 +1,8 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Updating {
@@ -54,7 +56,14 @@ public class Updating {
                      int x=ps.executeUpdate();
                      if(x>0){
                          System.out.println("The address has been updated to "+ address);
+
+                         PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                         p2.setString(1,"UPDATE forsale SET Address="+address+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                         p2.setInt(3,LoginOrRegister.primary_keys);
+                         p2.executeUpdate();
                          con.commit();
+
                      }else{
                          System.out.println("Update unsuccessful something went wrong.");
                      }
@@ -81,10 +90,18 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3,updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The city has been updated to "+ city);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forsale SET City="+city+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
+                    con.commit();
+
+
 
                 }catch (SQLException e){
+                    e.printStackTrace();
                     con.rollback();
                 }
 
@@ -112,8 +129,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The zipcode has been updated to "+ zip);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forsale SET ZipCode="+zip+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();
@@ -142,8 +164,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The size has been updated to "+ size);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forsale SET Size="+size+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch(SQLException e){
                     con.rollback();
@@ -172,8 +199,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The number of bedrooms has been updated to "+ bed);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forsale SET Bedrooms="+bed+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();
@@ -202,8 +234,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The number of bathrooms has been updated to "+ bath);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forsale SET Bathrooms="+bath+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();
@@ -232,8 +269,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The price has been updated to "+ price);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forsale SET Price="+price+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();
@@ -291,8 +333,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The address has been updated to "+ address);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forrent SET Address="+address+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
                 }catch (SQLException e){
                     con.rollback();
                 }
@@ -314,8 +361,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3,updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The city has been updated to "+ city);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forrent SET City="+city+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();
@@ -345,8 +397,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The zipcode has been updated to "+ zip);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forrent SET ZipCode="+zip+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();
@@ -375,8 +432,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The size has been updated to "+ size);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forrent SET Size="+size+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch(SQLException e){
                     con.rollback();
@@ -405,8 +467,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The number of bedrooms has been updated to "+ bed);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forrent SET Bedrooms="+bed+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();
@@ -435,8 +502,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The number of bathrooms has been updated to "+ bath);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forrent SET Bathrooms="+bath+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();
@@ -465,8 +537,13 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    con.commit();
                     System.out.println("The price has been updated to "+ price);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1,"UPDATE forrent SET Price="+price+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
+                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    con.commit();
+
 
                 }catch (SQLException e){
                     con.rollback();

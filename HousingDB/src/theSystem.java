@@ -62,12 +62,14 @@ public class theSystem {
             System.out.println("What do you need to do?");
             System.out.println("1- View all the users within the database?");
             System.out.println("2- View the number of users within the system?");
-            System.out.println("3- Logout");
+            System.out.println("3- View the database Housing Helper Database log?");
+            System.out.println("4- Logout");
 
             while (!scanInt.hasNextInt()) {
                 System.out.println("1- View all the users within the database?");
                 System.out.println("2- View the number of users within the system?");
-                System.out.println("3- Logout");
+                System.out.println("3- View the database Housing Helper Database log?");
+                System.out.println("4- Logout");
                 System.out.println("Please select between options 1-2 by entering the number corresponding to the option.");
                 scanInt.next(); // this is important!
             }
@@ -102,6 +104,21 @@ public class theSystem {
                     start();
                 }
             }else if(option==3) {
+                s.viewLogs();
+                System.out.println("Back to the main menu?");
+                System.out.println("1-Yes, 2-No");
+                while (!scanInt.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Back to the main menu?");
+                    System.out.println("1-Yes, 2-No");
+                    scanInt.next(); // this is important!
+                }
+                goAgain2 = scanInt.nextInt();
+                if(goAgain2!=1){
+                    start();
+                }
+
+            }else if(option==4) {
                 System.out.println("You have been logged out");
                 start();
 
