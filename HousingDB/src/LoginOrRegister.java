@@ -38,6 +38,31 @@ public class LoginOrRegister {
         }
 
     }
+    public void Adminlogin(){
+
+        try {
+            System.out.println("Please enter your admin username to login.");
+            String username=scan.nextLine();
+            System.out.println("Please enter your  administrator password to login.");
+            String pass=scan.nextLine();
+            PreparedStatement ps=con.prepareStatement("SELECT DISTINCT AdminID FROM administrator WHERE AdminUsername=? AND AdminPassword=? ");
+            ps.setString(1,username);
+            ps.setInt(2,pass.hashCode());
+
+            ResultSet rs=ps.executeQuery();
+            if (rs.next()) {
+                primary_keys = rs.getInt(1);
+                System.out.println(primary_keys);
+            }else{
+                System.out.println("Incorrect password please try again");
+                Adminlogin();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public void register(){
         try {
@@ -55,7 +80,7 @@ public class LoginOrRegister {
                 System.out.println("Please enter your phone number");
                 scanNum.next(); // this is important!
             }
-            long num = scanNum.nextInt();
+            long num = scanNum.nextLong();
             System.out.println("Please enter your email address");
             String email = scan.nextLine();
             PreparedStatement ps = con.prepareStatement("INSERT INTO users(Username,Password, FirstName, LastName, Phone, Email) VALUES (?,?,?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
@@ -76,6 +101,7 @@ public class LoginOrRegister {
             System.out.println(primary_keys);
 
         }catch (Exception e){
+            e.printStackTrace();
             System.out.println("This username already exists please try another username.");
             register();
 

@@ -26,9 +26,10 @@ public class theSystem {
         System.out.println("");
         System.out.println("1- Login");
         System.out.println("2- Register");
-        System.out.println("3- Exit");
+        System.out.println("3- Administrator Login");
+        System.out.println("4- Exit");
 
-        System.out.println("Please enter 1 to Login or 2 to Register 3 to Exit the system");
+        System.out.println("Please enter 1 to Login or 2 to Register 3 to Login as administrator or 4 to Exit the system");
         while (!scanInt.hasNextInt()) {
             System.out.println("Not a valid input");
             System.out.println("Please enter 1 to Login or 2 to Register 3 to Exit the system");
@@ -37,16 +38,78 @@ public class theSystem {
         int logOrreg=scanInt.nextInt();
         if (logOrreg==1){
             l.login();
+            run();
 
         }else if(logOrreg==2){
             l.register();
+            run();
         }else if(logOrreg==3){
+            l.Adminlogin();
+            runAdmin();
+        }else if(logOrreg==4){
             System.out.println("Thank you for using Housing Helper goodbye!");
             System.exit(0);
         }else{
             System.exit(0);
         }
     }
+
+    public void runAdmin() throws InterruptedException{
+        int goAgain2=1;
+        do {
+            s.getConnection();
+            System.out.println("WELCOME ADMINISTRATOR TO THE HOUSING HELPER DATABASE");
+            System.out.println("What do you need to do?");
+            System.out.println("1- View all the users within the database?");
+            System.out.println("2- View the number of users within the system?");
+            System.out.println("3- Logout");
+
+            while (!scanInt.hasNextInt()) {
+                System.out.println("1- View all the users within the database?");
+                System.out.println("2- View the number of users within the system?");
+                System.out.println("3- Logout");
+                System.out.println("Please select between options 1-2 by entering the number corresponding to the option.");
+                scanInt.next(); // this is important!
+            }
+
+            int option = scanInt.nextInt();
+            if(option==1){
+                s.viewAllUsers();
+                System.out.println("Back to the main menu?");
+                System.out.println("1-Yes, 2-No");
+                while (!scanInt.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Back to the main menu?");
+                    System.out.println("1-Yes, 2-No");
+                    scanInt.next(); // this is important!
+                }
+                goAgain2 = scanInt.nextInt();
+                if(goAgain2!=1){
+                    start();
+                }
+            }else if(option==2){
+                s.viewNumberUsers();
+                System.out.println("Back to the main menu?");
+                System.out.println("1-Yes, 2-No");
+                while (!scanInt.hasNextInt()) {
+                    System.out.println("That's not a number!");
+                    System.out.println("Back to the main menu?");
+                    System.out.println("1-Yes, 2-No");
+                    scanInt.next(); // this is important!
+                }
+                goAgain2 = scanInt.nextInt();
+                if(goAgain2!=1){
+                    start();
+                }
+            }else if(option==3) {
+                System.out.println("You have been logged out");
+                start();
+
+            }
+        }while (goAgain2==1);
+
+    }
+
 
     public void run() throws InterruptedException {
         int goAgain=1;
@@ -80,13 +143,16 @@ public class theSystem {
                     System.out.println("5- View the average house price for sale in a particular city");
                     System.out.println("6- Find users who have both a property for sale and for rent");
                     System.out.println("7- View houses between a certain price range.");
+                    System.out.println("8- View all houses above the average price for sale in your area.");
+                    System.out.println("9- View all houses below the average price for sale in your area.");
+
 
 
                     //view house above certain price
                     //view house below certain price
                     //view house between a certain price
                     //address city agent and agent phone join
-                    System.out.println("8-Return to main menu");
+                    System.out.println("10-Return to main menu");
                     while (!scanInt.hasNextInt()) {
                         System.out.println("Not a valid input");
                         System.out.println("1- View houses for sale.");
@@ -96,7 +162,9 @@ public class theSystem {
                         System.out.println("5- View the average house price for sale in a particular city");
                         System.out.println("6- Find users who have both a property for sale and for rent");
                         System.out.println("7- View houses between a certain price range.");
-                        System.out.println("8-Return to main menu");
+                        System.out.println("8- View all houses above the average price for sale in your area.");
+                        System.out.println("9- View all houses below the average price for sale in your area.");
+                        System.out.println("10-Return to main menu");
                         scanInt.next(); // this is important!
                     }
 
@@ -112,6 +180,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     } else if (forSaleChoice == 2) {
                         i.insertForSale();
@@ -124,6 +195,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     } else if (forSaleChoice == 3) {
                         d.deleteForSale();
@@ -136,6 +210,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     } else if (forSaleChoice == 4) {
 
@@ -149,6 +226,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     }else if(forSaleChoice==5){
                         s.avgPriceForSalePerCity();
@@ -161,6 +241,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
                     }else if(forSaleChoice==6){
                         s.userForSaleForRent();
                         System.out.println("Back to the main menu?");
@@ -172,6 +255,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     }else if(forSaleChoice==7){
                         s.betweenPriceRangeSale();
@@ -184,6 +270,39 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
+
+                    }else if(forSaleChoice==8){
+                        s.aboveAvgPriceForSale();
+                        System.out.println("Back to the main menu?");
+                        System.out.println("1-Yes, 2-No");
+                        while (!scanInt.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Back to the main menu?");
+                            System.out.println("1-Yes, 2-No");
+                            scanInt.next(); // this is important!
+                        }
+                        goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
+
+                    }else if(forSaleChoice==9){
+                        s.belowAvgPriceForSale();
+                        System.out.println("Back to the main menu?");
+                        System.out.println("1-Yes, 2-No");
+                        while (!scanInt.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Back to the main menu?");
+                            System.out.println("1-Yes, 2-No");
+                            scanInt.next(); // this is important!
+                        }
+                        goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     }
 
@@ -198,8 +317,10 @@ public class theSystem {
                     System.out.println("5- View the average house price for rent in a particular city");
                     System.out.println("6- Find users who have both a property for rent and for sale");
                     System.out.println("7- View houses between a certain price range.");
+                    System.out.println("8- View all houses above the average price for rent in your area.");
+                    System.out.println("9- View all houses below the average price for rent in your area.");
+                    System.out.println("10-Return to main menu");
                     //address city agent and agent phone join
-                    System.out.println("8-Return to main menu");
                     while (!scanInt.hasNextInt()) {
                         System.out.println("Not a valid input");
                         System.out.println("1- View houses for rent.");
@@ -209,6 +330,9 @@ public class theSystem {
                         System.out.println("5- View the average house price for rent in a particular city");
                         System.out.println("6- Find users who have both a property for rent and for sale");
                         System.out.println("7- View houses between a certain price range.");
+                        System.out.println("8- View all houses above the average price for rent in your area.");
+                        System.out.println("9- View all houses below the average price for rent in your area.");
+                        System.out.println("10-Return to main menu");
                         scanInt.next(); // this is important!
                     }
 
@@ -224,6 +348,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     } else if (forRentChoice == 2) {
                         i.insertForRent();
@@ -236,6 +363,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     } else if (forRentChoice == 3) {
                         d.deleteForRent();
@@ -248,6 +378,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     } else if (forRentChoice == 4) {
                         u.updateForRent();
@@ -260,6 +393,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     }else if(forRentChoice==5){
                         s.avgPriceForRentPerCity();
@@ -272,6 +408,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
                     }else if(forRentChoice==6){
                         s.userForSaleForRent();
                         System.out.println("Back to the main menu?");
@@ -283,6 +422,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
                     }else if(forRentChoice==7){
                         s.betweenPriceRangeRent();
                         System.out.println("Back to the main menu?");
@@ -294,6 +436,39 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
+                    }
+                    else if(forRentChoice==8){
+                        s.aboveAvgPriceForRent();
+                        System.out.println("Back to the main menu?");
+                        System.out.println("1-Yes, 2-No");
+                        while (!scanInt.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Back to the main menu?");
+                            System.out.println("1-Yes, 2-No");
+                            scanInt.next(); // this is important!
+                        }
+                        goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
+                    }
+                    else if(forRentChoice==9){
+                        s.belowAvgPriceForRent();
+                        System.out.println("Back to the main menu?");
+                        System.out.println("1-Yes, 2-No");
+                        while (!scanInt.hasNextInt()) {
+                            System.out.println("That's not a number!");
+                            System.out.println("Back to the main menu?");
+                            System.out.println("1-Yes, 2-No");
+                            scanInt.next(); // this is important!
+                        }
+                        goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
                     }
 
 
@@ -328,6 +503,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     }else if(agentChoice==2){
                         s.viewAgentsByCity();
@@ -340,6 +518,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     }else if(agentChoice==3){
                         s.AgentsAndAddressForSale();
@@ -352,6 +533,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
 
                     }else if(agentChoice==4){
                         s.AgentsAndAddressForRent();
@@ -364,6 +548,9 @@ public class theSystem {
                             scanInt.next(); // this is important!
                         }
                         goAgain = scanInt.nextInt();
+                        if(goAgain!=1){
+                            start();
+                        }
                     }
 
 
