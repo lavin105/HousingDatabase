@@ -503,7 +503,7 @@ public class theSystem {
                         System.out.println("1- View all agents available.");
                         System.out.println("2- Find agents in your area.");
                         System.out.println("3- Find the address and city of houses for sale with the corresponding agent information ");
-                        System.out.println("4- Find the address and city of houses for sale with the corresponding agent information ");
+                        System.out.println("4- Find the address and city of houses for rent with the corresponding agent information ");
 
                         System.out.println("8-Return to main menu");
                         scanInt.next(); // this is important!

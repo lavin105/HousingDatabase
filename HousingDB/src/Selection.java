@@ -104,7 +104,7 @@ public class Selection extends Connect {
                     }
                     int csv=scan.nextInt();
                     if(csv==1){
-                        System.out.println("Please enter the name of the file you wish to export this data to.");
+                        System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                         String _file=scanString.nextLine();
                         try {
                             PrintWriter pw = new PrintWriter(new File(_file));
@@ -230,7 +230,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -341,7 +341,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -452,7 +452,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -568,7 +568,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -683,7 +683,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -796,7 +796,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -912,7 +912,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -1026,7 +1026,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -1153,7 +1153,7 @@ public class Selection extends Connect {
                     }
                     int csv=scan.nextInt();
                     if(csv==1){
-                        System.out.println("Please enter the name of the file you wish to export this data to.");
+                        System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                         String _file=scanString.nextLine();
                         try {
                             PrintWriter pw = new PrintWriter(new File(_file));
@@ -1273,7 +1273,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -1382,7 +1382,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -1491,7 +1491,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -1605,7 +1605,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -1720,7 +1720,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -1833,7 +1833,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -1948,7 +1948,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -2062,7 +2062,7 @@ public class Selection extends Connect {
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
-                            System.out.println("Please enter the name of the file you wish to export this data to.");
+                            System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                             String _file=scanString.nextLine();
                             try {
                                 PrintWriter pw = new PrintWriter(new File(_file));
@@ -2157,7 +2157,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -2238,7 +2238,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -2324,7 +2324,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -2396,7 +2396,7 @@ public class Selection extends Connect {
                 s.append(col6);
                 s.append('\n');
                 while (r.next()){
-                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getInt(5), r.getString(6));
+                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getString(5), r.getString(6));
                     System.out.format(format, "--------------------", "--------------------","--------------------","-------------------------","--------------------","-------------------------");
                     s.append(r.getInt(1));
                     s.append(',');
@@ -2406,7 +2406,7 @@ public class Selection extends Connect {
                     s.append(',');
                     s.append(r.getString(4));
                     s.append(',');
-                    s.append(r.getInt(5));
+                    s.append(r.getString(5));
                     s.append(',');
                     s.append(r.getString(6));
                     s.append('\n');
@@ -2423,7 +2423,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -2552,7 +2552,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -2681,7 +2681,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -2753,7 +2753,7 @@ public class Selection extends Connect {
                 s.append(col6);
                 s.append('\n');
                 while (r.next()){
-                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getInt(5), r.getString(6));
+                    System.out.format(format, r.getInt(1),r.getString(2), r.getString(3),r.getString(4),r.getString(5), r.getString(6));
                     System.out.format(format, "--------------------", "--------------------","--------------------","-------------------------","--------------------","-------------------------");
                     s.append(r.getInt(1));
                     s.append(',');
@@ -2763,7 +2763,7 @@ public class Selection extends Connect {
                     s.append(',');
                     s.append(r.getString(4));
                     s.append(',');
-                    s.append(r.getInt(5));
+                    s.append(r.getString(5));
                     s.append(',');
                     s.append(r.getString(6));
                     s.append('\n');
@@ -2780,7 +2780,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -2854,7 +2854,7 @@ public class Selection extends Connect {
                 s.append(col7);
                 s.append('\n');
                 while (r.next()){
-                    System.out.format(format, r.getString(1),r.getString(2), r.getInt(3),r.getString(4),r.getString(5), r.getInt(6), r.getString(7));
+                    System.out.format(format, r.getString(1),r.getString(2), r.getInt(3),r.getString(4),r.getString(5), r.getString(6), r.getString(7));
                     System.out.format(format, "------------------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","------------------------------");
                     s.append(r.getString(1));
                     s.append(',');
@@ -2866,7 +2866,7 @@ public class Selection extends Connect {
                     s.append(',');
                     s.append(r.getString(5));
                     s.append(',');
-                    s.append(r.getInt(6));
+                    s.append(r.getString(6));
                     s.append(',');
                     s.append(r.getString(7));
                     s.append('\n');
@@ -2883,7 +2883,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -2954,7 +2954,7 @@ public class Selection extends Connect {
                 s.append(col7);
                 s.append('\n');
                 while (r.next()){
-                    System.out.format(format, r.getString(1),r.getString(2), r.getInt(3),r.getString(4),r.getString(5), r.getInt(6), r.getString(7));
+                    System.out.format(format, r.getString(1),r.getString(2), r.getInt(3),r.getString(4),r.getString(5), r.getString(6), r.getString(7));
                     System.out.format(format, "------------------------------", "--------------------","--------------------","--------------------","--------------------","--------------------","------------------------------");
                     s.append(r.getString(1));
                     s.append(',');
@@ -2966,7 +2966,7 @@ public class Selection extends Connect {
                     s.append(',');
                     s.append(r.getString(5));
                     s.append(',');
-                    s.append(r.getInt(6));
+                    s.append(r.getString(6));
                     s.append(',');
                     s.append(r.getString(7));
                     s.append('\n');
@@ -2983,7 +2983,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -3099,7 +3099,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -3212,7 +3212,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -3325,7 +3325,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -3438,7 +3438,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -3508,7 +3508,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -3608,7 +3608,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
@@ -3689,7 +3689,7 @@ public class Selection extends Connect {
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
-                    System.out.println("Please enter the name of the file you wish to export this data to.");
+                    System.out.println("Please enter the name of the file you wish to export this data to. Please put .csv at the end of your file's name");
                     String _file=scanString.nextLine();
                     try {
                         PrintWriter pw = new PrintWriter(new File(_file));
