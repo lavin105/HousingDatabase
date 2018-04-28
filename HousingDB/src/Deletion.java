@@ -23,11 +23,25 @@ public class Deletion {
                     scanInt.next(); // this is important!
                 }
                 int saleID = scanInt.nextInt();
-                PreparedStatement ps = con.prepareStatement("DELETE FROM forsale WHERE ForSaleID=? AND UserID=?");
+            PreparedStatement p=con.prepareStatement("INSERT INTO DeletedHouseForSale SELECT * FROM forsale WHERE ForSaleID=? AND UserID=?");
+            p.setInt(1,saleID);
+            p.setInt(2, LoginOrRegister.primary_keys);
+            p.executeUpdate();
+            con.commit();
+
+            PreparedStatement pz = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+            pz.setString(1,"INSERT INTO DeletedHouseForSale SELECT * FROM forsale WHERE ForSaleID="+saleID+" AND UserID="+LoginOrRegister.primary_keys);
+            pz.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+            pz.setInt(3,LoginOrRegister.primary_keys);pz.executeUpdate();
+            con.commit();
+
+            PreparedStatement ps = con.prepareStatement("DELETE FROM forsale WHERE ForSaleID=? AND UserID=?");
                 ps.setInt(1, saleID);
                 ps.setInt(2, LoginOrRegister.primary_keys);
                 ps.executeUpdate();
-                System.out.println("Record officially deleted from our records.");
+                con.commit();
+
+            System.out.println("Record officially deleted from our records.");
 
                 PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                 p2.setString(1,"DELETE FROM forsale WHERE ForSaleID= "+saleID+" AND UserID= "+ LoginOrRegister.primary_keys);
@@ -53,11 +67,25 @@ public class Deletion {
                     scanInt.next(); // this is important!
                 }
                 int saleID = scanInt.nextInt();
-                PreparedStatement ps = con.prepareStatement("DELETE FROM forrent WHERE ForRentID=? AND UserID=?");
+                PreparedStatement p=con.prepareStatement("INSERT INTO DeletedHouseForRent SELECT * FROM forrent WHERE ForRentID=? AND UserID=?");
+                p.setInt(1,saleID);
+                p.setInt(2, LoginOrRegister.primary_keys);
+                p.executeUpdate();
+            con.commit();
+
+            PreparedStatement pz = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+            pz.setString(1,"INSERT INTO DeletedHouseForRent SELECT * FROM forrent WHERE ForSaleID="+saleID+" AND UserID="+LoginOrRegister.primary_keys);
+            pz.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+            pz.setInt(3,LoginOrRegister.primary_keys);pz.executeUpdate();
+            con.commit();
+
+            PreparedStatement ps = con.prepareStatement("DELETE FROM forrent WHERE ForRentID=? AND UserID=?");
                 ps.setInt(1, saleID);
                 ps.setInt(2, LoginOrRegister.primary_keys);
                 ps.executeUpdate();
-                System.out.println("Record officially deleted from our records.");
+            con.commit();
+
+            System.out.println("Record officially deleted from our records.");
                 PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                 p2.setString(1,"DELETE FROM forrent WHERE ForSaleID= "+saleID+" AND UserID= "+ LoginOrRegister.primary_keys);
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
