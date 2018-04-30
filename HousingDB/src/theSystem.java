@@ -7,8 +7,7 @@ public class theSystem {
     private Insertion i=new Insertion();
     private Updating u=new Updating();
     private Deletion d=new Deletion();
-    Scanner scanInt=new Scanner(System.in);
-    Scanner scanString=new Scanner(System.in);
+    private Scanner scanInt=new Scanner(System.in);
 
 
     public void start() throws InterruptedException{
@@ -32,8 +31,11 @@ public class theSystem {
         System.out.println("Please enter 1 to Login or 2 to Register 3 to Login as administrator or 4 to Exit the system");
         while (!scanInt.hasNextInt()) {
             System.out.println("Not a valid input");
-            System.out.println("Please enter 1 to Login or 2 to Register 3 to Exit the system");
-            scanInt.next(); // this is important!
+            System.out.println("Please enter 1 to Login");
+            System.out.println("2 to register");
+            System.out.println("3 to login as administrator");
+            System.out.println("4 to exit the system");
+            scanInt.next();
         }
         int logOrreg=scanInt.nextInt();
         if (logOrreg==1){
@@ -50,7 +52,8 @@ public class theSystem {
             System.out.println("Thank you for using Housing Helper goodbye!");
             System.exit(0);
         }else{
-            System.exit(0);
+            System.out.println("Not a valid option");
+            start();
         }
     }
 
@@ -62,16 +65,16 @@ public class theSystem {
             System.out.println("What do you need to do?");
             System.out.println("1- View all the users within the database?");
             System.out.println("2- View the number of users within the system?");
-            System.out.println("3- View the database Housing Helper Database log?");
+            System.out.println("3- View the Housing Helper Database logs?");
             System.out.println("4- Logout");
 
             while (!scanInt.hasNextInt()) {
                 System.out.println("1- View all the users within the database?");
                 System.out.println("2- View the number of users within the system?");
-                System.out.println("3- View the database Housing Helper Database log?");
+                System.out.println("3- View the Housing Helper Database logs?");
                 System.out.println("4- Logout");
-                System.out.println("Please select between options 1-2 by entering the number corresponding to the option.");
-                scanInt.next(); // this is important!
+                System.out.println("Please select between options 1-4 by entering the number corresponding to the option.");
+                scanInt.next();
             }
 
             int option = scanInt.nextInt();
@@ -83,7 +86,7 @@ public class theSystem {
                     System.out.println("That's not a number!");
                     System.out.println("Back to the main menu?");
                     System.out.println("1-Yes, 2-No");
-                    scanInt.next(); // this is important!
+                    scanInt.next();
                 }
                 goAgain2 = scanInt.nextInt();
                 if(goAgain2!=1){
@@ -97,7 +100,7 @@ public class theSystem {
                     System.out.println("That's not a number!");
                     System.out.println("Back to the main menu?");
                     System.out.println("1-Yes, 2-No");
-                    scanInt.next(); // this is important!
+                    scanInt.next();
                 }
                 goAgain2 = scanInt.nextInt();
                 if(goAgain2!=1){
@@ -111,7 +114,7 @@ public class theSystem {
                     System.out.println("That's not a number!");
                     System.out.println("Back to the main menu?");
                     System.out.println("1-Yes, 2-No");
-                    scanInt.next(); // this is important!
+                    scanInt.next();
                 }
                 goAgain2 = scanInt.nextInt();
                 if(goAgain2!=1){
@@ -122,6 +125,9 @@ public class theSystem {
                 System.out.println("You have been logged out");
                 start();
 
+            }else{
+                System.out.println("Not a valid choice you are being re directed to the main menu!");
+                runAdmin();
             }
         }while (goAgain2==1);
 
@@ -138,15 +144,18 @@ public class theSystem {
                 System.out.println("1- Houses for sale?");
                 System.out.println("2- Houses for rent?");
                 System.out.println("3- Finding an agent to help you with purchasing or renting a home?");
-                System.out.println("4- Logout");
-                System.out.println("Please select between options 1-4 by entering the number corresponding to the option.");
+                System.out.println("4- Update Profile Information");
+                System.out.println("5- Logout");
+                System.out.println("Please select between options 1-5 by entering the number corresponding to the option.");
                 while (!scanInt.hasNextInt()) {
                     System.out.println("Not a valid input");
                     System.out.println("1- Houses for sale?");
                     System.out.println("2- Houses for rent?");
                     System.out.println("3- Finding an agent to help you with purchasing or renting a home?");
-                    System.out.println("4- Logout");
-                    System.out.println("Please select between options 1-4 by entering the number corresponding to the option.");                    scanInt.next(); // this is important!
+                    System.out.println("4- Update Profile Information");
+                    System.out.println("5- Logout");
+                    System.out.println("Please select between options 1-5 by entering the number corresponding to the option.");
+                    scanInt.next();
                 }
 
                 int option = scanInt.nextInt();
@@ -162,13 +171,6 @@ public class theSystem {
                     System.out.println("7- View houses between a certain price range.");
                     System.out.println("8- View all houses above the average price for sale in your area.");
                     System.out.println("9- View all houses below the average price for sale in your area.");
-
-
-
-                    //view house above certain price
-                    //view house below certain price
-                    //view house between a certain price
-                    //address city agent and agent phone join
                     System.out.println("10-Return to main menu");
                     while (!scanInt.hasNextInt()) {
                         System.out.println("Not a valid input");
@@ -182,7 +184,7 @@ public class theSystem {
                         System.out.println("8- View all houses above the average price for sale in your area.");
                         System.out.println("9- View all houses below the average price for sale in your area.");
                         System.out.println("10-Return to main menu");
-                        scanInt.next(); // this is important!
+                        scanInt.next();
                     }
 
                     int forSaleChoice = scanInt.nextInt();
@@ -194,7 +196,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -209,7 +211,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -224,7 +226,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -240,7 +242,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -255,7 +257,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -269,7 +271,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -284,7 +286,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -299,7 +301,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -314,13 +316,18 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
                             start();
                         }
 
+                    }else if(forSaleChoice==10){
+                        run();
+                    }else{
+                        System.out.println("Not a valid choice you are being re directed to the main menu!");
+                        run();
                     }
 
 
@@ -337,7 +344,6 @@ public class theSystem {
                     System.out.println("8- View all houses above the average price for rent in your area.");
                     System.out.println("9- View all houses below the average price for rent in your area.");
                     System.out.println("10-Return to main menu");
-                    //address city agent and agent phone join
                     while (!scanInt.hasNextInt()) {
                         System.out.println("Not a valid input");
                         System.out.println("1- View houses for rent.");
@@ -350,7 +356,7 @@ public class theSystem {
                         System.out.println("8- View all houses above the average price for rent in your area.");
                         System.out.println("9- View all houses below the average price for rent in your area.");
                         System.out.println("10-Return to main menu");
-                        scanInt.next(); // this is important!
+                        scanInt.next();
                     }
 
                     int forRentChoice = scanInt.nextInt();
@@ -362,7 +368,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -377,7 +383,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -392,7 +398,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -407,7 +413,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -422,7 +428,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -436,7 +442,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -450,7 +456,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -465,7 +471,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -480,12 +486,17 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
                             start();
                         }
+                    }else if(forRentChoice==10){
+                        run();
+                    }else{
+                        System.out.println("Not a valid choice you are being re directed to the main menu!");
+                        run();
                     }
 
 
@@ -496,17 +507,15 @@ public class theSystem {
                     System.out.println("2- Find agents in your area.");
                     System.out.println("3- Find the address and city of houses for sale with the corresponding agent information ");
                     System.out.println("4- Find the address and city of houses for sale with the corresponding agent information ");
-
-                    System.out.println("8-Return to main menu");
+                    System.out.println("5-Return to main menu");
                     while (!scanInt.hasNextInt()) {
                         System.out.println("Not a valid input");
                         System.out.println("1- View all agents available.");
                         System.out.println("2- Find agents in your area.");
                         System.out.println("3- Find the address and city of houses for sale with the corresponding agent information ");
                         System.out.println("4- Find the address and city of houses for rent with the corresponding agent information ");
-
-                        System.out.println("8-Return to main menu");
-                        scanInt.next(); // this is important!
+                        System.out.println("5-Return to main menu");
+                        scanInt.next();
                     }
                     int agentChoice = scanInt.nextInt();
                     if (agentChoice == 1) {
@@ -517,7 +526,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -532,7 +541,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -547,7 +556,7 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
@@ -562,20 +571,27 @@ public class theSystem {
                             System.out.println("That's not a number!");
                             System.out.println("Back to the main menu?");
                             System.out.println("1-Yes, 2-No");
-                            scanInt.next(); // this is important!
+                            scanInt.next();
                         }
                         goAgain = scanInt.nextInt();
                         if(goAgain!=1){
                             start();
                         }
+                    }else if(agentChoice==5){
+                        run();
                     }
 
 
 
                 } else if(option==4) {
+                    u.updateProfile();
+                }else if(option==5) {
                     System.out.println("You have been logged out");
                     start();
 
+                }else{
+                    System.out.println("Not a valid choice you are being re directed to the main menu!");
+                    run();
                 }
 
             }catch (SQLException e){

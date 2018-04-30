@@ -20,7 +20,7 @@ public class Deletion {
                 while (!scanInt.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID of the house you wish to delete.");
-                    scanInt.next(); // this is important!
+                    scanInt.next();
                 }
                 int saleID = scanInt.nextInt();
             PreparedStatement p=con.prepareStatement("INSERT INTO DeletedHouseForSale SELECT * FROM forsale WHERE ForSaleID=? AND UserID=?");
@@ -64,7 +64,7 @@ public class Deletion {
                 while (!scanInt.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID of the house you wish to delete.");
-                    scanInt.next(); // this is important!
+                    scanInt.next();
                 }
                 int saleID = scanInt.nextInt();
                 PreparedStatement p=con.prepareStatement("INSERT INTO DeletedHouseForRent SELECT * FROM forrent WHERE ForRentID=? AND UserID=?");

@@ -29,7 +29,7 @@ public class LoginOrRegister {
             ResultSet rs=ps.executeQuery();
             if (rs.next()) {
                 primary_keys = rs.getInt(1);
-                System.out.println(primary_keys);
+                System.out.println("UserID: "+primary_keys);
             }else{
                 System.out.println("Incorrect password please try again");
                 login();
@@ -54,7 +54,7 @@ public class LoginOrRegister {
             ResultSet rs=ps.executeQuery();
             if (rs.next()) {
                 primary_keys = rs.getInt(1);
-                System.out.println(primary_keys);
+                System.out.println("AdminID: "+primary_keys);
             }else{
                 System.out.println("Incorrect password please try again");
                 Adminlogin();
@@ -80,7 +80,7 @@ public class LoginOrRegister {
             while (!scanNum.hasNextLong()) {
                 System.out.println("That's not a number!");
                 System.out.println("Please enter your phone number");
-                scanNum.next(); // this is important!
+                scanNum.next();
             }
             long num = scanNum.nextLong();
             System.out.println("Please enter your email address");
@@ -100,14 +100,13 @@ public class LoginOrRegister {
                 primary_keys = rs_key.getInt(1);
             }
 
-            System.out.println(primary_keys);
+            System.out.println("UserID: "+primary_keys);
             PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
             p2.setString(1,"INSERT INTO users(Username,Password, FirstName, LastName, Phone, Email) VALUES ("+username+","+ pass.hashCode()+","+fname+","+lname+","+num+","+email+")");
             p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
             p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
 
         }catch (Exception e){
-            e.printStackTrace();
             System.out.println("This username already exists please try another username.");
             register();
 

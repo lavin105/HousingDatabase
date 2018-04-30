@@ -6,10 +6,11 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 public class Updating {
-    private Scanner scanString=new Scanner(System.in);
-    private Scanner scanNum=new Scanner(System.in);
-    private Connect c=new Connect();
-    private Connection con=c.getConnection();
+    private Scanner scanString = new Scanner(System.in);
+    private Scanner scanNum = new Scanner(System.in);
+    private Connect c = new Connect();
+    private Connection con = c.getConnection();
+
     public void updateForSale() throws InterruptedException {
         try {
             System.out.println("In order to update your housing record please select what you would like to update.");
@@ -32,7 +33,7 @@ public class Updating {
                 System.out.println("6- Update Record number of bathrooms");
                 System.out.println("7- Update Record the price");
                 System.out.println("8- Return to the main menu");
-                scanNum.next(); // this is important!
+                scanNum.next();
             }
 
             int whatToUpdate = scanNum.nextInt();
@@ -43,7 +44,7 @@ public class Updating {
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update your address to.");
@@ -53,33 +54,33 @@ public class Updating {
                     ps.setString(1, address);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                     int x=ps.executeUpdate();
-                     if(x>0){
-                         System.out.println("The address has been updated to "+ address);
+                    int x = ps.executeUpdate();
+                    if (x > 0) {
+                        System.out.println("The address has been updated to " + address);
 
-                         PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                         p2.setString(1,"UPDATE forsale SET Address="+address+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                         p2.setInt(3,LoginOrRegister.primary_keys);
-                         p2.executeUpdate();
-                         con.commit();
+                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        p2.setString(1, "UPDATE forsale SET Address=" + address + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                        p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                        p2.setInt(3, LoginOrRegister.primary_keys);
+                        p2.executeUpdate();
+                        con.commit();
 
-                     }else{
-                         System.out.println("Update unsuccessful something went wrong.");
-                     }
+                    } else {
+                        System.out.println("Update unsuccessful something went wrong.");
+                    }
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
-            }else if(whatToUpdate==2){
+            } else if (whatToUpdate == 2) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the city please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the city to.");
@@ -88,39 +89,38 @@ public class Updating {
                     ps.clearParameters();
                     ps.setString(1, city);
                     ps.setInt(2, LoginOrRegister.primary_keys);
-                    ps.setInt(3,updateID);
+                    ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The city has been updated to "+ city);
+                    System.out.println("The city has been updated to " + city);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forsale SET City="+city+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);
+                    p2.setString(1, "UPDATE forsale SET City=" + city + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
                     p2.executeUpdate();
                     con.commit();
 
 
-
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     e.printStackTrace();
                     con.rollback();
                 }
 
 
-            }else if(whatToUpdate==3){
+            } else if (whatToUpdate == 3) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the zipcode please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the zipcode to.");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update the zipcode to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int zip = scanNum.nextInt();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET ZipCode=? WHERE UserID=? AND ForSaleID=?");
@@ -129,33 +129,34 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The zipcode has been updated to "+ zip);
+                    System.out.println("The zipcode has been updated to " + zip);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forsale SET ZipCode="+zip+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forsale SET ZipCode=" + zip + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==4){
+            } else if (whatToUpdate == 4) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the size please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the size to.");
                     while (!scanNum.hasNextDouble()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update the size to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     double size = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET Size=? WHERE UserID=? AND ForSaleID=?");
@@ -164,33 +165,34 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The size has been updated to "+ size);
+                    System.out.println("The size has been updated to " + size);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forsale SET Size="+size+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forsale SET Size=" + size + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch(SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==5){
+            } else if (whatToUpdate == 5) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the  number of bedrooms please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the number of bedrooms to.");
                     while (!scanNum.hasNextDouble()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update the number of bedrooms to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     double bed = scanNum.nextInt();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET Bedrooms=? WHERE UserID=? AND ForSaleID=?");
@@ -199,33 +201,34 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The number of bedrooms has been updated to "+ bed);
+                    System.out.println("The number of bedrooms has been updated to " + bed);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forsale SET Bedrooms="+bed+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forsale SET Bedrooms=" + bed + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==6){
+            } else if (whatToUpdate == 6) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the number of bathrooms please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the number of bathrooms to.");
                     while (!scanNum.hasNextDouble()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update the number of bathrooms to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     double bath = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET Bathrooms=? WHERE UserID=? AND ForSaleID=?");
@@ -234,33 +237,34 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The number of bathrooms has been updated to "+ bath);
+                    System.out.println("The number of bathrooms has been updated to " + bath);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forsale SET Bathrooms="+bath+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forsale SET Bathrooms=" + bath + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==7){
+            } else if (whatToUpdate == 7) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the price please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update your price to.");
                     while (!scanNum.hasNextDouble()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update your price to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     double price = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forsale SET Price=? WHERE UserID=? AND ForSaleID=?");
@@ -269,26 +273,28 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The price has been updated to "+ price);
+                    System.out.println("The price has been updated to " + price);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forsale SET Price="+price+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forsale SET Price=" + price + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==8){
-                theSystem s=new theSystem();
+            } else if (whatToUpdate == 8) {
+                theSystem s = new theSystem();
                 s.run();
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
+
     public void updateForRent() throws InterruptedException {
         try {
             System.out.println("In order to update your housing record please select what you would like to update.");
@@ -311,7 +317,7 @@ public class Updating {
                 System.out.println("6- Update Record number of bathrooms");
                 System.out.println("7- Update Record the price");
                 System.out.println("8- Return to the main menu");
-                scanNum.next(); // this is important!
+                scanNum.next();
             }
 
             int whatToUpdate = scanNum.nextInt();
@@ -322,7 +328,7 @@ public class Updating {
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update your address to.");
@@ -333,24 +339,25 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The address has been updated to "+ address);
+                    System.out.println("The address has been updated to " + address);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forrent SET Address="+address+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forrent SET Address=" + address + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
-            }else if(whatToUpdate==2){
+            } else if (whatToUpdate == 2) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the city please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the city to.");
@@ -359,36 +366,37 @@ public class Updating {
                     ps.clearParameters();
                     ps.setString(1, city);
                     ps.setInt(2, LoginOrRegister.primary_keys);
-                    ps.setInt(3,updateID);
+                    ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The city has been updated to "+ city);
+                    System.out.println("The city has been updated to " + city);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forrent SET City="+city+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forrent SET City=" + city + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
 
-            }else if(whatToUpdate==3){
+            } else if (whatToUpdate == 3) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the zipcode please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the zipcode to.");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update the zipcode to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int zip = scanNum.nextInt();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET ZipCode=? WHERE UserID=? AND ForRentID=?");
@@ -397,33 +405,34 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The zipcode has been updated to "+ zip);
+                    System.out.println("The zipcode has been updated to " + zip);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forrent SET ZipCode="+zip+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forrent SET ZipCode=" + zip + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==4){
+            } else if (whatToUpdate == 4) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the size please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the size to.");
                     while (!scanNum.hasNextDouble()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update size to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     double size = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET Size=? WHERE UserID=? AND ForRentID=?");
@@ -432,33 +441,34 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The size has been updated to "+ size);
+                    System.out.println("The size has been updated to " + size);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forrent SET Size="+size+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forrent SET Size=" + size + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch(SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==5){
+            } else if (whatToUpdate == 5) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the  number of bedrooms please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the number of bedrooms to.");
                     while (!scanNum.hasNextDouble()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update the number of bedrooms to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int bed = scanNum.nextInt();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET Bedrooms=? WHERE UserID=? AND ForRentID=?");
@@ -467,33 +477,34 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The number of bedrooms has been updated to "+ bed);
+                    System.out.println("The number of bedrooms has been updated to " + bed);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forrent SET Bedrooms="+bed+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forrent SET Bedrooms=" + bed + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==6){
+            } else if (whatToUpdate == 6) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the number of bathrooms please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update the number of bathrooms to.");
                     while (!scanNum.hasNextDouble()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to the number of bathrooms to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     double bath = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET Bathrooms=? WHERE UserID=? AND ForRentID=?");
@@ -502,33 +513,34 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The number of bathrooms has been updated to "+ bath);
+                    System.out.println("The number of bathrooms has been updated to " + bath);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forrent SET Bathrooms="+bath+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forrent SET Bathrooms=" + bath + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==7){
+            } else if (whatToUpdate == 7) {
                 try {
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the price please enter it below");
                     while (!scanNum.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID in order to update");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     int updateID = scanNum.nextInt();
                     System.out.println("Please enter what you would like to update your price to.");
                     while (!scanNum.hasNextDouble()) {
                         System.out.println("That's not a number!");
                         System.out.println("Please enter what you would like to update your price to.");
-                        scanNum.next(); // this is important!
+                        scanNum.next();
                     }
                     double price = scanNum.nextDouble();
                     PreparedStatement ps = con.prepareStatement("UPDATE forrent SET Price=? WHERE UserID=? AND ForRentID=?");
@@ -537,25 +549,219 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     ps.executeUpdate();
-                    System.out.println("The price has been updated to "+ price);
+                    System.out.println("The price has been updated to " + price);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
-                    p2.setString(1,"UPDATE forrent SET Price="+price+" WHERE UserID="+LoginOrRegister.primary_keys+" AND ForSaleID="+updateID);
-                    p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
-                    p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
+                    p2.setString(1, "UPDATE forrent SET Price=" + price + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
                     con.commit();
 
 
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     con.rollback();
                 }
 
-            }else if(whatToUpdate==8){
-                theSystem s=new theSystem();
+            } else if (whatToUpdate == 8) {
+                theSystem s = new theSystem();
                 s.run();
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
 
+
+    public void updateProfile() throws InterruptedException {
+        try {
+            System.out.println("In order to update your profile record please select what you would like to update.");
+            System.out.println("1- Update Username");
+            System.out.println("2- Update Password");
+            System.out.println("3- Update First Name");
+            System.out.println("4- Update Last Name");
+            System.out.println("5- Update Phone number");
+            System.out.println("6- Update email address");
+            System.out.println("7- Return to the main menu");
+            while (!scanNum.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.println("In order to update your profile record please select what you would like to update.");
+                System.out.println("1- Update Username");
+                System.out.println("2- Update Password");
+                System.out.println("3- Update First Name");
+                System.out.println("4- Update Last Name");
+                System.out.println("5- Update Phone number");
+                System.out.println("6- Update email address");
+                System.out.println("7- Return to the main menu");
+                scanNum.next();
+            }
+
+            int whatToUpdate = scanNum.nextInt();
+            if (whatToUpdate == 1) {
+                try {
+                    con.setAutoCommit(false);
+                    System.out.println("Please enter what you would like to update your username to.");
+                    String username = scanString.nextLine();
+                    PreparedStatement ps = con.prepareStatement("UPDATE users SET Username=? WHERE UserID=?");
+                    ps.clearParameters();
+                    ps.setString(1, username);
+                    ps.setInt(2, LoginOrRegister.primary_keys);
+                    ps.executeUpdate();
+                    con.commit();
+                    System.out.println("Your username has been updated to " + username);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1, "UPDATE users SET Username=" + username + " WHERE UserID=" + LoginOrRegister.primary_keys);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
+                    con.commit();
+
+                } catch (SQLException e) {
+                    System.out.println("This username already exists please try another username.");
+                    updateProfile();
+                    try {
+                        con.rollback();
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            } else if (whatToUpdate == 2) {
+                try {
+                    con.setAutoCommit(false);
+                    System.out.println("Please enter what you would like to update your password to.");
+                    String pass = scanString.nextLine();
+                    PreparedStatement ps = con.prepareStatement("UPDATE users SET Password=? WHERE UserID=?");
+                    ps.clearParameters();
+                    ps.setInt(1, pass.hashCode());
+                    ps.setInt(2, LoginOrRegister.primary_keys);
+                    ps.executeUpdate();
+                    con.commit();
+                    System.out.println("Your password has been updated to " + pass);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1, "UPDATE users SET Password=" + pass.hashCode() + " WHERE UserID=" + LoginOrRegister.primary_keys);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
+                    con.commit();
+
+                } catch (SQLException e) {
+                    try {
+                        con.rollback();
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            } else if (whatToUpdate == 3) {
+                try {
+                    con.setAutoCommit(false);
+                    System.out.println("Please enter what you would like to update your First Name to.");
+                    String fname = scanString.nextLine();
+                    PreparedStatement ps = con.prepareStatement("UPDATE users SET FirstName=? WHERE UserID=?");
+                    ps.clearParameters();
+                    ps.setString(1, fname);
+                    ps.setInt(2, LoginOrRegister.primary_keys);
+                    ps.executeUpdate();
+                    con.commit();
+                    System.out.println("Your First name has been updated to " + fname);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1, "UPDATE users SET FirstName=" + fname + " WHERE UserID=" + LoginOrRegister.primary_keys);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
+                    con.commit();
+
+                } catch (SQLException e) {
+                    try {
+                        con.rollback();
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            } else if (whatToUpdate == 4) {
+                try {
+                    con.setAutoCommit(false);
+                    System.out.println("Please enter what you would like to update your Last Name to.");
+                    String lname = scanString.nextLine();
+                    PreparedStatement ps = con.prepareStatement("UPDATE users SET LastName=? WHERE UserID=?");
+                    ps.clearParameters();
+                    ps.setString(1, lname);
+                    ps.setInt(2, LoginOrRegister.primary_keys);
+                    ps.executeUpdate();
+                    con.commit();
+                    System.out.println("Your last name has been updated to " + lname);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1, "UPDATE users SET LastName=" + lname + " WHERE UserID=" + LoginOrRegister.primary_keys);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
+                    con.commit();
+
+                } catch (SQLException e) {
+                    try {
+                        con.rollback();
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            } else if (whatToUpdate == 5) {
+                try {
+                    con.setAutoCommit(false);
+                    System.out.println("Please enter what you would like to update your Phone number to.");
+                    long phone = scanNum.nextLong();
+                    PreparedStatement ps = con.prepareStatement("UPDATE users SET Phone=? WHERE UserID=?");
+                    ps.clearParameters();
+                    ps.setLong(1, phone);
+                    ps.setInt(2, LoginOrRegister.primary_keys);
+                    ps.executeUpdate();
+                    con.commit();
+                    System.out.println("Your phone number has been updated to " + phone);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1, "UPDATE users SET Phone=" + phone + " WHERE UserID=" + LoginOrRegister.primary_keys);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
+                    con.commit();
+
+                } catch (SQLException e) {
+                    try {
+                        con.rollback();
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }else if (whatToUpdate == 6) {
+                try {
+                    con.setAutoCommit(false);
+                    System.out.println("Please enter what you would like to update your email address to.");
+                    String email=scanString.nextLine();
+                    PreparedStatement ps = con.prepareStatement("UPDATE users SET Email=? WHERE UserID=?");
+                    ps.clearParameters();
+                    ps.setString(1, email);
+                    ps.setInt(2, LoginOrRegister.primary_keys);
+                    ps.executeUpdate();
+                    con.commit();
+                    System.out.println("Your email has been updated to " + email);
+                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    p2.setString(1, "UPDATE users SET Email=" + email + " WHERE UserID=" + LoginOrRegister.primary_keys);
+                    p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
+                    p2.setInt(3, LoginOrRegister.primary_keys);
+                    p2.executeUpdate();
+                    con.commit();
+
+                } catch (SQLException e) {
+                    try {
+                        con.rollback();
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }else if (whatToUpdate == 7) {
+                theSystem s = new theSystem();
+                s.run();
+            }
+
+        } catch (Exception r) {
+        }
+
+
+    }
 }

@@ -43,6 +43,7 @@ public class Selection extends Connect {
 
 
                 }else{
+                    System.out.println("Displaying all houses for sale");
                     System.out.println("");
                     System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                     System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -100,7 +101,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     int csv=scan.nextInt();
                     if(csv==1){
@@ -149,7 +150,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     int id=scan.nextInt();
                     p.setInt(1,id);
@@ -172,6 +173,7 @@ public class Selection extends Connect {
 
 
                     }else{
+                        System.out.println("Displaying all houses for sale with the ForSaleId "+id);
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -226,7 +228,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -283,6 +285,7 @@ public class Selection extends Connect {
                         System.out.println("No house for sale with an address of " + add);
 
                     }else{
+                        System.out.println("Displaying all houses for sale with the address "+add);
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -337,7 +340,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -393,6 +396,8 @@ public class Selection extends Connect {
                         System.out.println("No house for sale with the city "+city );
 
                     }else{
+                        System.out.println("Displaying all houses for sale with the city "+city);
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -448,7 +453,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -488,7 +493,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextInt()) {
                         System.out.println("That's not a popper zipcode!");
                         System.out.println("Enter the Zipcode to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
 
 
@@ -512,6 +517,8 @@ public class Selection extends Connect {
                         System.out.println("No house for sale with the zipcode "+ zcode);
 
                     }else {
+                        System.out.println("Displaying all houses for sale with the zipcode "+zcode);
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -564,7 +571,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -604,7 +611,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextDouble()) {
                         System.out.println("That's not a popper size!");
                         System.out.println("Enter the size to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     double sz=scan.nextDouble();
                     p.setDouble(1,sz);
@@ -627,6 +634,8 @@ public class Selection extends Connect {
 
 
                     }else{
+                        System.out.println("Displaying all houses for sale with the size "+sz+" square feet");
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -679,7 +688,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -717,7 +726,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextDouble()) {
                         System.out.println("That's not a popper number of bedrooms!");
                         System.out.println("Enter the number of bedrooms to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     double bed=scan.nextDouble();
                     p.setDouble(1,bed);
@@ -740,6 +749,8 @@ public class Selection extends Connect {
 
 
                     }else{
+                        System.out.println("Displaying all houses for sale with "+bed+" bedrooms");
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -792,7 +803,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -832,7 +843,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextDouble()) {
                         System.out.println("That's not a popper number of bathrooms!");
                         System.out.println("Enter the number of bathrooms to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     double bath=scan.nextDouble();
                     p.setDouble(1,bath);
@@ -855,6 +866,7 @@ public class Selection extends Connect {
 
 
                     }else{
+                        System.out.println("Displaying all houses for sale with "+bath+" bathrooms");
 
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
@@ -908,7 +920,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -948,7 +960,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextDouble()) {
                         System.out.println("That's not a popper price!");
                         System.out.println("Enter the price to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     double price=scan.nextDouble();
                     p.setDouble(1,price);
@@ -970,6 +982,8 @@ public class Selection extends Connect {
                         System.out.println("No house for sale has a price of "+ price + " dollars");
 
                     }else {
+                        System.out.println("Displaying all houses for sale with a price of "+ price);
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1022,7 +1036,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -1097,6 +1111,8 @@ public class Selection extends Connect {
                     System.out.println("No record exists");
 
                 }else{
+                    System.out.println("Displaying all houses for rent");
+
                     System.out.println("");
                     System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                     System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1149,7 +1165,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     int csv=scan.nextInt();
                     if(csv==1){
@@ -1186,7 +1202,7 @@ public class Selection extends Connect {
             }
         }else if(filter==1){
 
-            System.out.println("What would you like to filter faculty by?");
+            System.out.println("What would you like to filter  by?");
             System.out.println("1-ID, 2-Address, 3-City, 4-Zip Code, 5-Size, 6-# of Bedrooms, 7-# of Bathrooms, 8-Price");
             int filter2=scan.nextInt();
             if(filter2==1){
@@ -1196,7 +1212,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextInt()) {
                         System.out.println("That's not a number!");
                         System.out.println("Enter the ID to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     int id=scan.nextInt();
                     p.setInt(1,id);
@@ -1217,6 +1233,8 @@ public class Selection extends Connect {
                         System.out.println("No house for rent with the ID "+id);
 
                     }else{
+                        System.out.println("Displaying all houses for rent with a ForRentID of "+id);
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1269,7 +1287,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -1326,6 +1344,8 @@ public class Selection extends Connect {
                         System.out.println("No house exists with the address "+ add);
 
                     }else{
+                        System.out.println("Displaying all houses for rent with the address "+add);
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1378,7 +1398,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -1435,6 +1455,8 @@ public class Selection extends Connect {
                         System.out.println("No house for rent exists with the city "+city);
 
                     }else{
+                        System.out.println("Displaying all houses for rent with the city "+city);
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1487,7 +1509,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -1528,7 +1550,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextInt()) {
                         System.out.println("That's not a proper zipcode!");
                         System.out.println("Enter the zipcode to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     int zcode=scan.nextInt();
                     p.setInt(1,zcode);
@@ -1549,6 +1571,8 @@ public class Selection extends Connect {
                         System.out.println("No house for rent has the zipcode "+zcode);
 
                     }else{
+                        System.out.println("Displaying all houses for rent with the zipcode "+zcode);
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1601,7 +1625,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -1643,7 +1667,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextDouble()) {
                         System.out.println("That's not a proper size!");
                         System.out.println("Enter the size to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     double sz=scan.nextDouble();
                     p.setDouble(1,sz);
@@ -1664,6 +1688,8 @@ public class Selection extends Connect {
                         System.out.println("No house for rent exists that is "+sz+" square feet");
 
                     }else{
+                        System.out.println("Displaying all houses for rent with the size "+sz+" square feet");
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1716,7 +1742,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -1756,7 +1782,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextDouble()) {
                         System.out.println("That's not a proper number of bedrooms!");
                         System.out.println("Enter the number of bedrooms to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     double bed=scan.nextDouble();
                     p.setDouble(1,bed);
@@ -1777,6 +1803,8 @@ public class Selection extends Connect {
                         System.out.println("No hose for rent has "+bed+" bedrooms");
 
                     }else{
+                        System.out.println("Displaying all houses for rent with"+bed+" bedrooms");
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1829,7 +1857,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -1871,7 +1899,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextDouble()) {
                         System.out.println("That's not a proper number of bathrooms!");
                         System.out.println("Enter the number of bathrooms to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     double bath=scan.nextDouble();
                     p.setDouble(1,bath);
@@ -1892,6 +1920,8 @@ public class Selection extends Connect {
                         System.out.println("No house for rent has "+bath+" bathrooms");
 
                     }else{
+                        System.out.println("Displaying all houses for rent with"+bath+" bathrooms");
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -1944,7 +1974,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -1985,7 +2015,7 @@ public class Selection extends Connect {
                     while (!scan.hasNextDouble()) {
                         System.out.println("That's not a proper price!");
                         System.out.println("Enter the price to filter by.");
-                        scan.next(); // this is important!
+                        scan.next();
                     }
                     double price=scan.nextDouble();
                     p.setDouble(1,price);
@@ -2006,6 +2036,8 @@ public class Selection extends Connect {
                         System.out.println("No house with the price "+price+" exists");
 
                     }else{
+                        System.out.println("Displaying all houses for rent with the price $"+price);
+
                         System.out.println("");
                         System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                         System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -2058,7 +2090,7 @@ public class Selection extends Connect {
                         while (!scan.hasNextInt()) {
                             System.out.println("That's not a number!");
                             System.out.println("Enter the ID to filter by.");
-                            scan.next(); // this is important!
+                            scan.next();
                         }
                         int csv=scan.nextInt();
                         if(csv==1){
@@ -2129,6 +2161,8 @@ public class Selection extends Connect {
                 System.out.println("No house exists with the city "+city);
 
             }else{
+                System.out.println("Displaying the average house prices for sale in the city "+city);
+
                 System.out.println("");
                 System.out.format(format, "+++++++++++++++++++++++++", "++++++++++++++++++++");
                 System.out.format(format, col1, col2);
@@ -2153,7 +2187,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -2210,6 +2244,8 @@ public class Selection extends Connect {
                 System.out.println("No record exists with the city "+city);
 
             }else{
+                System.out.println("Displaying the average house prices for rent in the city "+city);
+
                 System.out.println("");
                 System.out.format(format, "+++++++++++++++++++++++++", "++++++++++++++++++++");
                 System.out.format(format, col1, col2);
@@ -2234,7 +2270,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -2320,7 +2356,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -2379,6 +2415,8 @@ public class Selection extends Connect {
                 System.out.println("Records do not exists");
 
             }else{
+                System.out.println("Displaying all agents");
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","+++++++++++++++++++++++++","++++++++++++++++++++","+++++++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3, col4,col5,col6);
@@ -2419,7 +2457,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -2463,14 +2501,14 @@ public class Selection extends Connect {
             while (!scan.hasNextDouble()) {
                 System.out.println("That's not a proper minimum price!");
                 System.out.println("What is the minimum price you are searching for?");
-                scan.next(); // this is important!
+                scan.next();
             }
             double min=scan.nextDouble();
             System.out.println("What is the maximum price you are searching?");
             while (!scan.hasNextDouble()) {
                 System.out.println("That's not a proper maximum price!");
                 System.out.println("What is the maximum price you are searching for?\"");
-                scan.next(); // this is important!
+                scan.next();
             }
             double max=scan.nextDouble();
             PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale WHERE Price BETWEEN ? AND ?");
@@ -2495,6 +2533,8 @@ public class Selection extends Connect {
                 System.out.println("No house for sale between the prices of "+min+ " and "+max);
 
             }else{
+                System.out.println("Displaying houses for sale between the prices of "+min+ " and "+max);
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                 System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -2548,7 +2588,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -2592,14 +2632,14 @@ public class Selection extends Connect {
             while (!scan.hasNextDouble()) {
                 System.out.println("That's not a proper minimum price!");
                 System.out.println("What is the minimum price you are searching for?");
-                scan.next(); // this is important!
+                scan.next();
             }
             double min=scan.nextDouble();
             System.out.println("What is the maximum price you are searching?");
             while (!scan.hasNextDouble()) {
                 System.out.println("That's not a proper maximum price!");
                 System.out.println("What is the maximum price you are searching for?\"");
-                scan.next(); // this is important!
+                scan.next();
             }
             double max=scan.nextDouble();
             PreparedStatement p = con.prepareStatement("SELECT * FROM ForRent WHERE Price BETWEEN ? AND ?");
@@ -2624,6 +2664,8 @@ public class Selection extends Connect {
                 System.out.println("No house for rent between "+min+" and "+max);
 
             }else{
+                System.out.println("Displaying houses for rent between the prices of "+min+ " and "+max);
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                 System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -2677,7 +2719,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -2736,6 +2778,8 @@ public class Selection extends Connect {
                 System.out.println("No agent exists with jurisdiction over the city "+city);
 
             }else{
+                System.out.println("Displaying all agent with jurisdiction over the city "+city);
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","+++++++++++++++++++++++++","++++++++++++++++++++","+++++++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3, col4,col5,col6);
@@ -2776,7 +2820,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -2835,6 +2879,7 @@ public class Selection extends Connect {
                 System.out.println("Record does not exist");
 
             }else{
+                System.out.println("Displaying agent information with the corresponding hosues for sale that they manage");
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
@@ -2879,7 +2924,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -2935,6 +2980,8 @@ public class Selection extends Connect {
                 System.out.println("Record does not exist");
 
             }else{
+                System.out.println("Displaying agent information with the corresponding hosues for rent that they manage");
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++++++++++++++", "++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++","++++++++++++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3, col4,col5,col6, col7);
@@ -2979,7 +3026,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -3040,9 +3087,11 @@ public class Selection extends Connect {
             String col9=rm.getColumnName(9);
 
             if(!r.isBeforeFirst()){
-                System.out.println("No house for sale exists with the city "+city);
+                System.out.println("No house for sale exists with this criteria");
 
             }else{
+                System.out.println("Displaying all houses for sale above the average prce in the city "+city);
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                 System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -3095,7 +3144,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -3153,9 +3202,11 @@ public class Selection extends Connect {
             String col9=rm.getColumnName(9);
 
             if(!r.isBeforeFirst()){
-                System.out.println("No house for sale exists with the city "+city);
+                System.out.println("No house for sale exists with this criteria");
 
             }else{
+                System.out.println("Displaying all houses for sale below the average prce in the city "+city);
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                 System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -3208,7 +3259,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -3266,9 +3317,11 @@ public class Selection extends Connect {
             String col9=rm.getColumnName(9);
 
             if(!r.isBeforeFirst()){
-                System.out.println("No house for sale exists with the city "+city);
+                System.out.println("No house for rent exists with this criteria");
 
             }else{
+                System.out.println("Displaying all houses for rent above the average prce in the city "+city);
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                 System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -3321,7 +3374,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -3379,9 +3432,11 @@ public class Selection extends Connect {
             String col9=rm.getColumnName(9);
 
             if(!r.isBeforeFirst()){
-                System.out.println("No house for sale exists with the city "+city);
+                System.out.println("No house for rent exists with this criteria");
 
             }else{
+                System.out.println("Displaying all houses for rent below the average prce in the city "+city);
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                 System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
@@ -3434,7 +3489,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -3504,7 +3559,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -3604,7 +3659,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -3660,6 +3715,8 @@ public class Selection extends Connect {
                 System.out.println("No record exists");
 
             }else{
+                System.out.println("Displaying the HosuingHelper Database Logs.");
+
                 System.out.println("");
                 System.out.format(format, "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++", "++++++++++++++++++++", "++++++++++++++++++++");
                 System.out.format(format, col1, col2,col3);
@@ -3685,7 +3742,7 @@ public class Selection extends Connect {
                 while (!scan.hasNextInt()) {
                     System.out.println("That's not a number!");
                     System.out.println("Enter the ID to filter by.");
-                    scan.next(); // this is important!
+                    scan.next();
                 }
                 int csv=scan.nextInt();
                 if(csv==1){
@@ -3722,12 +3779,5 @@ public class Selection extends Connect {
 
 
     }
-
-
-
-
-
-
-
 
 }
