@@ -55,6 +55,8 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     int x = ps.executeUpdate();
+                    con.commit();
+
                     if (x > 0) {
                         System.out.println("The address has been updated to " + address);
 
@@ -90,8 +92,15 @@ public class Updating {
                     ps.setString(1, city);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The city has been updated to " + city);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The city has been updated to " + city);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET City=" + city + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -128,8 +137,15 @@ public class Updating {
                     ps.setInt(1, zip);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The zipcode has been updated to " + zip);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The zipcode has been updated to " + zip);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET ZipCode=" + zip + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -164,8 +180,15 @@ public class Updating {
                     ps.setDouble(1, size);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The size has been updated to " + size);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The size has been updated to " + size);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET Size=" + size + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -200,8 +223,15 @@ public class Updating {
                     ps.setDouble(1, bed);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The number of bedrooms has been updated to " + bed);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The number of bedrooms has been updated to " + bed);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET Bedrooms=" + bed + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -236,8 +266,15 @@ public class Updating {
                     ps.setDouble(1, bath);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The number of bathrooms has been updated to " + bath);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The number of bathrooms has been updated to " + bath);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET Bathrooms=" + bath + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -272,8 +309,15 @@ public class Updating {
                     ps.setDouble(1, price);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The price has been updated to " + price);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The price has been updated to " + price);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET Price=" + price + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -338,8 +382,15 @@ public class Updating {
                     ps.setString(1, address);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The address has been updated to " + address);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The address has been updated to " + address);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Address=" + address + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -367,8 +418,15 @@ public class Updating {
                     ps.setString(1, city);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The city has been updated to " + city);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The city has been updated to " + city);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET City=" + city + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -404,8 +462,15 @@ public class Updating {
                     ps.setInt(1, zip);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The zipcode has been updated to " + zip);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The zipcode has been updated to " + zip);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET ZipCode=" + zip + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -440,8 +505,15 @@ public class Updating {
                     ps.setDouble(1, size);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The size has been updated to " + size);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The size has been updated to " + size);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Size=" + size + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -476,8 +548,15 @@ public class Updating {
                     ps.setInt(1, bed);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The number of bedrooms has been updated to " + bed);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The number of bedrooms has been updated to " + bed);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Bedrooms=" + bed + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -512,8 +591,15 @@ public class Updating {
                     ps.setDouble(1, bath);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The number of bathrooms has been updated to " + bath);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The number of bathrooms has been updated to " + bath);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Bathrooms=" + bath + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -548,8 +634,15 @@ public class Updating {
                     ps.setDouble(1, price);
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
-                    ps.executeUpdate();
-                    System.out.println("The price has been updated to " + price);
+                    int x = ps.executeUpdate();
+                    con.commit();
+
+                    if(x>0){
+                        System.out.println("The price has been updated to " + price);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Price=" + price + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -605,9 +698,14 @@ public class Updating {
                     ps.clearParameters();
                     ps.setString(1, username);
                     ps.setInt(2, LoginOrRegister.primary_keys);
-                    ps.executeUpdate();
+                    int x = ps.executeUpdate();
+                    if(x>0){
+                        System.out.println("Your username has been updated to " + username);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     con.commit();
-                    System.out.println("Your username has been updated to " + username);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE users SET Username=" + username + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -633,9 +731,14 @@ public class Updating {
                     ps.clearParameters();
                     ps.setInt(1, pass.hashCode());
                     ps.setInt(2, LoginOrRegister.primary_keys);
-                    ps.executeUpdate();
+                    int x = ps.executeUpdate();
+                    if(x>0){
+                        System.out.println("Your password has been updated to " + pass);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     con.commit();
-                    System.out.println("Your password has been updated to " + pass);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE users SET Password=" + pass.hashCode() + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -659,9 +762,14 @@ public class Updating {
                     ps.clearParameters();
                     ps.setString(1, fname);
                     ps.setInt(2, LoginOrRegister.primary_keys);
-                    ps.executeUpdate();
+                    int x = ps.executeUpdate();
+                    if(x>0){
+                        System.out.println("Your First name has been updated to " + fname);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     con.commit();
-                    System.out.println("Your First name has been updated to " + fname);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE users SET FirstName=" + fname + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -685,9 +793,14 @@ public class Updating {
                     ps.clearParameters();
                     ps.setString(1, lname);
                     ps.setInt(2, LoginOrRegister.primary_keys);
-                    ps.executeUpdate();
+                    int x = ps.executeUpdate();
+                    if(x>0){
+                        System.out.println("Your last name has been updated to " + lname);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     con.commit();
-                    System.out.println("Your last name has been updated to " + lname);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE users SET LastName=" + lname + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -711,9 +824,14 @@ public class Updating {
                     ps.clearParameters();
                     ps.setLong(1, phone);
                     ps.setInt(2, LoginOrRegister.primary_keys);
-                    ps.executeUpdate();
+                    int x = ps.executeUpdate();
+                    if(x>0){
+                        System.out.println("Your phone number has been updated to " + phone);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     con.commit();
-                    System.out.println("Your phone number has been updated to " + phone);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE users SET Phone=" + phone + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -737,9 +855,14 @@ public class Updating {
                     ps.clearParameters();
                     ps.setString(1, email);
                     ps.setInt(2, LoginOrRegister.primary_keys);
-                    ps.executeUpdate();
+                    int x = ps.executeUpdate();
+                    if(x>0){
+                        System.out.println("Your email has been updated to " + email);
+
+                    }else{
+                        System.out.println("Updating unsuccessful");
+                    }
                     con.commit();
-                    System.out.println("Your email has been updated to " + email);
                     PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                     p2.setString(1, "UPDATE users SET Email=" + email + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
