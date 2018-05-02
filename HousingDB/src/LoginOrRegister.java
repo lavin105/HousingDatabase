@@ -1,16 +1,13 @@
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Scanner;
 public class LoginOrRegister {
-    Scanner scan=new Scanner(System.in);
-    Scanner scanNum=new Scanner(System.in);
+    private Scanner scan=new Scanner(System.in);
+    private Scanner scanNum=new Scanner(System.in);
 
-    Connect c=new Connect();
-     Connection con=c.getConnection();
+    private Connect c=new Connect();
+     private Connection con=c.getConnection();
      public static int primary_keys;
 
 
@@ -47,7 +44,7 @@ public class LoginOrRegister {
             String username=scan.nextLine();
             System.out.println("Please enter your administrator password to login.");
             String pass=scan.nextLine();
-            PreparedStatement ps=con.prepareStatement("SELECT DISTINCT AdminID FROM administrator WHERE AdminUsername=? AND AdminPassword=? ");
+            CallableStatement ps=con.prepareCall("CALL adminLogin(?,?)");
             ps.setString(1,username);
             ps.setInt(2,pass.hashCode());
 
@@ -101,7 +98,7 @@ public class LoginOrRegister {
             }
 
             System.out.println("UserID: "+primary_keys);
-            PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+            CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
             p2.setString(1,"INSERT INTO users(Username,Password, FirstName, LastName, Phone, Email) VALUES ("+username+","+ pass.hashCode()+","+fname+","+lname+","+num+","+email+")");
             p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
             p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();

@@ -1,3 +1,4 @@
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -60,7 +61,7 @@ public class Updating {
                     if (x > 0) {
                         System.out.println("The address has been updated to " + address);
 
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1, "UPDATE forsale SET Address=" + address + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                         p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3, LoginOrRegister.primary_keys);
@@ -101,7 +102,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET City=" + city + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -146,7 +147,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET ZipCode=" + zip + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -189,7 +190,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET Size=" + size + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -232,7 +233,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET Bedrooms=" + bed + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -275,7 +276,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET Bathrooms=" + bath + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -318,7 +319,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forsale SET Price=" + price + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -391,7 +392,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Address=" + address + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -427,7 +428,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET City=" + city + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -471,7 +472,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET ZipCode=" + zip + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -514,7 +515,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Size=" + size + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -557,7 +558,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Bedrooms=" + bed + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -600,7 +601,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Bathrooms=" + bath + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -643,7 +644,7 @@ public class Updating {
                     }else{
                         System.out.println("Updating unsuccessful");
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE forrent SET Price=" + price + " WHERE UserID=" + LoginOrRegister.primary_keys + " AND ForSaleID=" + updateID);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -706,7 +707,7 @@ public class Updating {
                         System.out.println("Updating unsuccessful");
                     }
                     con.commit();
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE users SET Username=" + username + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -739,7 +740,7 @@ public class Updating {
                         System.out.println("Updating unsuccessful");
                     }
                     con.commit();
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE users SET Password=" + pass.hashCode() + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -770,7 +771,7 @@ public class Updating {
                         System.out.println("Updating unsuccessful");
                     }
                     con.commit();
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE users SET FirstName=" + fname + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -801,7 +802,7 @@ public class Updating {
                         System.out.println("Updating unsuccessful");
                     }
                     con.commit();
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE users SET LastName=" + lname + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -832,7 +833,7 @@ public class Updating {
                         System.out.println("Updating unsuccessful");
                     }
                     con.commit();
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE users SET Phone=" + phone + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);
@@ -863,7 +864,7 @@ public class Updating {
                         System.out.println("Updating unsuccessful");
                     }
                     con.commit();
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1, "UPDATE users SET Email=" + email + " WHERE UserID=" + LoginOrRegister.primary_keys);
                     p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3, LoginOrRegister.primary_keys);

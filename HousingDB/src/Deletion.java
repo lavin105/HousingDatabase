@@ -1,3 +1,4 @@
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -43,7 +44,7 @@ public class Deletion {
 
             System.out.println("Record officially deleted from our records.");
 
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"DELETE FROM forsale WHERE ForSaleID= "+saleID+" AND UserID= "+ LoginOrRegister.primary_keys);
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -86,7 +87,7 @@ public class Deletion {
             con.commit();
 
             System.out.println("Record officially deleted from our records.");
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"DELETE FROM forrent WHERE ForSaleID= "+saleID+" AND UserID= "+ LoginOrRegister.primary_keys);
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();

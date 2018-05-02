@@ -91,7 +91,7 @@ public class Selection extends Connect {
 
                     }
 
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1,"SELECT * FROM ForSale ");
                     p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -218,7 +218,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForSale Where ForSaleID="+id);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
 
@@ -330,7 +330,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForSale Where Address LIKE "+add);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
 
@@ -442,7 +442,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForSale Where City="+city);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);
@@ -563,7 +563,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForSale Where ZipCode="+zcode);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -680,7 +680,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForSale Where Size="+sz);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -795,7 +795,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForSale Where Bed="+bed);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -912,7 +912,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForSale Where Bath="+bath);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1028,7 +1028,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForSale Where Price="+price);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1157,7 +1157,7 @@ public class Selection extends Connect {
                         s.append(r.getDouble(9));
                         s.append('\n');
                     }
-                    PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                    CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1,"SELECT * FROM ForRent");
                     p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1279,7 +1279,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForRent WHERE ForRentID="+id);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1390,7 +1390,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForRent WHERE Address LIKE "+add);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1501,7 +1501,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForRent WHERE City="+city);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1617,7 +1617,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForRent WHERE ZipCode="+zcode);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1734,7 +1734,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForRent WHERE Size="+sz);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1849,7 +1849,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForRent WHERE Bedrooms="+bed);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -1966,7 +1966,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForRent WHERE Bathrooms="+bath);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2082,7 +2082,7 @@ public class Selection extends Connect {
                             s.append(r.getDouble(9));
                             s.append('\n');
                         }
-                        PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                        CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                         p2.setString(1,"SELECT * FROM ForRent WHERE Price="+price);
                         p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                         p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2179,7 +2179,7 @@ public class Selection extends Connect {
                     s.append(r.getDouble(2));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT City, AVG(Price) as AverageHousePrice FROM forsale WHERE City="+city+" GROUP BY City");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2262,7 +2262,7 @@ public class Selection extends Connect {
                     s.append(r.getDouble(2));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT City, AVG(Price) as AverageHousePrice FROM forrent WHERE City="+city+" GROUP BY City");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2348,7 +2348,7 @@ public class Selection extends Connect {
                     s.append(r.getString(4));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM SellsAndRents");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2449,7 +2449,7 @@ public class Selection extends Connect {
                     s.append(r.getString(6));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM allagents");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2580,7 +2580,7 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM ForSale WHERE Price BETWEEN "+min+" AND "+max);
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2711,7 +2711,7 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM ForRent WHERE Price BETWEEN "+min+" AND "+max);
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2812,7 +2812,7 @@ public class Selection extends Connect {
                     s.append(r.getString(6));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM agentbycity WHERE CityJurisdiction="+city);
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -2916,7 +2916,7 @@ public class Selection extends Connect {
                     s.append(r.getString(7));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM agentaddressforsale");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -3018,7 +3018,7 @@ public class Selection extends Connect {
                     s.append(r.getString(7));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM agentaddressforrent");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -3136,7 +3136,7 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM ForSale WHERE City="+city+" AND Price>(SELECT AVG(Price) FROM ForSale WHERE City="+city+")");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -3251,7 +3251,7 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM ForSale WHERE City="+city+" AND Price<(SELECT AVG(Price) FROM ForSale WHERE City="+city+")");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -3366,7 +3366,7 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM ForRent WHERE City="+city+" AND Price>(SELECT AVG(Price) FROM ForSale WHERE City="+city+")");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
@@ -3481,7 +3481,7 @@ public class Selection extends Connect {
                     s.append(r.getDouble(9));
                     s.append('\n');
                 }
-                PreparedStatement p2 = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
+                CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1,"SELECT * FROM ForRent WHERE City="+city+" AND Price<(SELECT AVG(Price) FROM ForSale WHERE City="+city+")");
                 p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 p2.setInt(3,LoginOrRegister.primary_keys);p2.executeUpdate();
