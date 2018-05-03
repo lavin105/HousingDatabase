@@ -1,7 +1,4 @@
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -11,6 +8,8 @@ public class Updating {
     private Scanner scanNum = new Scanner(System.in);
     private Connect c = new Connect();
     private Connection con = c.getConnection();
+    String format = "\u2503%1$-18s\u2503%2$-18s\u2503%3$-30s\u2503%4$-18s\u2503%5$-18s\u2503%6$-18s\u2503%7$-18s\u2503%8$-18s\u2503%9$-18s\u2503\n";
+
 
     public void updateForSale() throws InterruptedException {
         try {
@@ -40,6 +39,40 @@ public class Updating {
             int whatToUpdate = scanNum.nextInt();
             if (whatToUpdate == 1) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the address please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -78,6 +111,40 @@ public class Updating {
                 }
             } else if (whatToUpdate == 2) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the city please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -118,6 +185,40 @@ public class Updating {
 
             } else if (whatToUpdate == 3) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the zipcode please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -161,6 +262,40 @@ public class Updating {
 
             } else if (whatToUpdate == 4) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the size please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -204,6 +339,40 @@ public class Updating {
 
             } else if (whatToUpdate == 5) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the  number of bedrooms please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -247,6 +416,40 @@ public class Updating {
 
             } else if (whatToUpdate == 6) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the number of bathrooms please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -290,6 +493,40 @@ public class Updating {
 
             } else if (whatToUpdate == 7) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the price please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -368,6 +605,40 @@ public class Updating {
             int whatToUpdate = scanNum.nextInt();
             if (whatToUpdate == 1) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForRent WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the address please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -404,6 +675,40 @@ public class Updating {
                 }
             } else if (whatToUpdate == 2) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForRent WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the city please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -443,6 +748,40 @@ public class Updating {
 
             } else if (whatToUpdate == 3) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForRent WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the zipcode please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -486,6 +825,40 @@ public class Updating {
 
             } else if (whatToUpdate == 4) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForRent WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the size please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -529,6 +902,40 @@ public class Updating {
 
             } else if (whatToUpdate == 5) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForRent WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the  number of bedrooms please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -572,6 +979,40 @@ public class Updating {
 
             } else if (whatToUpdate == 6) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForRent WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the number of bathrooms please enter it below");
                     while (!scanNum.hasNextInt()) {
@@ -615,6 +1056,40 @@ public class Updating {
 
             } else if (whatToUpdate == 7) {
                 try {
+                    PreparedStatement px = con.prepareStatement("SELECT * FROM ForRent WHERE UserID=?");
+
+                    px.setInt(1,LoginOrRegister.primary_keys);
+                    ResultSet rx = px.executeQuery();
+                    ResultSetMetaData rm = rx.getMetaData();
+
+                    String col1 = rm.getColumnName(1);
+                    String col2 = rm.getColumnName(2);
+                    String col3 = rm.getColumnName(3);
+                    String col4 = rm.getColumnName(4);
+                    String col5 = rm.getColumnName(5);
+                    String col6 = rm.getColumnName(6);
+                    String col7 = rm.getColumnName(7);
+                    String col8= rm.getColumnName(8);
+                    String col9=rm.getColumnName(9);
+
+
+                    if(!rx.isBeforeFirst()){
+                        System.out.println("No house for sale with ID "+ LoginOrRegister.primary_keys);
+
+
+                    }else{
+                        System.out.println("Displaying all houses for sale with your UserID, UserID: "+LoginOrRegister.primary_keys);
+                        System.out.println("");
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                        System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
+                        System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+
+                        while (rx.next()) {
+                            System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                            System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
+
+                        }
+                    }
                     con.setAutoCommit(false);
                     System.out.println("We need your house ID in order to update the price please enter it below");
                     while (!scanNum.hasNextInt()) {
