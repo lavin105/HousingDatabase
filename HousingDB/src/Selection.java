@@ -2061,7 +2061,7 @@ public class Selection extends Connect {
                         s.append(col9);
                         s.append('\n');
                         while (r.next()) {
-                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), r.getDouble(9));
+                            System.out.format(format, r.getInt(1),r.getInt(2), r.getString(3), r.getString(4), r.getInt(5), r.getDouble(6), r.getDouble(7), r.getDouble(8), "$"+r.getDouble(9));
                             System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
                             s.append(r.getInt(1));
                             s.append(',');
@@ -2147,7 +2147,7 @@ public class Selection extends Connect {
         try {
             System.out.println("Please enter the city in which you would like to see the average price of houses for sale.");
             String city = scanString.nextLine();
-            PreparedStatement p = con.prepareStatement("SELECT City, AVG(Price) as AverageHousePrice FROM forsale WHERE City=? GROUP BY City");
+            PreparedStatement p = con.prepareStatement("SELECT City, ROUND(AVG(Price),2) as AverageHousePrice FROM forsale WHERE City=? GROUP BY City");
             p.setString(1,city);
             ResultSet r=p.executeQuery();
             ResultSetMetaData rm = r.getMetaData();
@@ -2172,7 +2172,7 @@ public class Selection extends Connect {
                 s.append(col2);
                 s.append('\n');
                 while (r.next()){
-                    System.out.format(format, r.getString(1),r.getDouble(2));
+                    System.out.format(format, r.getString(1),"$"+r.getDouble(2));
                     System.out.format(format, "-------------------------", "--------------------");
                     s.append(r.getString(1));
                     s.append(',');
@@ -2230,7 +2230,7 @@ public class Selection extends Connect {
         try {
             System.out.println("Please enter the city in which you would like to see the average price of houses for rent.");
             String city = scanString.nextLine();
-            PreparedStatement p = con.prepareStatement("SELECT City, AVG(Price) as AverageHousePrice FROM forrent WHERE City=? GROUP BY City");
+            PreparedStatement p = con.prepareStatement("SELECT City, ROUND(AVG(Price),2) as AverageHousePrice FROM forrent WHERE City=? GROUP BY City");
             p.setString(1,city);
             ResultSet r=p.executeQuery();
             ResultSetMetaData rm = r.getMetaData();
@@ -2255,7 +2255,7 @@ public class Selection extends Connect {
                 s.append(col2);
                 s.append('\n');
                 while (r.next()){
-                    System.out.format(format, r.getString(1),r.getDouble(2));
+                    System.out.format(format, r.getString(1),"$"+r.getDouble(2));
                     System.out.format(format, "-------------------------", "--------------------");
                     s.append(r.getString(1));
                     s.append(',');
