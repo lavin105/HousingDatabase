@@ -9,9 +9,10 @@ public class theSystem {
     private Deletion d=new Deletion();
     private Scanner scanInt=new Scanner(System.in);
 
-
+    //method propts the start up menu tha leads to login/registration
     public void start() throws InterruptedException{
         System.out.println("WELCOME TO THE HOUSING HELPER");
+        //thread.sleep added for aesthetics
         System.out.print(".");Thread.sleep(30);System.out.print(".");Thread.sleep(30);System.out.print(".");Thread.sleep(30);
         System.out.print(".");Thread.sleep(30);System.out.print(".");Thread.sleep(30);System.out.print(".");Thread.sleep(30);
         System.out.print(".");Thread.sleep(30);System.out.print(".");Thread.sleep(30);System.out.print(".");Thread.sleep(30);
@@ -37,6 +38,7 @@ public class theSystem {
             System.out.println("4 to exit the system");
             scanInt.next();
         }
+        //based on the users choice perform different sections of the application
         int logOrreg=scanInt.nextInt();
         if (logOrreg==1){
             l.login();
@@ -56,7 +58,7 @@ public class theSystem {
             start();
         }
     }
-
+    //runs the administrator portion of the application
     public void runAdmin() throws InterruptedException{
         int goAgain2=1;
         do {
@@ -133,7 +135,7 @@ public class theSystem {
 
     }
 
-
+    //runs the average users portion of the application
     public void run() throws InterruptedException {
         int goAgain=1;
         do {
@@ -506,7 +508,7 @@ public class theSystem {
                     System.out.println("1- View all agents available.");
                     System.out.println("2- Find agents in your area.");
                     System.out.println("3- Find the address and city of houses for sale with the corresponding agent information ");
-                    System.out.println("4- Find the address and city of houses for sale with the corresponding agent information ");
+                    System.out.println("4- Find the address and city of houses for rent with the corresponding agent information ");
                     System.out.println("5-Return to main menu");
                     while (!scanInt.hasNextInt()) {
                         System.out.println("Not a valid input");

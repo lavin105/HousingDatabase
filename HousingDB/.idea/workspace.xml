@@ -15,8 +15,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -25,219 +25,11 @@
       <file leaf-file-name="theSystem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/theSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="854">
-              <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+            <state relative-caret-position="-7540">
+              <caret line="137" column="55" lean-forward="false" selection-start-line="137" selection-start-column="55" selection-end-line="137" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Engine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="22" lean-forward="true" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginOrRegister.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginOrRegister.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1525221959239" expanded="true" signature="689:739" ph="SELECT DISTI... users" />
-                <marker date="1525221959239" expanded="true" signature="689:754" ph="SELECT DISTI... users" />
-                <marker date="1525221959239" expanded="true" signature="3079:3171" ph="INSERT INTO users... " />
-                <marker date="1525221959239" expanded="true" signature="3776:3783" ph="INSERT INTO logs... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Insertion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Insertion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="71" column="21" lean-forward="false" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1525222000226" expanded="true" signature="2825:2934" ph="INSERT INTO forsale... " />
-                <marker date="1525222000226" expanded="true" signature="3552:3559" ph="INSERT INTO logs... " />
-                <marker date="1525222000226" expanded="true" signature="6487:6596" ph="INSERT INTO forrent... " />
-                <marker date="1525222000226" expanded="true" signature="7214:7221" ph="INSERT INTO logs... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Updating.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Updating.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="63" column="30" lean-forward="false" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
-              <folding>
-                <marker date="1525222000336" expanded="true" signature="2759:2818" ph="UPDATE forsale... " />
-                <marker date="1525222000336" expanded="true" signature="3300:3307" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="4754:4810" ph="UPDATE forsale... " />
-                <marker date="1525222000336" expanded="true" signature="5393:5400" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="7009:7068" ph="UPDATE forsale... " />
-                <marker date="1525222000336" expanded="true" signature="7649:7656" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="9226:9282" ph="UPDATE forsale... " />
-                <marker date="1525222000336" expanded="true" signature="9865:9872" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="11479:11539" ph="UPDATE forsale... " />
-                <marker date="1525222000336" expanded="true" signature="12134:12141" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="13757:13818" ph="UPDATE forsale... " />
-                <marker date="1525222000336" expanded="true" signature="14416:14423" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="16002:16059" ph="UPDATE forsale... " />
-                <marker date="1525222000336" expanded="true" signature="16645:16652" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="19721:19764" ph="UPDATE forrent... " />
-                <marker date="1525222000336" expanded="true" signature="19721:19780" ph="UPDATE forrent... " />
-                <marker date="1525222000336" expanded="true" signature="19721:19782" ph="UPDATE users... " />
-                <marker date="1525222000336" expanded="true" signature="20372:20379" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="21664:21720" ph="UPDATE forrent... " />
-                <marker date="1525222000336" expanded="true" signature="22303:22310" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="23878:23937" ph="UPDATE forrent... " />
-                <marker date="1525222000336" expanded="true" signature="24518:24525" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="26091:26147" ph="UPDATE forrent... " />
-                <marker date="1525222000336" expanded="true" signature="26730:26737" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="28341:28401" ph="UPDATE forrent... " />
-                <marker date="1525222000336" expanded="true" signature="28993:29000" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="30609:30670" ph="UPDATE forrent... " />
-                <marker date="1525222000336" expanded="true" signature="31268:31275" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="32854:32911" ph="UPDATE forsale... " />
-                <marker date="1525222000336" expanded="true" signature="33497:33504" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="35933:35975" ph="UPDATE users... " />
-                <marker date="1525222000336" expanded="true" signature="36526:36533" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="37646:37688" ph="UPDATE users... " />
-                <marker date="1525222000336" expanded="true" signature="38239:38246" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="39231:39274" ph="UPDATE users... " />
-                <marker date="1525222000336" expanded="true" signature="39821:39828" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="40803:40845" ph="UPDATE users... " />
-                <marker date="1525222000336" expanded="true" signature="41391:41398" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="42370:42409" ph="UPDATE users... " />
-                <marker date="1525222000336" expanded="true" signature="42956:42963" ph="INSERT INTO logs... " />
-                <marker date="1525222000336" expanded="true" signature="43935:43974" ph="UPDATE users... " />
-                <marker date="1525222000336" expanded="true" signature="44516:44523" ph="INSERT INTO logs... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Deletion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Deletion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="89" column="21" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1525222000273" expanded="true" signature="1108:1192" ph="INSERT INTO DeletedHouse... " />
-                <marker date="1525222000273" expanded="true" signature="1140:1192" ph="SELECT * FRO... forsale" />
-                <marker date="1525222000273" expanded="true" signature="1398:1428" ph="INSERT INTO logs... " />
-                <marker date="1525222000273" expanded="true" signature="1857:1907" ph="DELETE FROM forsale... " />
-                <marker date="1525222000273" expanded="true" signature="2223:2230" ph="INSERT INTO logs... " />
-                <marker date="1525222000273" expanded="true" signature="3324:3408" ph="INSERT INTO DeletedHouseForRent... " />
-                <marker date="1525222000273" expanded="true" signature="3356:3408" ph="SELECT * FRO... forsale" />
-                <marker date="1525222000273" expanded="true" signature="3626:3656" ph="INSERT INTO logs... " />
-                <marker date="1525222000273" expanded="true" signature="4085:4135" ph="DELETE FROM forrent... " />
-                <marker date="1525222000273" expanded="true" signature="4446:4453" ph="INSERT INTO logs... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Selection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Selection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-              <folding>
-                <marker date="1525221959504" expanded="true" signature="990:1011" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="6627:6666" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="10770:10777" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="12831:12873" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="16772:16779" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="18856:18890" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="22778:22785" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="24922:24959" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="29114:29121" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="31170:31204" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="35367:35374" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="37419:37457" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="41647:41654" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="43701:43740" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="47939:47946" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="49995:50030" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="54199:54206" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="56752:56773" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="60199:60206" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="62361:62400" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="66506:66513" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="68562:68604" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="72487:72494" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="74543:74577" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="78459:78466" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="80516:80553" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="84690:84697" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="86752:86786" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="90947:90954" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="92997:93035" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="97207:97214" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="99264:99303" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="103485:103492" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="105543:105578" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="109720:109727" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="112276:112360" ph="SELECT City,... forsale" />
-                <marker date="1525221959504" expanded="true" signature="113761:113768" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="115814:115898" ph="SELECT City,... forrent" />
-                <marker date="1525221959504" expanded="true" signature="117300:117307" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="119258:119285" ph="SELECT * FRO... SellsAndRents" />
-                <marker date="1525221959504" expanded="true" signature="121130:121137" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="122930:122937" ph="SELECT agent... agents" />
-                <marker date="1525221959504" expanded="true" signature="122930:122953" ph="SELECT * FRO... allagents" />
-                <marker date="1525221959504" expanded="true" signature="125444:125451" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="128105:128154" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="131484:131491" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="134176:134225" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="137540:137547" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="139514:139564" ph="SELECT * FRO... agentbycity" />
-                <marker date="1525221959504" expanded="true" signature="142157:142164" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="143993:144026" ph="SELECT * FRO... agentaddressforsale" />
-                <marker date="1525221959504" expanded="true" signature="146861:146868" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="148664:148697" ph="SELECT * FRO... agentaddressforrent" />
-                <marker date="1525221959504" expanded="true" signature="151574:151581" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="153392:153482" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="153438:153481" ph="SELECT AVG(P... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="156950:156957" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="158838:158928" ph="SELECT * FRO... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="158884:158927" ph="SELECT AVG(P... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="162393:162400" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="164281:164371" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="164327:164370" ph="SELECT AVG(P... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="167839:167846" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="169727:169817" ph="SELECT * FRO... ForRent" />
-                <marker date="1525221959504" expanded="true" signature="169773:169816" ph="SELECT AVG(P... ForSale" />
-                <marker date="1525221959504" expanded="true" signature="173282:173289" ph="INSERT INTO logs... " />
-                <marker date="1525221959504" expanded="true" signature="175165:175208" ph="SELECT * FRO... Users" />
-                <marker date="1525221959504" expanded="true" signature="177693:177712" ph="SELECT * FRO... Users" />
-                <marker date="1525221959504" expanded="true" signature="181952:181959" ph="SELECT City,... forsale" />
-                <marker date="1525221959504" expanded="true" signature="181952:181970" ph="SELECT * FRO... logs" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Connect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -313,13 +105,13 @@
         <option value="$PROJECT_DIR$/src/InsertionAndUpdate.java" />
         <option value="$PROJECT_DIR$/src/Connect.java" />
         <option value="$PROJECT_DIR$/src/Engine.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/theSystem.java" />
         <option value="$PROJECT_DIR$/src/LoginOrRegister.java" />
         <option value="$PROJECT_DIR$/src/Selection.java" />
         <option value="$PROJECT_DIR$/src/Insertion.java" />
         <option value="$PROJECT_DIR$/src/Updating.java" />
         <option value="$PROJECT_DIR$/src/Deletion.java" />
+        <option value="$PROJECT_DIR$/src/theSystem.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -368,16 +160,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="HousingDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="HousingDB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HousingDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HousingDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -559,12 +356,13 @@
       <workItem from="1523990690513" duration="24462000" />
       <workItem from="1524608142242" duration="32330000" />
       <workItem from="1525049467047" duration="1626000" />
-      <workItem from="1525051393118" duration="5664000" />
+      <workItem from="1525051393118" duration="7785000" />
+      <workItem from="1525322978320" duration="876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113406000" />
+    <option name="totallyTimeSpent" value="116403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="744" extended-state="7" />
@@ -585,7 +383,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -597,6 +394,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1198,126 +996,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Insertion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="71" column="21" lean-forward="false" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1525222000226" expanded="true" signature="2825:2934" ph="INSERT INTO forsale... " />
-            <marker date="1525222000226" expanded="true" signature="3552:3559" ph="INSERT INTO logs... " />
-            <marker date="1525222000226" expanded="true" signature="6487:6596" ph="INSERT INTO forrent... " />
-            <marker date="1525222000226" expanded="true" signature="7214:7221" ph="INSERT INTO logs... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Updating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="63" column="30" lean-forward="false" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
-          <folding>
-            <marker date="1525222000336" expanded="true" signature="2759:2818" ph="UPDATE forsale... " />
-            <marker date="1525222000336" expanded="true" signature="3300:3307" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="4754:4810" ph="UPDATE forsale... " />
-            <marker date="1525222000336" expanded="true" signature="5393:5400" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="7009:7068" ph="UPDATE forsale... " />
-            <marker date="1525222000336" expanded="true" signature="7649:7656" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="9226:9282" ph="UPDATE forsale... " />
-            <marker date="1525222000336" expanded="true" signature="9865:9872" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="11479:11539" ph="UPDATE forsale... " />
-            <marker date="1525222000336" expanded="true" signature="12134:12141" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="13757:13818" ph="UPDATE forsale... " />
-            <marker date="1525222000336" expanded="true" signature="14416:14423" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="16002:16059" ph="UPDATE forsale... " />
-            <marker date="1525222000336" expanded="true" signature="16645:16652" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="19721:19764" ph="UPDATE forrent... " />
-            <marker date="1525222000336" expanded="true" signature="19721:19780" ph="UPDATE forrent... " />
-            <marker date="1525222000336" expanded="true" signature="19721:19782" ph="UPDATE users... " />
-            <marker date="1525222000336" expanded="true" signature="20372:20379" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="21664:21720" ph="UPDATE forrent... " />
-            <marker date="1525222000336" expanded="true" signature="22303:22310" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="23878:23937" ph="UPDATE forrent... " />
-            <marker date="1525222000336" expanded="true" signature="24518:24525" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="26091:26147" ph="UPDATE forrent... " />
-            <marker date="1525222000336" expanded="true" signature="26730:26737" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="28341:28401" ph="UPDATE forrent... " />
-            <marker date="1525222000336" expanded="true" signature="28993:29000" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="30609:30670" ph="UPDATE forrent... " />
-            <marker date="1525222000336" expanded="true" signature="31268:31275" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="32854:32911" ph="UPDATE forsale... " />
-            <marker date="1525222000336" expanded="true" signature="33497:33504" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="35933:35975" ph="UPDATE users... " />
-            <marker date="1525222000336" expanded="true" signature="36526:36533" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="37646:37688" ph="UPDATE users... " />
-            <marker date="1525222000336" expanded="true" signature="38239:38246" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="39231:39274" ph="UPDATE users... " />
-            <marker date="1525222000336" expanded="true" signature="39821:39828" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="40803:40845" ph="UPDATE users... " />
-            <marker date="1525222000336" expanded="true" signature="41391:41398" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="42370:42409" ph="UPDATE users... " />
-            <marker date="1525222000336" expanded="true" signature="42956:42963" ph="INSERT INTO logs... " />
-            <marker date="1525222000336" expanded="true" signature="43935:43974" ph="UPDATE users... " />
-            <marker date="1525222000336" expanded="true" signature="44516:44523" ph="INSERT INTO logs... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginOrRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1525221959239" expanded="true" signature="689:739" ph="SELECT DISTI... users" />
-            <marker date="1525221959239" expanded="true" signature="689:754" ph="SELECT DISTI... users" />
-            <marker date="1525221959239" expanded="true" signature="3079:3171" ph="INSERT INTO users... " />
-            <marker date="1525221959239" expanded="true" signature="3776:3783" ph="INSERT INTO logs... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="true" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/theSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="854">
-          <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deletion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="89" column="21" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1525222000273" expanded="true" signature="1108:1192" ph="INSERT INTO DeletedHouse... " />
-            <marker date="1525222000273" expanded="true" signature="1140:1192" ph="SELECT * FRO... forsale" />
-            <marker date="1525222000273" expanded="true" signature="1398:1428" ph="INSERT INTO logs... " />
-            <marker date="1525222000273" expanded="true" signature="1857:1907" ph="DELETE FROM forsale... " />
-            <marker date="1525222000273" expanded="true" signature="2223:2230" ph="INSERT INTO logs... " />
-            <marker date="1525222000273" expanded="true" signature="3324:3408" ph="INSERT INTO DeletedHouseForRent... " />
-            <marker date="1525222000273" expanded="true" signature="3356:3408" ph="SELECT * FRO... forsale" />
-            <marker date="1525222000273" expanded="true" signature="3626:3656" ph="INSERT INTO logs... " />
-            <marker date="1525222000273" expanded="true" signature="4085:4135" ph="DELETE FROM forrent... " />
-            <marker date="1525222000273" expanded="true" signature="4446:4453" ph="INSERT INTO logs... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Selection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="2261">
           <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
           <folding>
             <marker date="1525221959504" expanded="true" signature="990:1011" ph="SELECT * FRO... ForSale" />
@@ -1394,10 +1075,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Deletion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="89" column="21" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1525222000273" expanded="true" signature="1108:1192" ph="INSERT INTO DeletedHouse... " />
+            <marker date="1525222000273" expanded="true" signature="1140:1192" ph="SELECT * FRO... forsale" />
+            <marker date="1525222000273" expanded="true" signature="1398:1428" ph="INSERT INTO logs... " />
+            <marker date="1525222000273" expanded="true" signature="1857:1907" ph="DELETE FROM forsale... " />
+            <marker date="1525222000273" expanded="true" signature="2223:2230" ph="INSERT INTO logs... " />
+            <marker date="1525222000273" expanded="true" signature="3324:3408" ph="INSERT INTO DeletedHouseForRent... " />
+            <marker date="1525222000273" expanded="true" signature="3356:3408" ph="SELECT * FRO... forsale" />
+            <marker date="1525222000273" expanded="true" signature="3626:3656" ph="INSERT INTO logs... " />
+            <marker date="1525222000273" expanded="true" signature="4085:4135" ph="DELETE FROM forrent... " />
+            <marker date="1525222000273" expanded="true" signature="4446:4453" ph="INSERT INTO logs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Updating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="63" column="30" lean-forward="false" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+          <folding>
+            <marker date="1525222000336" expanded="true" signature="2759:2818" ph="UPDATE forsale... " />
+            <marker date="1525222000336" expanded="true" signature="3300:3307" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="4754:4810" ph="UPDATE forsale... " />
+            <marker date="1525222000336" expanded="true" signature="5393:5400" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="7009:7068" ph="UPDATE forsale... " />
+            <marker date="1525222000336" expanded="true" signature="7649:7656" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="9226:9282" ph="UPDATE forsale... " />
+            <marker date="1525222000336" expanded="true" signature="9865:9872" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="11479:11539" ph="UPDATE forsale... " />
+            <marker date="1525222000336" expanded="true" signature="12134:12141" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="13757:13818" ph="UPDATE forsale... " />
+            <marker date="1525222000336" expanded="true" signature="14416:14423" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="16002:16059" ph="UPDATE forsale... " />
+            <marker date="1525222000336" expanded="true" signature="16645:16652" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="19721:19764" ph="UPDATE forrent... " />
+            <marker date="1525222000336" expanded="true" signature="19721:19780" ph="UPDATE forrent... " />
+            <marker date="1525222000336" expanded="true" signature="19721:19782" ph="UPDATE users... " />
+            <marker date="1525222000336" expanded="true" signature="20372:20379" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="21664:21720" ph="UPDATE forrent... " />
+            <marker date="1525222000336" expanded="true" signature="22303:22310" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="23878:23937" ph="UPDATE forrent... " />
+            <marker date="1525222000336" expanded="true" signature="24518:24525" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="26091:26147" ph="UPDATE forrent... " />
+            <marker date="1525222000336" expanded="true" signature="26730:26737" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="28341:28401" ph="UPDATE forrent... " />
+            <marker date="1525222000336" expanded="true" signature="28993:29000" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="30609:30670" ph="UPDATE forrent... " />
+            <marker date="1525222000336" expanded="true" signature="31268:31275" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="32854:32911" ph="UPDATE forsale... " />
+            <marker date="1525222000336" expanded="true" signature="33497:33504" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="35933:35975" ph="UPDATE users... " />
+            <marker date="1525222000336" expanded="true" signature="36526:36533" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="37646:37688" ph="UPDATE users... " />
+            <marker date="1525222000336" expanded="true" signature="38239:38246" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="39231:39274" ph="UPDATE users... " />
+            <marker date="1525222000336" expanded="true" signature="39821:39828" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="40803:40845" ph="UPDATE users... " />
+            <marker date="1525222000336" expanded="true" signature="41391:41398" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="42370:42409" ph="UPDATE users... " />
+            <marker date="1525222000336" expanded="true" signature="42956:42963" ph="INSERT INTO logs... " />
+            <marker date="1525222000336" expanded="true" signature="43935:43974" ph="UPDATE users... " />
+            <marker date="1525222000336" expanded="true" signature="44516:44523" ph="INSERT INTO logs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Insertion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1525222000226" expanded="true" signature="2825:2934" ph="INSERT INTO forsale... " />
+            <marker date="1525222000226" expanded="true" signature="3552:3559" ph="INSERT INTO logs... " />
+            <marker date="1525222000226" expanded="true" signature="6487:6596" ph="INSERT INTO forrent... " />
+            <marker date="1525222000226" expanded="true" signature="7214:7221" ph="INSERT INTO logs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginOrRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1525221959239" expanded="true" signature="689:739" ph="SELECT DISTI... users" />
+            <marker date="1525221959239" expanded="true" signature="689:754" ph="SELECT DISTI... users" />
+            <marker date="1525221959239" expanded="true" signature="3079:3171" ph="INSERT INTO users... " />
+            <marker date="1525221959239" expanded="true" signature="3776:3783" ph="INSERT INTO logs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/theSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7540">
+          <caret line="137" column="55" lean-forward="false" selection-start-line="137" selection-start-column="55" selection-end-line="137" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding />
         </state>
       </provider>
