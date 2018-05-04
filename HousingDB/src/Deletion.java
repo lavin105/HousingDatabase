@@ -44,7 +44,7 @@ public class Deletion {
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                 while (rx.next()) {
-                    System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                    System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), "$"+rx.getDouble(9));
                     System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                 }
@@ -128,7 +128,7 @@ public class Deletion {
                 System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
 
                 while (rx.next()) {
-                    System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), rx.getDouble(9));
+                    System.out.format(format, rx.getInt(1),rx.getInt(2), rx.getString(3), rx.getString(4), rx.getInt(5), rx.getDouble(6), rx.getDouble(7), rx.getDouble(8), "$"+rx.getDouble(9));
                     System.out.format(format, "------------------", "------------------", "------------------------------", "------------------", "------------------", "------------------","------------------","------------------","------------------");
 
                 }
