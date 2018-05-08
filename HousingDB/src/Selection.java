@@ -15,8 +15,14 @@ import java.util.Scanner;
 public class Selection extends Connect {
     Scanner scan=new Scanner(System.in);
     Scanner scanString=new Scanner(System.in);
+    //format string for te majority of tables
     String format = "\u2503%1$-18s\u2503%2$-18s\u2503%3$-30s\u2503%4$-18s\u2503%5$-18s\u2503%6$-18s\u2503%7$-18s\u2503%8$-18s\u2503%9$-18s\u2503\n";
 
+    //method to select a home for sale
+    //a house can be selected with or without a filter on a particular attribute
+    //a home can be filtered by all of its criteria: ID, address, city, zip, bedrooms, bathrooms, size, and price
+    //each query can be exported to a csv
+    //every if and else if are different filters on the house for sale
     public void selectForSale() {
         StringBuilder s=new StringBuilder();
         System.out.println("Would you like to filter your selection?");
@@ -48,6 +54,7 @@ public class Selection extends Connect {
                     System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
                     System.out.format(format, col1, col2, col3, col4, col5, col6, col7, col8, col9);
                     System.out.format(format, "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++", "++++++++++++++++++","++++++++++++++++++","++++++++++++++++++","++++++++++++++++++");
+                   //appending attributes to a string builder for the sake of exporting to csv
                     s.append(col1);
                     s.append(',');
                     s.append(col2);
@@ -1085,6 +1092,8 @@ public class Selection extends Connect {
             selectForSale();
         }
     }
+    //selecting houses for rent behaves identical to selecting homes for sale
+    //see the selectForSale method for details about the method
     public void selectForRent() {
         StringBuilder s=new StringBuilder();
         System.out.println("Would you like to filter your selection?");
@@ -2140,7 +2149,8 @@ public class Selection extends Connect {
             selectForRent();
         }
     }
-
+    //this method uses an aggregate function in it to display the average price of a home for sale based on a city of the users choice
+    //it returns a table with the city's name and the average price for that particular city
     public void avgPriceForSalePerCity(){
         StringBuilder s=new StringBuilder();
 
@@ -2224,6 +2234,8 @@ public class Selection extends Connect {
 
 
     }
+    //this method uses an aggregate function in it to display the average price of a home for rent based on a city of the users choice
+    //it returns a table with the city's name and the average price for that particular city
     public void avgPriceForRentPerCity(){
         StringBuilder s=new StringBuilder();
 
@@ -2304,11 +2316,14 @@ public class Selection extends Connect {
         }
 
     }
+    //this method involves a query with a join over 3 tables and it displays the users with a house for sale and for rent and their information
+
     public void userForSaleForRent(){
         StringBuilder s=new StringBuilder();
 
         try {
             System.out.println("Displaying users with a house for sale and for rent");
+            //this query is changed into a view
             PreparedStatement p = con.prepareStatement("SELECT * FROM SellsAndRents");
             ResultSet r=p.executeQuery();
             ResultSetMetaData rm = r.getMetaData();
@@ -2391,11 +2406,12 @@ public class Selection extends Connect {
         }
 
     }
-
+    //method to view all the real estate agents within the databse
     public void viewAgents(){
         StringBuilder s=new StringBuilder();
 
         try{
+            //query uses a view as well
             PreparedStatement p = con.prepareStatement("SELECT * FROM allagents");
             ResultSet r=p.executeQuery();
             ResultSetMetaData rm = r.getMetaData();
@@ -2492,6 +2508,7 @@ public class Selection extends Connect {
 
 
     }
+    //this method displays homes for sale between a particular price range which is helpful for people on a budget
     public void betweenPriceRangeSale(){
         StringBuilder s=new StringBuilder();
 
@@ -2622,7 +2639,7 @@ public class Selection extends Connect {
             }
         }
     }
-
+    //this method displays homes for rent between a particular price range which is helpful for people on a budget
     public void betweenPriceRangeRent(){
         StringBuilder s=new StringBuilder();
 
@@ -2753,6 +2770,8 @@ public class Selection extends Connect {
             }
         }
     }
+    //this method filter agents based on a city
+    //the query also is converted into a view
     public void viewAgentsByCity(){
         StringBuilder s=new StringBuilder();
 
@@ -2855,6 +2874,9 @@ public class Selection extends Connect {
 
 
     }
+    //method displays homes for sale with te corresponding agent and their agent
+    //the query contains a join across 3 tables
+    //also contains a view
 
     public void AgentsAndAddressForSale(){
         StringBuilder s=new StringBuilder();
@@ -2956,6 +2978,9 @@ public class Selection extends Connect {
             }
         }
     }
+    //method displays homes for rent with te corresponding agent and their agent
+    //the query contains a join across 3 tables
+    //also contains a view
     public void AgentsAndAddressForRent(){
         StringBuilder s=new StringBuilder();
 
@@ -3062,7 +3087,8 @@ public class Selection extends Connect {
 
 
 
-
+    //method tht diplays the houses for sale above the average price of the city that they are in
+    //this method contains a query with a subquery
     public void aboveAvgPriceForSale(){
         StringBuilder s=new StringBuilder();
 
@@ -3178,6 +3204,8 @@ public class Selection extends Connect {
             }
         }
     }
+    //method tht diplays the houses for sale below the average price of the city that they are in
+    //this method contains a query with a subquery
     public void belowAvgPriceForSale(){
         StringBuilder s=new StringBuilder();
 
@@ -3293,6 +3321,8 @@ public class Selection extends Connect {
             }
         }
     }
+    //method tht diplays the houses for rent above the average price of the city that they are in
+    //this method contains a query with a subquery
     public void aboveAvgPriceForRent(){
         StringBuilder s=new StringBuilder();
 
@@ -3408,6 +3438,8 @@ public class Selection extends Connect {
             }
         }
     }
+    //method tht diplays the houses for sale below the average price of the city that they are in
+    //this method contains a query with a subquery
     public void belowAvgPriceForRent(){
         StringBuilder s=new StringBuilder();
 
@@ -3523,6 +3555,8 @@ public class Selection extends Connect {
             }
         }
     }
+    //this method is for displaying the number of users within the system
+    //method is intended for administrator purposes
     public void viewNumberUsers(){
         StringBuilder s=new StringBuilder();
 
@@ -3593,7 +3627,8 @@ public class Selection extends Connect {
             }
         }
     }
-
+    //method that returns all of the uses within the database and their corresponding user information
+    //method is intended for administrator use only
     public void viewAllUsers(){
         StringBuilder s=new StringBuilder();
 
@@ -3695,7 +3730,9 @@ public class Selection extends Connect {
     }
 
 
-
+    //method for viewing all the logs generated for the system
+    //intended for administrator use only
+    //displas the query made, the date/time stamp, as well as the userID of who performed the query
     public void viewLogs(){
         StringBuilder s=new StringBuilder();
 

@@ -2,19 +2,22 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Scanner;
-
+//class for deleting records from the database
 public class Deletion {
     private Scanner scanString=new Scanner(System.in);
     private Scanner scanInt=new Scanner(System.in);
     Selection select=new Selection();
     Connect c =new Connect();
     Connection con=c.getConnection();
+    //format needed for displaying the record in an organized way
     String format = "\u2503%1$-18s\u2503%2$-18s\u2503%3$-30s\u2503%4$-18s\u2503%5$-18s\u2503%6$-18s\u2503%7$-18s\u2503%8$-18s\u2503%9$-18s\u2503\n";
 
-
+    //deletes houses for sale
+    //users can only delete houses they own this is tracked with the use of their userID
     public void deleteForSale() throws SQLException {
         try {
             System.out.println("In order to remove a house for sale please enter the following information.");
+            //query to display the houses that belong to the user
             PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
 
             px.setInt(1,LoginOrRegister.primary_keys);
@@ -49,7 +52,7 @@ public class Deletion {
 
                 }
             }
-
+                //start the deletion transaction
                 con.setAutoCommit(false);
                 System.out.println("Please enter the houses for sale ID or enter 0 to return to the main menu");
                 while (!scanInt.hasNextInt()) {
@@ -61,6 +64,7 @@ public class Deletion {
                 if(saleID==0){
 
                 }else{
+                    //query to insert the house to be deleted in a delete house for sale table
                     PreparedStatement p=con.prepareStatement("INSERT INTO DeletedHouseForSale SELECT * FROM forsale WHERE ForSaleID=? AND UserID=?");
                     p.setInt(1,saleID);
                     p.setInt(2, LoginOrRegister.primary_keys);
@@ -72,7 +76,7 @@ public class Deletion {
                     pz.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                     pz.setInt(3,LoginOrRegister.primary_keys);pz.executeUpdate();
                     con.commit();
-
+                    //query that actually deletes the record from the db
                     PreparedStatement ps = con.prepareStatement("DELETE FROM forsale WHERE ForSaleID=? AND UserID=?");
                     ps.setInt(1, saleID);
                     ps.setInt(2, LoginOrRegister.primary_keys);
@@ -80,7 +84,8 @@ public class Deletion {
                     con.commit();
 
                     System.out.println("Record officially deleted from our records.");
-
+                    //log the queries in the log tables
+                    //uses a callable statement
                     CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                     p2.setString(1,"DELETE FROM forsale WHERE ForSaleID= "+saleID+" AND UserID= "+ LoginOrRegister.primary_keys);
                     p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -96,9 +101,11 @@ public class Deletion {
             con.rollback();
         }
     }
+    //method for deleting houses for rent
     public void deleteForRent() throws SQLException {
         try {
             System.out.println("In order to remove a house for sale please enter the following information.");
+            //display all the homes for rent that belong to the user logged in
             PreparedStatement px = con.prepareStatement("SELECT * FROM ForRent WHERE UserID=?");
 
             px.setInt(1,LoginOrRegister.primary_keys);
@@ -144,19 +151,19 @@ public class Deletion {
             if(saleID==0){
 
             }else {
+                //insert the house to be deleted into the deleted for rent table
                 PreparedStatement p = con.prepareStatement("INSERT INTO DeletedHouseForRent SELECT * FROM forrent WHERE ForRentID=? AND UserID=?");
                 p.setInt(1, saleID);
                 p.setInt(2, LoginOrRegister.primary_keys);
                 p.executeUpdate();
                 con.commit();
-
                 PreparedStatement pz = con.prepareStatement("INSERT INTO logs VALUES(?,?,?)");
                 pz.setString(1, "INSERT INTO DeletedHouseForRent SELECT * FROM forrent WHERE ForSaleID=" + saleID + " AND UserID=" + LoginOrRegister.primary_keys);
                 pz.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
                 pz.setInt(3, LoginOrRegister.primary_keys);
                 pz.executeUpdate();
                 con.commit();
-
+                //query to actually delete the house for rent from the database
                 PreparedStatement ps = con.prepareStatement("DELETE FROM forrent WHERE ForRentID=? AND UserID=?");
                 ps.setInt(1, saleID);
                 ps.setInt(2, LoginOrRegister.primary_keys);
@@ -164,6 +171,7 @@ public class Deletion {
                 con.commit();
 
                 System.out.println("Record officially deleted from our records.");
+                //log the queries in the log table using a stored procedure
                 CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
                 p2.setString(1, "DELETE FROM forrent WHERE ForSaleID= " + saleID + " AND UserID= " + LoginOrRegister.primary_keys);
                 p2.setString(2, new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));

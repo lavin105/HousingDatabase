@@ -12,10 +12,12 @@ public class Insertion {
    private Connect c=new Connect();
    private Connection con=c.getConnection();
 
-
+//method for inserting a house for sale into the database
     public void insertForSale() throws SQLException{
         try {
+            //making use of transactions
             con.setAutoCommit(false);
+            //take in all the criteria from the user that is necessary for inserting a house
             System.out.println("Please fill out the following fields in order to list your house for sale.");
             System.out.println("");
             System.out.println("Please enter the address of the home you wish to list.");
@@ -57,6 +59,7 @@ public class Insertion {
                 scanNum.next();
             }
             double price=scanNum.nextDouble();
+            //query to insert the house for sale into the database
             PreparedStatement addForSale=con.prepareStatement("INSERT INTO forsale(UserID, Address,City, ZipCode, Size, Bedrooms, Bathrooms, Price) VALUES (?,?,?,?,?,?,?,?)");
             addForSale.clearParameters();
             addForSale.setInt(1,LoginOrRegister.primary_keys);
@@ -69,6 +72,7 @@ public class Insertion {
             addForSale.setDouble(8,price);
             addForSale.executeUpdate();
             System.out.println("Your house has been successfully added to the for sale listings!");
+            //log the query
             CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
             p2.setString(1,"INSERT INTO forsale(UserID, Address,City, ZipCode, Size, Bedrooms, Bathrooms, Price) VALUES ("+LoginOrRegister.primary_keys+","+ address+","+city+","+zip+","+size+","+bedroom+","+bathroom+","+price+")");
             p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
@@ -76,6 +80,7 @@ public class Insertion {
             con.commit();
 
         }catch (SQLException e){
+            //rollback if something fails
             con.rollback();
 
         }
@@ -83,6 +88,9 @@ public class Insertion {
 
 
     }
+    //method that inserts a house for rent into the database
+    //has the exact same functionality as inserting for sale however it inserts the data into the for rent table
+    //also uses a transaction
     public void insertForRent() throws SQLException {
         try {
             con.setAutoCommit(false);

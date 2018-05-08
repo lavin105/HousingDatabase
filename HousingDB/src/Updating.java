@@ -10,9 +10,15 @@ public class Updating {
     private Connection con = c.getConnection();
     String format = "\u2503%1$-18s\u2503%2$-18s\u2503%3$-30s\u2503%4$-18s\u2503%5$-18s\u2503%6$-18s\u2503%7$-18s\u2503%8$-18s\u2503%9$-18s\u2503\n";
 
-
+//method for updating houses for sale
     public void updateForSale() throws InterruptedException {
         try {
+            //the user can select what they wish to update based on a particular house
+            //each if and else if is for updating the particular attribute from 1-7
+            //before updating any record the users homes are displayed so they have the ease of know what their house id is
+            //each update statement is a transaction
+            //every update is logged in the logs table
+            //a user os only able to update a home if it belongs to them this is where the userID comes into use
             System.out.println("In order to update your housing record please select what you would like to update.");
             System.out.println("1- Update Record Address");
             System.out.println("2- Update Record City");
@@ -37,6 +43,7 @@ public class Updating {
             }
 
             int whatToUpdate = scanNum.nextInt();
+            //updating a homes address
             if (whatToUpdate == 1) {
                 try {
                     PreparedStatement px = con.prepareStatement("SELECT * FROM ForSale WHERE UserID=?");
@@ -44,7 +51,7 @@ public class Updating {
                     px.setInt(1,LoginOrRegister.primary_keys);
                     ResultSet rx = px.executeQuery();
                     ResultSetMetaData rm = rx.getMetaData();
-
+                //ResultSetMetaData is used to retrieve the names of the attributes of each column
                     String col1 = rm.getColumnName(1);
                     String col2 = rm.getColumnName(2);
                     String col3 = rm.getColumnName(3);
@@ -576,7 +583,7 @@ public class Updating {
             System.out.println(e.getMessage());
         }
     }
-
+    //updatingForRent behaves in the exact way as the for sale update so see its documentation for clarification
     public void updateForRent() throws InterruptedException {
         try {
             System.out.println("In order to update your housing record please select what you would like to update.");

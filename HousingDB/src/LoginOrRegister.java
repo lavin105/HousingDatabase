@@ -11,10 +11,11 @@ public class LoginOrRegister {
      public static int primary_keys;
 
 
-
+//method for standard user login
     public void login(){
 
         try {
+            //user must enter their username and password to log in
             System.out.println("Please enter your username to login.");
             String username=scan.nextLine();
             System.out.println("Please enter your password to login.");
@@ -24,6 +25,7 @@ public class LoginOrRegister {
             ps.setInt(2,pass.hashCode());
 
             ResultSet rs=ps.executeQuery();
+            //if their record exists get the primary key of their userid for later purposes
             if (rs.next()) {
                 primary_keys = rs.getInt(1);
                 System.out.println("UserID: "+primary_keys);
@@ -37,13 +39,16 @@ public class LoginOrRegister {
         }
 
     }
+    //login for administrators
     public void Adminlogin(){
 
         try {
+            //use the username admin1 and password HousingHelper in order to access the administrator section
             System.out.println("Please enter your admin username to login.");
             String username=scan.nextLine();
             System.out.println("Please enter your administrator password to login.");
             String pass=scan.nextLine();
+            //stored procedure to log in as an administrator
             CallableStatement ps=con.prepareCall("CALL adminLogin(?,?)");
             ps.setString(1,username);
             ps.setInt(2,pass.hashCode());
@@ -62,9 +67,10 @@ public class LoginOrRegister {
         }
 
     }
-
+//method for registration
     public void register(){
         try {
+            //user must enter their username password first name last name phone number an email in order to register
             System.out.println("Please enter your desired username");
             String username = scan.nextLine();
             System.out.println("Please enter your desired password");
@@ -82,6 +88,7 @@ public class LoginOrRegister {
             long num = scanNum.nextLong();
             System.out.println("Please enter your email address");
             String email = scan.nextLine();
+            //query that adds the users information to the database
             PreparedStatement ps = con.prepareStatement("INSERT INTO users(Username,Password, FirstName, LastName, Phone, Email) VALUES (?,?,?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
             ps.clearParameters();
             ps.setString(1, username);
@@ -98,6 +105,7 @@ public class LoginOrRegister {
             }
 
             System.out.println("UserID: "+primary_keys);
+            //log the registration query
             CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
             p2.setString(1,"INSERT INTO users(Username,Password, FirstName, LastName, Phone, Email) VALUES ("+username+","+ pass.hashCode()+","+fname+","+lname+","+num+","+email+")");
             p2.setString(2,new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()));
