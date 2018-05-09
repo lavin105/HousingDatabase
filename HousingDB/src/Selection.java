@@ -32,7 +32,11 @@ public class Selection extends Connect {
 
             try {
                 PreparedStatement p = con.prepareStatement("SELECT * FROM ForSale");
+                //timer commented out used for testing purposes
+                //long startTime = System.currentTimeMillis();
                 ResultSet r = p.executeQuery();
+                //long endTime = System.currentTimeMillis();
+                //System.out.println("That took " + (endTime - startTime) + " milliseconds");
                 ResultSetMetaData rm = r.getMetaData();
 
                 String col1 = rm.getColumnName(1);
@@ -2883,7 +2887,12 @@ public class Selection extends Connect {
 
         try{
         PreparedStatement p = con.prepareStatement("SELECT * FROM agentaddressforsale");
-        ResultSet r=p.executeQuery();
+            //timer commented out used for testing purposes
+
+            //long startTime = System.currentTimeMillis();
+            ResultSet r = p.executeQuery();
+            //long endTime = System.currentTimeMillis();
+            //System.out.println("That took " + (endTime - startTime) + " milliseconds");
         ResultSetMetaData rm = r.getMetaData();
         String col1 = rm.getColumnName(1);
         String col2 = rm.getColumnName(2);

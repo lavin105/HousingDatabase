@@ -80,7 +80,12 @@ public class Deletion {
                     PreparedStatement ps = con.prepareStatement("DELETE FROM forsale WHERE ForSaleID=? AND UserID=?");
                     ps.setInt(1, saleID);
                     ps.setInt(2, LoginOrRegister.primary_keys);
+                    //timer commented out used for testing purposes
+
+                    //long startTime = System.currentTimeMillis();
                     ps.executeUpdate();
+                    //long endTime = System.currentTimeMillis();
+                    //System.out.println("That took " + (endTime - startTime) + " milliseconds");
                     con.commit();
 
                     System.out.println("Record officially deleted from our records.");

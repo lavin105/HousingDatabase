@@ -41,6 +41,7 @@ public class theSystem {
         //based on the users choice perform different sections of the application
         int logOrreg=scanInt.nextInt();
         if (logOrreg==1){
+
             l.login();
             run();
 

@@ -70,7 +70,11 @@ public class Insertion {
             addForSale.setDouble(6, bedroom);
             addForSale.setDouble(7, bathroom);
             addForSale.setDouble(8,price);
+            //timer commented out used for testing purposes
+            //long startTime = System.currentTimeMillis();
             addForSale.executeUpdate();
+            //long endTime = System.currentTimeMillis();
+            //System.out.println("That took " + (endTime - startTime) + " milliseconds");
             System.out.println("Your house has been successfully added to the for sale listings!");
             //log the query
             CallableStatement p2 = con.prepareCall("CALL addLog(?,?,?)");
