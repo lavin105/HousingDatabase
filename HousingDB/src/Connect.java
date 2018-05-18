@@ -8,7 +8,7 @@ public class Connect {
     public Connection getConnection() {
         try {
             //connection string
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Housing?useSSL=false", "lavin105", "Lavin105@m.c.edu");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/HousingHelper?useSSL=false", "lavin105", "Lavin105@m.c.edu");
         } catch (SQLException e) {
             e.printStackTrace();
         }

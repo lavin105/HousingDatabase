@@ -96,10 +96,10 @@ public class Updating {
                     ps.setInt(2, LoginOrRegister.primary_keys);
                     ps.setInt(3, updateID);
                     //timer commented out used for testing purposes
-                    //long startTime = System.currentTimeMillis();
-                    int x = ps.executeUpdate();
-                    //long endTime = System.currentTimeMillis();
-                    //System.out.println("That took " + (endTime - startTime) + " milliseconds");
+//                    long startTime = System.currentTimeMillis();
+                     int x = ps.executeUpdate();
+//                    long endTime = System.currentTimeMillis();
+//                    System.out.println("That took " + (endTime - startTime) + " milliseconds");
                     con.commit();
 
                     if (x > 0) {
